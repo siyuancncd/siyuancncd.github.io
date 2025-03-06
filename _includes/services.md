@@ -2,7 +2,7 @@
 
 Striving to serve the academic community...
 
-<div style="display:none">
+<!--
 
 <h4 style="margin:0 10px 0;">Conference Reviewers</h4>
 
@@ -19,4 +19,4 @@ Striving to serve the academic community...
   <li><a href="https://www.springer.com/journal/11263"><autocolor>International Journal of Computer Vision (IJCV)</autocolor></a></li>
 </ul>
 
-</div>
+-->
