@@ -5,7 +5,7 @@ main:
   - title: "Fuzzy Multimodal Learning for Trusted Cross-modal Retrieval"
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, and Peng Hu#
     conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025.
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025, (CCF-A).
     # pdf: https://arxiv.org/pdf/2002.10211.pdf
     code: https://github.com/siyuancncd/FUME
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -16,7 +16,7 @@ main:
   - title: Deep Fuzzy Physics-Informed Neural Networks for Forward and Inverse PDE Problems
     authors: Wenyuan Wu*, <strong>Siyuan Duan*</strong>, Yuan Sun, Yang Yu, Dong Liu#, and Dezhong Peng#
     conference_short: NN
-    conference: Neural Networks <strong>(NN)</strong>, 2025.
+    conference: Neural Networks <strong>(NN)</strong>, 2025, (CCF-B).
     link: https://doi.org/10.1016/j.neunet.2024.106750
     code: https://github.com/siyuancncd/FPINNs
     # bibtex: https://bib.yliu.me/MICCAI23.txt
