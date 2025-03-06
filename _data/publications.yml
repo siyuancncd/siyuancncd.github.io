@@ -18,5 +18,5 @@ main:
     code: https://github.com/siyuancncd/FUME
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+    # notes: Oral Presentation
+    image: ./assets/img/FUME_framwork.png
