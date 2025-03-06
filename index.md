@@ -10,13 +10,13 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## Research Interests
 
-- **Multimodal:** Cross-modal Retreival.
-- **AI4S:** Physics-informed Neural Networks.
+- **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
+- **AI4S:** It utilizes Physics-Informed Neural Networks (PINNs) for solving forward and inverse PDE problems.
 
 ## News
 
-- **[Feb. 2025]** Our paper has been accepted to **CVPR 2025**! (Acceptance rate = 22.1%). Thanks to all coauthors.
-- **[Sep. 2024]** Our paper has been accepted to **Neural Networks**. Thanks to all coauthors.
+- **[Feb. 2025]** One paper has been accepted to **CVPR 2025 (CCF-A)**! (Acceptance rate = 22.1%). Thanks to all coauthors.
+- **[Sep. 2024]** One paper has been accepted to **Neural Networks (CCF-B)**. Thanks to all coauthors.
 
 {% include_relative _includes/publications.md %}
 
