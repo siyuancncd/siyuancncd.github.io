@@ -15,8 +15,8 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## News
 
-- **[Feb. 2025]** One paper is accepted to **CVPR 2025 (CCF-A)**! (Acceptance rate = 22.1%). Thanks to all coauthors.
-- **[Sep. 2024]** One paper is accepted to **Neural Networks (CCF-B)**. Thanks to all coauthors.
+- **[Feb. 2025]** One paper is accepted to **CVPR 2025**! (Acceptance rate = 22.1%). Thanks to all coauthors.
+- **[Sep. 2024]** One paper is accepted to **Neural Networks**. Thanks to all coauthors.
 
 {% include_relative _includes/publications.md %}
 
