@@ -1,14 +1,6 @@
 main:
 
-  # - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-  #   authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-  #   conference_short: MICCAI
-  #   conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-  #   pdf: https://arxiv.org/pdf/2306.00988.pdf
-  #   code: https://github.com/MrGiovanni/ContinualLearning
-  #   bibtex: https://bib.yliu.me/MICCAI23.txt
-  #   image: ./assets/img/teaser_example_2.png
-  #   notes: Early Accept
+
 
   - title: "Fuzzy Multimodal Learning for Trusted Cross-modal Retrieval"
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, and Peng Hu#
@@ -20,3 +12,13 @@ main:
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
     image: ./assets/img/FUME_framework.png
+    
+  - title: Deep Fuzzy Physics-Informed Neural Networks for Forward and Inverse PDE Problems
+    authors: Wenyuan Wu*, Siyuan Duan, Yuan Sun, Yang Yu, Dong Liu#, and Dezhong Peng#
+    conference_short: NN 2025
+    conference: Neural Networks <strong>(NN)</strong>, 2025.
+    pdf: https://doi.org/10.1016/j.neunet.2024.106750
+    code: https://github.com/siyuancncd/FPINNs
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
