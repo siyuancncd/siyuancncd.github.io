@@ -14,7 +14,7 @@ main:
     image: ./assets/img/FUME_framework.png
     
   - title: Deep Fuzzy Physics-Informed Neural Networks for Forward and Inverse PDE Problems
-    authors: Wenyuan Wu*, Siyuan Duan*, Yuan Sun, Yang Yu, Dong Liu#, and Dezhong Peng#
+    authors: Wenyuan Wu*, <strong>Siyuan Dua</strong>n*, Yuan Sun, Yang Yu, Dong Liu#, and Dezhong Peng#
     conference_short: NN
     conference: Neural Networks <strong>(NN)</strong>, 2025.
     link: https://doi.org/10.1016/j.neunet.2024.106750
