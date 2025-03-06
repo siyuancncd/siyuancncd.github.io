@@ -11,7 +11,7 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 ## Research Interests
 
 - **Multimodal:** Cross-modal Retreival.
-- **AI4S:** PINN.
+- **AI4S:** Physics-informed Neural Networks.
 
 ## News
 
