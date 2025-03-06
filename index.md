@@ -10,7 +10,7 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## Research Interests
 
-- **Multimodal:** Cross-modal Retrival.
+- **Multimodal:** Cross-modal Retreival.
 - **AI4S:** PINN.
 
 ## News
