@@ -3,8 +3,6 @@
 <div class="Selected publications">
 <ol class="bibliography">
 
-“#” and “*” indicate the corresponding author and equal contribution, respectively.
-
 {% for link in site.data.publications.main %}
 
 <li>
@@ -51,3 +49,6 @@
 
 </ol>
 </div>
+
+“#” and “*” indicate the corresponding author and equal contribution, respectively.
+
