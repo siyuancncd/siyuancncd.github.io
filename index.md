@@ -4,8 +4,6 @@ layout: homepage
 
 ## About Me
 
-I am an M.Eng. student at ...
-
 I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan University, fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) \& Prof. [Peng Hu](https://penghu-cs.github.io).
 
 
