@@ -15,8 +15,8 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## News
 
-- **[Feb. 2025]** Our paper is accepted to CVPR 2025.
-- **[Sep. 2024]** Our paper is accepted to Neural Networks.
+- **[Feb. 2025]** Our paper has been accepted to CVPR 2025! (Acceptance rate = 22.1%). :v: Thanks to all coauthors.
+- **[Sep. 2024]** Our paper has been accepted to Neural Networks. :v: Thanks to all coauthors.
 
 {% include_relative _includes/publications.md %}
 
