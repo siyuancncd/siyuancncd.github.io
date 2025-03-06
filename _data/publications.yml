@@ -11,7 +11,7 @@ main:
   #   notes: Early Accept
 
   - title: "Fuzzy Multimodal Learning for Trusted Cross-modal Retrieval"
-    authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, and Peng Hu^#
+    authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, and Peng Hu#
     conference_short: CVPR 2025
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025.
     # pdf: https://arxiv.org/pdf/2002.10211.pdf
