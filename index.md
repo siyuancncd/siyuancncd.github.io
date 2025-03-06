@@ -6,10 +6,13 @@ layout: homepage
 
 I am an M.Eng. student at ...
 
+I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan University, fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) \& Prof. [Peng Hu](https://penghu-cs.github.io).
+
+
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Multimodal:** Cross-modal Retrival.
+- **AI4S:** PINN.
 
 ## News
 
