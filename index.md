@@ -10,8 +10,8 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## Research Interests
 
-- **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
-- **AI4S:** It utilizes Physics-Informed Neural Networks (PINNs) for solving forward and inverse PDE problems.
+- **Multi-modal Learning:** Including cross-modal retrieval (CMR) and multi-view classification (MVC).
+- **AI for PDEs:** It utilizes Physics-Informed Neural Networks (PINNs) for solving forward and inverse PDE problems.
 
 ## News
 
