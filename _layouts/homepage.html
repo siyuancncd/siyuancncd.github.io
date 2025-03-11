@@ -98,12 +98,16 @@
       <footer>
         
         <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI"></script>
-        <style>
-          #clstr_globe-widget {
-            width: 60% !important; /* 强制宽度 */
-            height: 120px !important; /* 强制高度 */
-          }
-        </style>
+          <script>
+            // 确保 DOM 完全加载后再调整样式
+            window.onload = function() {
+              var widget = document.getElementById('clstr_globe-widget');
+              if (widget) {
+                widget.style.width = '60%';
+                widget.style.height = '120px';
+              }
+            };
+          </script>
       </footer>
 
         
