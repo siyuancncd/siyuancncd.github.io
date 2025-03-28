@@ -1,13 +1,14 @@
 This is my [homepage](https://siyuancncd.github.io/).
 
 
+
 ## License
 
 This work is licensed under a [Creative Commons Zero v1.0 Universal](https://github.com/yaoyao-liu/minimal-light/blob/master/LICENSE) License.
 
 ## Acknowledgements
 
-Our project uses the source code from the following repositories:
+% Our project uses the source code from the following repositories:
 
 * [pages-themes/minimal](https://github.com/pages-themes/minimal)
 
