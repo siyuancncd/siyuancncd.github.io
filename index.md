@@ -21,3 +21,7 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 {% include_relative _includes/publications.md %}
 
 {% include_relative _includes/services.md %}
+
+## Honors and Awards
+
+- National Scholarship (Top 1\%), 2020.
