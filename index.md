@@ -10,7 +10,8 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## Research Interests
 
-- **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
+- **Multi-modal Learning:** Including cross-modal retrieval and  multi-view classification.
+- **Trustworthy AI:** Including trusted retrieval and classification.
 - **AI for PDEs:** It utilizes Physics-Informed Neural Networks (PINNs) for solving forward and inverse PDE problems.
 
 ## News
@@ -24,4 +25,6 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## Honors and Awards
 
-- National Scholarship (Top 1\%), 2020.
+- National Scholarship (Top 1%), 2020.
+- National Encouragement Scholarship, 2019, 2021.
+- Outstanding Graduates of CAFUC 2022.
