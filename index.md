@@ -16,6 +16,7 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## News 
 
+- **[May. 2025]** Amazing! Two papers are accepted to **ICML 2025**! One of them is spotlight (Acc=2.6%)! Thanks to all coauthors very much! 🎉
 - **[Feb. 2025]** One paper is accepted to **CVPR 2025**! (Acceptance rate = 22.1%)! Thanks to all coauthors. 🎉
 - **[Sep. 2024]** One paper is accepted to **Neural Networks**. Thanks to all coauthors. 🎉
 
