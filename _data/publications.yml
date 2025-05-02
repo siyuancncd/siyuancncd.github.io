@@ -1,6 +1,26 @@
 main:
 
+  - title: "Deep Fuzzy Multi-view Learning for Reliable Classification"
+    authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Guiduo Duan, Xi Peng, and Peng Hu#
+    conference_short: ICML
+    conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, (CCF-A).
+    # pdf: https://arxiv.org/pdf/2002.10211.pdf
+    code: https://github.com/siyuancncd/FUML
+    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    # notes: Oral Presentation
+    image: ./assets/img/FUML_framework.png
 
+  - title: "CoPINN: Cognitive Physics-informed Neural Network"
+    authors: <strong>Siyuan Duan*</strong>, Wenyuan Wu*, Peng Hu, Zhenwen Ren, Dezhong Peng, Yuan Sun#
+    conference_short: ICML
+    conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, (CCF-A).
+    # pdf: https://arxiv.org/pdf/2002.10211.pdf
+    code: https://github.com/siyuancncd/CoPINN
+    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    # notes: Oral Presentation
+    image: ./assets/img/CoPINNL_framework.png
 
   - title: "Fuzzy Multimodal Learning for Trusted Cross-modal Retrieval"
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, and Peng Hu#
