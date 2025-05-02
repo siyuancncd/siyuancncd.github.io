@@ -10,15 +10,15 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 
 ## Research Interests
 
-- **Multi-modal Learning:** Including cross-modal retrieval and  multi-view classification.
+- **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
 - **Trustworthy AI:** Including trusted retrieval and classification.
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
 
 ## News 
 
-- **[May. 2025]** Amazing! Two papers are accepted to **ICML 2025**! One of them was accepted as Spotlight (Acc rate=2.6%)! Thanks to all coauthors. 🎉
-- **[Feb. 2025]** One paper is accepted to **CVPR 2025**! (Acc rate = 22.1%)! Thanks to all coauthors. 🎉
-- **[Sep. 2024]** One paper is accepted to **Neural Networks**. Thanks to all coauthors. 🎉
+- **[May. 2025]** Amazing! Two papers were accepted to **ICML 2025**! One of them was accepted as Spotlight (Acc rate=2.6%)! Thanks to all coauthors. 🎉
+- **[Feb. 2025]** One paper was accepted to **CVPR 2025**! (Acc rate = 22.1%)! Thanks to all coauthors. 🎉
+- **[Sep. 2024]** One paper was accepted to **Neural Networks**. Thanks to all coauthors. 🎉
 
 {% include_relative _includes/publications.md %}
 
