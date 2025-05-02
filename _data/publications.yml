@@ -12,7 +12,7 @@ main:
     image: ./assets/img/FUML_framework.png
 
   - title: "CoPINN: Cognitive Physics-informed Neural Network"
-    authors: <strong>Siyuan Duan*</strong>, Wenyuan Wu*, Peng Hu, Zhenwen Ren, Dezhong Peng, Yuan Sun#
+    authors: <strong>Siyuan Duan*</strong>, Wenyuan Wu*, Peng Hu, Zhenwen Ren, Dezhong Peng, and Yuan Sun#
     conference_short: ICML
     conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, <strong>(Spotlight,acc rate=2.6%)</strong>, (CCF-A).
     # pdf: https://arxiv.org/pdf/2002.10211.pdf
