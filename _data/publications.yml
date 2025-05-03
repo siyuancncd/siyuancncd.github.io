@@ -20,7 +20,7 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
-    image: ./assets/img/CoPINN_framework.png
+    image: ./assets/img/CoPINN_motivation.png
 
   - title: "Fuzzy Multimodal Learning for Trusted Cross-modal Retrieval"
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, and Peng Hu#
