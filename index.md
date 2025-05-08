@@ -11,7 +11,6 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 ## Research Interests
 
 - **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
-- **Trustworthy AI:** Including trusted retrieval and classification.
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
 
 ## News 
