@@ -9,7 +9,7 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
-    image: ./assets/img/FUML_motivation.png
+    image: ./assets/img/FUML_framework.png
 
   - title: "CoPINN: Cognitive Physics-Informed Neural Network"
     authors: <strong>Siyuan Duan*</strong>, Wenyuan Wu*, Peng Hu, Zhenwen Ren, Dezhong Peng, and Yuan Sun#
@@ -20,7 +20,7 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
-    image: ./assets/img/CoPINN_motivation.png
+    image: ./assets/img/CoPINN_framework.png
 
   - title: "Fuzzy Multimodal Learning for Trusted Cross-modal Retrieval"
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, and Peng Hu#
