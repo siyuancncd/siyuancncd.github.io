@@ -39,6 +39,7 @@ main:
     conference: Neural Networks <strong>(NN)</strong>, 2025, (CCF-B).
     # link: https://doi.org/10.1016/j.neunet.2024.106750
     code: https://github.com/siyuancncd/FPINNs
+    report: https://mp.weixin.qq.com/s/J_UTQvRlSGxl9VH4ctk2Og
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/FPINN_framework.png
     # notes: Early Accept
