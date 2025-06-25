@@ -1,8 +1,6 @@
 ## Services
 
-- Conference Reviewer
-
-ACL ARR
+- Conference Reviewer: ACL ARR
 
 
 <!--
