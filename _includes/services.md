@@ -2,7 +2,7 @@
 
 ### Conference Reviewer
 
-2025: ACL ARR
+ACL ARR
 
 
 <!--
