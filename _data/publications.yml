@@ -4,7 +4,7 @@ main:
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Guiduo Duan, Xi Peng, and Peng Hu#
     conference_short: ICML
     conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, (CCF-A).
-    pdf: https://github.com/siyuancncd/FUML/blob/main/src/ICML25_Deep_Fuzzy_Multi_view_Learning_for_Reliable_Classification.pdf
+    link: https://github.com/siyuancncd/FUML/blob/main/src/ICML25_Deep_Fuzzy_Multi_view_Learning_for_Reliable_Classification.pdf
     code: https://github.com/siyuancncd/FUML
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
