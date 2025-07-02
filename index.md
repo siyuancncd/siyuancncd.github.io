@@ -14,7 +14,7 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
 
 ## News 
-
+- **[Jul. 2025]** I gave a talk at the [AI ​​TIME](https://www.aitime.cn/) pre-talk and introduced our [FUML (ICML'25)](https://github.com/siyuancncd/FUML).
 - **[May. 2025]** Amazing! Two papers were accepted to **ICML 2025**! One was accepted as Spotlight (acc rate = 2.6%)! Thanks to all coauthors. 🎉
 - **[Feb. 2025]** One paper was accepted to **CVPR 2025**(acc rate = 22.1%)! Thanks to all coauthors. 🎉
 - **[Sep. 2024]** One paper was accepted to **Neural Networks**. Thanks to all coauthors. 🎉
