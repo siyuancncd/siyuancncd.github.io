@@ -26,5 +26,3 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 ## Honors and Awards 🏆
 
 - National Scholarship (Top 1%), 2020.
-- National Encouragement Scholarship, 2019, 2021.
-- Outstanding Graduates of CAFUC 2022.
