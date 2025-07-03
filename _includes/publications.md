@@ -54,5 +54,4 @@
 </ol>
 </div>
 
-“#” and “*” indicate the corresponding author and equal contribution, respectively.
-
+“#” and “*” indicate the corresponding author and equal contribution, respectively. For full publications, please refer to my [Google Scholar](https://scholar.google.com/citations?user=Zck_72MAAAAJ&hl=en).
