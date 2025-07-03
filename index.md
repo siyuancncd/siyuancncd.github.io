@@ -6,6 +6,8 @@ layout: homepage
 
 I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan University, fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io).
 
+If you are interested in collaborating with me or want to have a chat, always feel free to contact me through email siyuanduancn@gmail.com.
+
 🔥 **I'm actively seeking a PhD position for Fall 2026 entry.** If you believe my background aligns with your research needs, please feel free to contact me via email at siyuanduancn@gmail.com.
 
 ## Research Interests
