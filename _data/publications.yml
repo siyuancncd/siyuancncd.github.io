@@ -4,7 +4,7 @@ main:
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Guiduo Duan, Xi Peng, and Peng Hu#
     conference_short: ICML
     conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, (CCF-A).
-    link: https://github.com/siyuancncd/FUML/blob/main/src/ICML25_Deep_Fuzzy_Multi_view_Learning_for_Reliable_Classification.pdf
+    link: https://openreview.net/forum?id=ZzuaeYvLsJ&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICML.cc%2F2025%2FConference%2FAuthors%23your-submissions)
     code: https://github.com/siyuancncd/FUML
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -15,7 +15,7 @@ main:
     authors: <strong>Siyuan Duan*</strong>, Wenyuan Wu*, Peng Hu, Zhenwen Ren, Dezhong Peng, and Yuan Sun#
     conference_short: ICML Spotlight
     conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, <strong>(Spotlight,acc rate=2.6%)</strong>, (CCF-A).
-    # pdf: https://arxiv.org/pdf/2002.10211.pdf
+    link: https://openreview.net/forum?id=4vAa0A98xI&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICML.cc%2F2025%2FConference%2FAuthors%23your-submissions)
     code: https://github.com/siyuancncd/CoPINN
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -29,6 +29,7 @@ main:
     link: https://openaccess.thecvf.com/content/CVPR2025/html/Duan_Fuzzy_Multimodal_Learning_for_Trusted_Cross-modal_Retrieval_CVPR_2025_paper.html
     # pdf: https://arxiv.org/pdf/2002.10211.pdf
     code: https://github.com/siyuancncd/FUME
+    report: https://mp.weixin.qq.com/s/LIOjHJ1n7C5hXJcEH8_81A
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
