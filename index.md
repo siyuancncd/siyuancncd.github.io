@@ -13,7 +13,7 @@ I'm Siyuan Duan, a master's student at the School of Computer Science, Sichuan U
 - **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
 
-🔥 **If you are interested in collaborating with me or want to have a chat, please feel free to contact me via email**.
+🌟 **If you are interested in collaborating with me or want to have a chat, please feel free to contact me via email**.
 
 ## News 
 - **[Jul. 2025]** I gave a talk at the [AI ​​TIME](https://www.aitime.cn/) pre-talk and introduced our [FUML (ICML'25)](https://github.com/siyuancncd/FUML).
