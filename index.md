@@ -28,3 +28,4 @@ I'm Siyuan Duan, a master's student at the College of Computer Science, Sichuan 
 ## Honors and Awards 🏆
 
 - National Scholarship (Top 1%), 2020.
+- National Scholarship (Top 2%), 2025.
