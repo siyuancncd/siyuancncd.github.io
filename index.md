@@ -6,7 +6,7 @@ layout: homepage
 
 I'm Siyuan Duan, currently a master's student at the [College of Computer Science, Sichuan University](https://cs.scu.edu.cn/), fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). 
 
-I am about to pursue my doctoral degree at the [Smart Lab](https://smartlab.cse.ust.hk/), under the Department of Computer Science and Engineering ([CSE](https://cse.hkust.edu.hk/)) at The Hong Kong University of Science and Technology ([HKUST](https://hkust.edu.hk/)). It is my honor to be advised by Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/) during my doctoral studies.
+I am also an incoming Ph.D candidate in the Department of Computer Science and Engineering ([CSE](https://cse.hkust.edu.hk/)) at The Hong Kong University of Science and Technology ([HKUST](https://hkust.edu.hk/)). I will conduct my doctoral studies at the department’s [Smart Lab](https://smartlab.cse.ust.hk/) under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
 
 ## Research Interests
 
