@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I'm Siyuan Duan, a master's student at the College of Computer Science, Sichuan University, fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). I'm about to pursue a doctoral degree at the [Smart Lab](https://smartlab.cse.ust.hk/) of The Hong Kong University of Science and Technology (HKUST) and will have the honor of being advised by Prof. [Chen Hao](https://cse.hkust.edu.hk/~jhc/).
+I'm Siyuan Duan, a master's student at the College of Computer Science, Sichuan University, fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). I'm about to pursue a doctoral degree at the [Smart Lab](https://smartlab.cse.ust.hk/) of The Hong Kong University of Science and Technology (HKUST) and will have the honor of being advised by Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
 
 ## Research Interests
 
