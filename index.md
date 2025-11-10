@@ -15,7 +15,7 @@ I am also an incoming Ph.D candidate in the Department of Computer Science and E
 
 🌟 **If you are interested in collaborating with me or want to have a chat, please feel free to contact me via email**.
 
-## News
+<h2>News</h2> <!-- 标题固定 -->
 
 <div class="news-container">
   <ul>
