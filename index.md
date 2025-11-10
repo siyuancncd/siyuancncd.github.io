@@ -15,8 +15,9 @@ I am also an incoming Ph.D candidate in the Department of Computer Science and E
 
 🌟 **If you are interested in collaborating with me or want to have a chat, please feel free to contact me via email**.
 
+## News
 <div class="news-container">
-  <h2>News</h2>
+  <!-- <h2>News</h2> -->
   <ul>
     <li><strong>[Jul. 2025]</strong> I gave a talk at the <a href="https://www.aitime.cn/">AI TIME</a> pre-talk and introduced our <a href="https://github.com/siyuancncd/FUML">FUML (ICML'25)</a>. You can see <a href="https://www.bilibili.com/video/BV1mA3yzEEWF/?spm_id_from=333.1387.homepage.video_card.click&vd_source=6c3619d976449503d4bb811d9044ee7f&t=5481">here</a>.</li>
     <li><strong>[May. 2025]</strong> Amazing! Two papers were accepted to <strong>ICML 2025</strong>! One was accepted as Spotlight (acc rate = 2.6%)! Thanks to all coauthors. 🎉</li>
