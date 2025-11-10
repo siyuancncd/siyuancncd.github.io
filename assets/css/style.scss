@@ -3,26 +3,23 @@
 
 @import "minimal-light";
 
-/* 限制News容器高度，超出部分滚动 */
 .news-container {
-  max-height: 220px; /* 可根据内容多少调整，当前4条内容建议200-250px */
-  overflow-y: auto; /* 垂直滚动（内容超出时显示滚动条） */
-  padding-right: 12px; /* 预留滚动条空间，避免内容被遮挡 */
-  line-height: 1.6; /* 可选：优化行间距，提升可读性 */
+  max-height: 160px; /* 高度仅针对列表，根据内容多少调整 */
+  overflow-y: auto; /* 内容超出时显示滚动条 */
+  padding-right: 10px; /* 避免滚动条遮挡文字 */
+  margin-top: 10px; /* 标题与列表之间留一点间距 */
 }
 
-/* 可选：美化滚动条（仅webkit内核浏览器生效） */
+/* 可选：美化滚动条 */
 .news-container::-webkit-scrollbar {
-  width: 6px; /* 滚动条宽度 */
+  width: 5px;
 }
 .news-container::-webkit-scrollbar-track {
-  background: #f5f5f5; /* 滚动条轨道颜色（适配白色背景） */
-  border-radius: 4px;
+  background: #f1f1f1;
+  border-radius: 3px;
 }
 .news-container::-webkit-scrollbar-thumb {
-  background: #ccc; /* 滚动条滑块颜色 */
-  border-radius: 4px;
+  background: #888;
+  border-radius: 3px;
 }
-.news-container::-webkit-scrollbar-thumb:hover {
-  background: #999; /* 鼠标悬停时滑块颜色 */
-}
+
