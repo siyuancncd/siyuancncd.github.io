@@ -37,33 +37,33 @@
   overflow: hidden; /* 避免内容溢出 */
 }
 
-/* 左侧10%浅灰色背景 */
+/* 左侧12%浅灰色背景 */
 .page-container::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 10%; /* 左侧宽度占10% */
+  width: 12%; /* 左侧宽度占10% */
   background-color: #f0f0f0; /* 浅灰色（可调整深浅） */
   z-index: -1; /* 放在内容下方，不遮挡文字 */
 }
 
-/* 右侧10%浅灰色背景 */
+/* 右侧12%浅灰色背景 */
 .page-container::after {
   content: "";
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
-  width: 10%; /* 右侧宽度占10% */
+  width: 12%; /* 右侧宽度占10% */
   background-color: #f0f0f0; /* 与左侧同色 */
   z-index: -1;
 }
 
-/* 中间80%白色区域（确保原有内容居中） */
+/* 中间76%白色区域（确保原有内容居中） */
 .wrapper-outer {
-  max-width: 80%; /* 中间宽度占80% */
+  max-width: 76%; /* 中间宽度占80% */
   margin: 0 auto; /* 水平居中 */
   background-color: #ffffff; /* 中间白色背景 */
   padding: 0 20px; /* 左右预留一点内边距，避免内容贴边 */
