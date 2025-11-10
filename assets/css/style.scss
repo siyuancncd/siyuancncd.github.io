@@ -1,9 +1,7 @@
 ---
 ---
 
-// @import "minimal-light";
-//禁用黑色主题，无论系统是什么模式，都变成白色主题
-@import "minimal-light-no-dark-mode";
+@import "minimal-light";
 
 .news-container {
   max-height: 120px; /* 高度仅针对列表，根据内容多少调整 */
