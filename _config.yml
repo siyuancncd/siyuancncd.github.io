@@ -12,8 +12,6 @@ description: The Minimal Light is a simple and elegant jekyll theme for academic
 # 改了好像没用
 canonical: https://minimal-light-theme.yliu.me/
 
-dark_mode: false
-
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com/citations?user=Zck_72MAAAAJ&hl=en
@@ -34,7 +32,8 @@ enable_footnote: true
 
 # Auto Dark Mode
 # You may use the option to disable the automatic dark theme
-auto_dark_mode: true
+## 禁用黑色主题，无论什么模式下，都用白色主题
+auto_dark_mode: false
 
 # Font
 # You can use this option to choose between Serif or Sans Serif fonts.
