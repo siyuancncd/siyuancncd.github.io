@@ -1,7 +1,9 @@
 ---
 ---
 
-@import "minimal-light";
+
+// @import "minimal-light";
+@import "minimal-light-no-dark-mode";
 
 .news-container {
   max-height: 120px; /* 高度仅针对列表，根据内容多少调整 */
