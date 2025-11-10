@@ -62,7 +62,7 @@
 }
 
 /* 中间80%白色区域（确保原有内容居中） */
-.wrapper {
+.wrapper-outer {
   max-width: 80%; /* 中间宽度占80% */
   margin: 0 auto; /* 水平居中 */
   background-color: #ffffff; /* 中间白色背景 */
