@@ -19,7 +19,7 @@ I am also an incoming Ph.D candidate in the Department of Computer Science and E
 
 <div class="news-container">
   <ul>
-    <li><strong>[10/2025]</strong> I got PhD offer from <a href="https://cse.hkust.edu.hk/">HKUST CSE</a>. </li>
+    <li><strong>[10/2025]</strong> I got a PhD offer from <a href="https://cse.hkust.edu.hk/">HKUST CSE</a>. </li>
     <li><strong>[07/2025]</strong> I gave a talk at the <a href="https://www.aitime.cn/">AI TIME</a> pre-talk and introduced our <a href="https://github.com/siyuancncd/FUML">FUML (ICML'25)</a>. You can see <a href="https://www.bilibili.com/video/BV1mA3yzEEWF/?spm_id_from=333.1387.homepage.video_card.click&vd_source=6c3619d976449503d4bb811d9044ee7f&t=5481">here</a>.</li>
     <li><strong>[05/2025]</strong> Amazing! 2 papers were accepted to <strong>ICML 2025</strong>! One was accepted as Spotlight (acc rate = 2.6%)! Thanks to all coauthors. 🎉</li>
     <li><strong>[02/2025]</strong> 1 paper was accepted to <strong>CVPR 2025</strong>(acc rate = 22.1%)! Thanks to all coauthors. 🎉</li>
