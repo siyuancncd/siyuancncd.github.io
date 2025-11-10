@@ -4,9 +4,9 @@ layout: homepage
 
 ## About Me
 
-I'm Siyuan Duan, currently a master's student at the [College of Computer Science, Sichuan University](https://cs.scu.edu.cn/), fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). 
+I'm Siyuan Duan, currently a master's student at the [College of Computer Science, Sichuan University](https://cs.scu.edu.cn/) <img src="assets/img/scu-logo.png" alt="SCU Logo" width="22" style="vertical-align: middle; margin-left: 5px;">, fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). 
 
-I am also an incoming Ph.D candidate in the Department of Computer Science and Engineering ([CSE](https://cse.hkust.edu.hk/)) at The Hong Kong University of Science and Technology ([HKUST](https://hkust.edu.hk/)). I will conduct my doctoral studies at the department’s [Smart Lab](https://smartlab.cse.ust.hk/) under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
+I am also an incoming Ph.D candidate in the Department of Computer Science and Engineering ([CSE](https://cse.hkust.edu.hk/)) at The Hong Kong University of Science and Technology ([HKUST](https://hkust.edu.hk/)) <img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="22" style="vertical-align: middle; margin-left: 5px;">. I will conduct my doctoral studies at the department’s [Smart Lab](https://smartlab.cse.ust.hk/) under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
 
 ## Research Interests
 
