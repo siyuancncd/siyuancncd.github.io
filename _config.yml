@@ -12,6 +12,8 @@ description: The Minimal Light is a simple and elegant jekyll theme for academic
 # 改了好像没用
 canonical: https://minimal-light-theme.yliu.me/
 
+dark_mode: false
+
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com/citations?user=Zck_72MAAAAJ&hl=en
