@@ -2,3 +2,24 @@
 ---
 
 @import "minimal-light-no-dark-mode";
+
+.news-container {
+  max-height: 120px; /* 高度仅针对列表，根据内容多少调整 */
+  overflow-y: auto; /* 内容超出时显示滚动条 */
+  padding-right: 10px; /* 避免滚动条遮挡文字 */
+  margin-top: 10px; /* 标题与列表之间留一点间距 */
+  margin-bottom: 20px; /* 关键：增加底部间距，数值越大距离越远 */
+}
+
+/* 可选：美化滚动条 */
+.news-container::-webkit-scrollbar {
+  width: 5px;
+}
+.news-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+.news-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
