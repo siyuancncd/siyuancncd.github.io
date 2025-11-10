@@ -23,3 +23,46 @@
   background: #888;
   border-radius: 3px;
 }
+
+//////////////////////////////////////////////////////
+// 将页面左右变灰，免得刺眼
+//////////////////////////////////////////////////////
+
+/* 全局页面容器 */
+.page-container {
+  position: relative; /* 作为左右灰色区域的定位父级 */
+  max-width: 100%; /* 占满整个屏幕宽度 */
+  overflow: hidden; /* 避免内容溢出 */
+}
+
+/* 左侧10%浅灰色背景 */
+.page-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10%; /* 左侧宽度占10% */
+  background-color: #f0f0f0; /* 浅灰色（可调整深浅） */
+  z-index: -1; /* 放在内容下方，不遮挡文字 */
+}
+
+/* 右侧10%浅灰色背景 */
+.page-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 10%; /* 右侧宽度占10% */
+  background-color: #f0f0f0; /* 与左侧同色 */
+  z-index: -1;
+}
+
+/* 中间80%白色区域（确保原有内容居中） */
+.wrapper {
+  max-width: 80%; /* 中间宽度占80% */
+  margin: 0 auto; /* 水平居中 */
+  background-color: #ffffff; /* 中间白色背景 */
+  padding: 0 20px; /* 左右预留一点内边距，避免内容贴边 */
+}
