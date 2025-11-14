@@ -33,5 +33,5 @@ I am also an incoming Ph.D candidate in the Department of Computer Science and E
 
 ## Honors and Awards 🏆
 
-- National Scholarship (Top 1%), 2020.
-- National Scholarship (Top 2%), 2025.
+- China National Scholarship (Top 1%), 2020.
+- China National Scholarship (Top 2%), 2025.
