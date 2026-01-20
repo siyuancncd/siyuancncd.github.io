@@ -29,6 +29,10 @@ I am also an incoming Ph.D candidate in the Department of Computer Science and E
 
 {% include_relative _includes/publications.md %}
 
+## Industrial Experience
+
+- Jan. 2026 - Now: Research Intern at Taotian Future Living Lab of Alibaba Group, Beijing, China.
+
 {% include_relative _includes/services.md %}
 
 ## Honors and Awards 🏆
