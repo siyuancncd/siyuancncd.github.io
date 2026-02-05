@@ -27,7 +27,7 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 
 ## Industrial Experience
 
-- Jan. 2026 - Now: **Research Intern** @ Taobao&Tmall Group in [<img src="assets/img/alibaba_logo.png" alt="Alibaba Logo" width="94" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">](https://www.alibabagroup.com/en-US), Beijing, China.
+- Jan. 2026 - Now: **Research Intern** @ Taobao&Tmall Group in [<img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="94" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">](https://www.alibabagroup.com/en-US), Beijing, China.
   - **Topic**: Vision-Language Models (VLMs).
 
 {% include_relative _includes/services.md %}
