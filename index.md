@@ -2,7 +2,7 @@
 layout: homepage
 ---
 <br>
-I'm currently a master's student at the College of Computer Science, [Sichuan University (SCU)](https://cs.scu.edu.cn/)<img src="assets/img/scu-logo-white.png" alt="SCU Logo" width="73" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">, fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). I'm also an incoming Ph.D candidate in the Department of Computer Science and Engineering at [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/)<img src="assets/img/hkust-logo-white.png" alt="HKUST Logo" width="73" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">. I will conduct my doctoral studies at the department’s [Smart Lab](https://smartlab.cse.ust.hk/) under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
+I'm currently a master's student at the College of Computer Science, [Sichuan University (SCU)](https://cs.scu.edu.cn/)<img src="assets/img/scu-logo-white.png" alt="SCU Logo" width="73" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">, fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). I'm also an incoming Ph.D candidate in the Department of Computer Science and Engineering at [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/)<img src="assets/img/hkust-logo-white.png" alt="HKUST Logo" width="76" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">. I will conduct my doctoral studies at the department’s [Smart Lab](https://smartlab.cse.ust.hk/) under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
 
 ## Research Interests
 
@@ -27,7 +27,7 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 
 ## Industrial Experience
 
-- Jan. 2026 - Now: **Research Intern** @ Taobao&Tmall Group in [<img src="assets/img/alibaba_logo.png" alt="Alibaba Logo" width="98" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">](https://www.alibabagroup.com/en-US), Beijing, China.
+- Jan. 2026 - Now: **Research Intern** @ Taobao&Tmall Group in [<img src="assets/img/alibaba_logo.png" alt="Alibaba Logo" width="95" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">](https://www.alibabagroup.com/en-US), Beijing, China.
   - **Topic**: Vision-Language Models (VLMs).
 
 {% include_relative _includes/services.md %}
