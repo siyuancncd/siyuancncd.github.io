@@ -8,6 +8,7 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 
 - **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
+  
 🌟 **If you are interested in collaborating with me or want to have a chat, please feel free to contact me via email**.
 
 <h2>News</h2> <!-- 标题固定 -->
