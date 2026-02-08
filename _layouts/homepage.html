@@ -4,8 +4,7 @@
     <title>{{ site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- 修复 viewport 设置，禁止用户缩放但确保正确缩放 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
@@ -34,46 +33,56 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
 
-    <!-- 添加内联响应式样式修复 iPad 问题 -->
+    <!-- iPad 响应式修复：保持左右分栏布局，修复文字溢出 -->
     <style>
-      /* 基础响应式设置 */
+      /* 基础盒模型 */
       * {
         box-sizing: border-box;
       }
       
+      /* 防止页面水平滚动 */
       html, body {
         max-width: 100%;
         overflow-x: hidden;
+        margin: 0;
+        padding: 0;
       }
       
-      /* 页面容器响应式 */
+      /* 外层容器保持 flex 布局 */
       .page-container {
         width: 100%;
-        max-width: 100vw;
-        overflow-x: hidden;
+        min-height: 100vh;
       }
       
       .wrapper-outer {
-        width: 100%;
         display: flex;
-        justify-content: center;
-        padding: 0 15px; /* 添加侧边距防止贴边 */
+        width: 100%;
+        min-height: 100vh;
       }
       
+      /* 左侧边栏固定 */
       .wrapper {
-        width: 100%;
-        max-width: 1200px; /* 限制最大宽度 */
-        margin: 0 auto;
-        padding: 20px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 280px; /* 原布局的侧边栏宽度 */
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 40px 30px;
+        background: inherit; /* 保持原背景色 */
+        z-index: 100;
       }
       
-      /* 内容区域确保不溢出 */
+      /* 右侧内容区可滚动 */
       section {
-        width: 100%;
-        max-width: 100%;
-        overflow-wrap: break-word;
+        margin-left: 280px; /* 与侧边栏宽度相同 */
+        flex: 1;
+        padding: 40px 50px;
+        min-height: 100vh;
+        overflow-x: hidden; /* 防止水平溢出 */
         word-wrap: break-word;
-        word-break: break-word;
+        overflow-wrap: break-word;
       }
       
       /* 图片自适应 */
@@ -82,48 +91,76 @@
         height: auto;
       }
       
-      /* 平板设备优化 (iPad 主要是 768px-1024px) */
-      @media screen and (max-width: 1024px) {
+      /* iPad 适配 (768px - 1024px) */
+      @media screen and (max-width: 1024px) and (min-width: 769px) {
         .wrapper {
-          padding: 15px;
-          max-width: 100%;
+          width: 240px; /* 稍微减小侧边栏宽度 */
+          padding: 30px 20px;
         }
         
+        section {
+          margin-left: 240px;
+          padding: 30px 35px;
+        }
+        
+        /* 缩小字体防止溢出 */
         h1 {
-          font-size: 1.8rem; /* 适当缩小标题 */
+          font-size: 1.6rem;
         }
         
         position {
-          font-size: 1rem !important;
+          font-size: 0.95rem !important;
+        }
+        
+        a, email {
+          font-size: 0.9rem;
+        }
+        
+        /* 确保长文本换行 */
+        .wrapper a, .wrapper email, .wrapper position {
+          max-width: 100%;
+          display: inline-block;
+          word-break: break-word;
+          overflow-wrap: break-word;
         }
       }
       
-      /* 手机设备 */
+      /* 手机端：改为上下布局 */
       @media screen and (max-width: 768px) {
         .wrapper-outer {
-          padding: 0 10px;
+          flex-direction: column;
         }
         
         .wrapper {
-          padding: 10px;
+          position: relative;
+          width: 100%;
+          height: auto;
+          padding: 20px;
+          text-align: center;
         }
         
-        h1 {
-          font-size: 1.5rem;
+        section {
+          margin-left: 0;
+          padding: 20px;
         }
       }
       
-      /* 防止长文本溢出 */
-      a, p, span, div {
+      /* 防止长文本溢出通用规则 */
+      a, p, span, div, h1, h2, h3, h4, h5, h6 {
         max-width: 100%;
       }
       
-      /* 社交图标容器 */
+      /* 邮箱特别处理 */
+      email {
+        word-break: break-all;
+      }
+      
+      /* 社交图标 */
       .social-icons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
       }
     </style>
 
@@ -143,15 +180,15 @@
         <h1>{{ site.title }}</h1>
 
         {% if site.position %}
-        <position style="font-size:1.10rem; display: inline-block; max-width: 100%;">{{ site.position }}</position>
+        <position style="font-size:1.10rem;">{{ site.position }}</position>
         <br>
         {% endif %}
         {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener" style="display: inline-block; max-width: 100%; word-break: break-word;"><autocolor>{{ site.affiliation }}</autocolor></a>
+        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
         <br>
         {% endif %}
         {% if site.email %}
-        <email style="display: inline-block; max-width: 100%; word-break: break-all;">{{ site.email }}</email>
+        <email>{{ site.email }}</email>
         {% endif %}
 
         <br>
@@ -190,26 +227,21 @@
         <br>
 
         <!-- 添加的小组件 -->
-        <div style="text-align: center; margin-top: 20px; max-width: 100%; overflow: hidden;">
+        <div style="text-align: center; margin-top: 20px; max-width: 100%;">
           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&ct=070707'></script>
         </div>
         <!-- 添加的小组件结束 -->
 
       </header>
       
-      <section>
-    
+      <!-- 注意：section 移到了 wrapper 外部，与 wrapper 同级 -->
+    </div> <!-- wrapper 结束 -->
+      
+    <section>
       {{ content }}
-
       <br>
-        
-      </section>
+    </section>
 
-      <footer>
-        
-      </footer>
-
-    </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
