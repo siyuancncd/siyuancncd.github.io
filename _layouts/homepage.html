@@ -4,7 +4,6 @@
     <title>{{ site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- 优化视口：添加shrink-to-fit避免iOS布局异常 -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
@@ -34,63 +33,83 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
 
-    <!-- 核心布局修复：解决重叠、白色区域、iPad溢出 -->
+    <!-- 最终优化：解决顶部空白、文字居中、保留全端兼容 -->
     <style>
-      /* 1. 全局基础设置：修复白色区域+盒模型 */
+      /* 1. 全局基础设置 */
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
 
-      /* 关键：body设置灰色背景，铺满整个屏幕，解决外围白色问题 */
       body {
-        background-color: #f0f0f0; /* 匹配原有灰色背景，可根据实际调整 */
-        min-height: 100vh; /* 确保背景铺满视口高度 */
+        background-color: #f0f0f0; /* 灰色背景，铺满屏幕 */
+        min-height: 100vh;
         margin: 0;
         padding: 0;
       }
 
-      /* 2. 主容器：居中+白色内容区+不挤压 */
+      /* 2. 主容器：移除顶部padding，仅保留左右和底部，解决左侧顶部空白 */
       .page-container {
         width: 100%;
-        max-width: 1200px; /* 电脑端最大宽度，适配大屏 */
-        margin: 0 auto;     /* 水平居中，两侧保留灰色背景 */
-        padding: 20px 15px; /* 内边距，避免内容贴边 */
-        display: flex;      /* 弹性布局，分隔左右区域，解决重叠 */
-        flex-wrap: wrap;    /* 小屏自动换行，适配手机/iPad */
-        gap: 20px;          /* 左右区域间距，彻底避免重叠 */
+        max-width: 1200px; /* 电脑端最大宽度 */
+        margin: 0 auto;     /* 水平居中 */
+        padding: 0 15px 20px; /* 仅保留左右15px、底部20px padding，移除顶部 */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;          /* 左右区域间距，避免重叠 */
       }
 
-      /* 3. 左侧固定区域（头像/信息）：固定宽度+不挤压 */
+      /* 3. 左侧固定区域：修复顶部空白 + 规整布局 */
       .wrapper-outer {
-        flex: 0 0 280px;    /* 固定宽度280px，不放大不缩小，避免重叠 */
-        min-width: 250px;   /* 小屏最小宽度，防止过度挤压 */
+        flex: 0 0 280px;    /* 固定宽度 */
+        min-width: 250px;   /* 最小宽度 */
         background-color: #fff; /* 白色背景 */
-        padding: 20px;
-        border-radius: 8px; /* 可选：圆角优化视觉，可删除 */
-        height: fit-content; /* 高度随内容自适应 */
+        padding: 20px;      /* 内部padding，上下左右统一 */
+        border-radius: 8px;
+        height: fit-content;
+        margin-top: 20px;   /* 仅给左侧加顶部margin，整体视觉统一 */
       }
 
-      /* 4. 右侧内容区域：自适应剩余宽度 */
+      /* 关键：重置header默认样式，彻底消除顶部空白 */
+      .wrapper-outer header {
+        margin: 0;          /* 移除header默认margin */
+        padding: 0;         /* 移除header默认padding */
+        text-align: center; /* 左侧内容居中（头像/文字），更专业 */
+      }
+
+      /* 4. 右侧内容区域：实现文字区域居中对齐 */
       .wrapper {
-        flex: 1;            /* 占据剩余所有宽度，自适应 */
-        min-width: 300px;   /* 最小宽度，避免窄屏挤压 */
+        flex: 1;            /* 自适应剩余宽度 */
+        min-width: 300px;   /* 最小宽度 */
         background-color: #fff; /* 白色背景 */
         padding: 20px;
-        border-radius: 8px; /* 可选：圆角优化视觉，可删除 */
+        border-radius: 8px;
+        margin-top: 20px;   /* 与左侧顶部margin一致，视觉对齐 */
+        display: flex;      /* 开启flex，让内部section居中 */
+        justify-content: center; /* 水平居中 */
+        align-items: flex-start; /* 顶部对齐，避免内容拉伸 */
       }
 
-      /* 5. iPad适配（768px-1024px）：微调布局，保留换行 */
+      /* 右侧内容块：限制最大宽度，居中显示，文字左对齐（阅读更友好） */
+      .wrapper section {
+        max-width: 800px;   /* 限制内容宽度，避免文字过宽 */
+        width: 100%;        /* 占满可用宽度 */
+        margin: 0 auto;     /* 块级居中 */
+        /* 可选：若需要文字完全居中，添加 text-align: center; */
+        /* text-align: center; */
+      }
+
+      /* 5. iPad适配（768px-1024px） */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container {
-          max-width: 95%;   /* 适配iPad屏幕，占95%宽度 */
-          gap: 15px;        /* 缩小间距，适配屏幕 */
+          max-width: 95%;
+          gap: 15px;
         }
         .wrapper-outer {
-          flex: 0 0 250px;  /* iPad端左侧略窄，优化布局 */
+          flex: 0 0 250px;
         }
-        /* 文字换行：确保长文本不溢出 */
+        /* 文字换行：确保不溢出 */
         section, h1, h2, p, a, position, email, autocolor {
           overflow-wrap: break-word;
           word-wrap: break-word;
@@ -98,27 +117,28 @@
         }
       }
 
-      /* 6. 手机端适配（小于768px）：自动换行，全屏显示 */
+      /* 6. 手机端适配（小于768px） */
       @media screen and (max-width: 767px) {
         .page-container {
-          flex-direction: column; /* 垂直排列 */
-          padding: 10px;
+          flex-direction: column;
+          padding: 0 10px 20px;
         }
         .wrapper-outer, .wrapper {
-          flex: 1 1 100%; /* 占满宽度 */
+          flex: 1 1 100%;
           min-width: unset;
+          margin-top: 15px;
         }
       }
 
-      /* 7. 细节优化：头像/文本样式，保留原有视觉 */
+      /* 7. 细节优化：保留原有视觉 */
       .avatar img {
         width: 120px !important;
         height: 120px !important;
         object-fit: cover !important;
-        margin: 0 auto;
+        margin: 0 auto 15px; /* 头像底部加margin，与标题分隔 */
         display: block;
       }
-      h1 {
+      .wrapper-outer h1 {
         font-size: 1.8rem;
         margin-bottom: 10px;
       }
@@ -128,7 +148,6 @@
         gap: 10px;
         justify-content: center;
       }
-      /* 统计组件适配：避免超出 */
       #clustrmaps {
         width: 100% !important;
         height: auto !important;
@@ -138,7 +157,7 @@
   <body>
     
     <div class="page-container">
-      <!-- 左侧固定区域：头像、个人信息、社交图标 -->
+      <!-- 左侧固定区域 -->
       <div class="wrapper-outer">
         <header>
           {% if site.avatar %}
@@ -201,7 +220,7 @@
         </header>
       </div>
 
-      <!-- 右侧内容区域：正文内容 -->
+      <!-- 右侧内容区域 -->
       <div class="wrapper">
         <section>
           {{ content }}
