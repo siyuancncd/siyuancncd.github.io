@@ -103,13 +103,13 @@
         margin: 0 auto;
       }
 
-      /* ===================== 核心修改：正文相对标题向右移动 ===================== */
-      /* 标题保持原位，正文（段落/列表/div）向右移10px，视觉美观 */
+      /* ===================== 核心修改：正文与news区域完全对齐 ===================== */
+      /* 标题保持原位，正文（段落/列表/div）向右移18px，与news区域精准对齐 */
       .wrapper section p,
       .wrapper section ul,
       .wrapper section li,
       .wrapper section div {
-          margin-left: 10px;    /* 从-5px改为10px，实现向右移动 */
+          margin-left: 18px;    /* 从10px改为18px，大幅右移实现对齐 */
           padding-left: 0;
       }
 
@@ -138,6 +138,13 @@
         .wrapper-outer {
           flex: 0 0 240px;
         }
+        /* iPad端正文右移幅度适配，保持对齐 */
+        .wrapper section p,
+        .wrapper section ul,
+        .wrapper section li,
+        .wrapper section div {
+            margin-left: 15px;
+        }
         .avatar img {
           width: 120px !important;
           height: 120px !important;
@@ -162,7 +169,7 @@
         .wrapper section ul,
         .wrapper section li,
         .wrapper section div {
-            margin-left: 5px;
+            margin-left: 10px;
         }
         .avatar img {
           width: 120px !important;
@@ -241,7 +248,7 @@
         </header>
       </div>
 
-      <!-- 右侧正文区域：内容相对标题右移 -->
+      <!-- 右侧正文区域：内容与news区域精准对齐 -->
       <div class="wrapper">
         <section>
           {{ content }}
@@ -265,5 +272,3 @@
   
   </body>
 </html>
-
-
