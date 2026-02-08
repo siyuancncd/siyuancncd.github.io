@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-<!--     <title>{{ site.title }} | {{site.affiliation}}</title>
- -->
     <title>{{ site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 修复 viewport 设置，禁止用户缩放但确保正确缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
@@ -16,12 +15,11 @@
     {% endif %}
 
     <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
-    <!-- <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" /> -->
     <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon_dark }}" type="image/png" />
     <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
 
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css     integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css    " integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     {% if site.font == "Sans Serif" %}
     <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
@@ -29,14 +27,105 @@
     <link rel="stylesheet" href="./assets/css/font.css">
     {% endif %}
     {% if site.auto_dark_mode %}
-    <!-- <link rel="stylesheet" href="./assets/css/style-no-dark-mode.cs"> -->
-    <!-- <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/publications.css">
     {% else %}
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
+
+    <!-- 添加内联响应式样式修复 iPad 问题 -->
+    <style>
+      /* 基础响应式设置 */
+      * {
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      
+      /* 页面容器响应式 */
+      .page-container {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+      
+      .wrapper-outer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 15px; /* 添加侧边距防止贴边 */
+      }
+      
+      .wrapper {
+        width: 100%;
+        max-width: 1200px; /* 限制最大宽度 */
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 内容区域确保不溢出 */
+      section {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+      
+      /* 图片自适应 */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* 平板设备优化 (iPad 主要是 768px-1024px) */
+      @media screen and (max-width: 1024px) {
+        .wrapper {
+          padding: 15px;
+          max-width: 100%;
+        }
+        
+        h1 {
+          font-size: 1.8rem; /* 适当缩小标题 */
+        }
+        
+        position {
+          font-size: 1rem !important;
+        }
+      }
+      
+      /* 手机设备 */
+      @media screen and (max-width: 768px) {
+        .wrapper-outer {
+          padding: 0 10px;
+        }
+        
+        .wrapper {
+          padding: 10px;
+        }
+        
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+      
+      /* 防止长文本溢出 */
+      a, p, span, div {
+        max-width: 100%;
+      }
+      
+      /* 社交图标容器 */
+      .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+    </style>
 
   </head>
   <body>
@@ -48,22 +137,21 @@
       <header>
         
         {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" style="width: 120px; height: 120px; object-fit: cover;" /></a>
-        <!-- <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a> -->
+        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" style="width: 120px; height: 120px; object-fit: cover; max-width: 100%;" /></a>
         {% endif %}
 
         <h1>{{ site.title }}</h1>
 
         {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
+        <position style="font-size:1.10rem; display: inline-block; max-width: 100%;">{{ site.position }}</position>
         <br>
         {% endif %}
         {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
+        <a href="{{ site.affiliation_link }}" rel="noopener" style="display: inline-block; max-width: 100%; word-break: break-word;"><autocolor>{{ site.affiliation }}</autocolor></a>
         <br>
         {% endif %}
         {% if site.email %}
-        <email>{{ site.email }}</email>
+        <email style="display: inline-block; max-width: 100%; word-break: break-all;">{{ site.email }}</email>
         {% endif %}
 
         <br>
@@ -102,14 +190,7 @@
         <br>
 
         <!-- 添加的小组件 -->
-        <div style="text-align: center; margin-top: 20px;">
-<!--           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=369bc4&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
-<!--           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=071a77&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
-<!--           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
-<!--        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script> -->
-<!--         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI'></script> -->
-<!--         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=0c0b0b'></script> -->
-<!--         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=ffd700&cmn=ff5353&ct=808080'></script> -->
+        <div style="text-align: center; margin-top: 20px; max-width: 100%; overflow: hidden;">
           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&ct=070707'></script>
         </div>
         <!-- 添加的小组件结束 -->
@@ -135,7 +216,7 @@
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js    ','ga');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
     </script>
