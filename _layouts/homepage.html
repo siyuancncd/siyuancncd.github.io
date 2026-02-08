@@ -4,8 +4,7 @@
     <title>{{ site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- 👈 修改1：移除shrink-to-fit=no，和第二段代码保持一致，解决移动端适配问题 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
@@ -35,7 +34,6 @@
     {% endif %}
 
     <style>
-      /* 👈 修改2：精简CSS，只保留必要样式，移除过度重置导致的滚动条隐藏问题 */
       * {
         box-sizing: border-box;
         margin: 0;
@@ -54,26 +52,22 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 10px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
       }
 
       .wrapper-outer {
-        width: 100%;
+        flex: 0 0 270px;
+        min-width: 250px;
         background-color: transparent;
+        padding: 20px;
         height: fit-content;
         margin-top: 20px;
         border: 0;
       }
 
-      .wrapper {
-        width: 100%;
-        max-width: 900px;
-        background-color: #ffffff;
-        padding: 20px 40px;
-        border-radius: 8px;
-        margin: 0 auto;
-      }
-
-      .wrapper header {
+      .wrapper-outer header {
         margin: 0;
         padding: 0;
         text-align: center;
@@ -81,11 +75,23 @@
       }
 
       .avatar img {
-        width: 120px !important;
-        height: 120px !important;
+        width: 144px !important;
+        height: 144px !important;
         object-fit: cover !important;
         margin: 0 auto 15px !important;
         display: block;
+      }
+
+      .wrapper {
+        flex: 1.4;
+        min-width: 300px;
+        background-color: #ffffff;
+        padding: 20px 40px;
+        border-radius: 8px;
+        margin-top: 10px;
+        display: flex;      
+        justify-content: center;
+        align-items: flex-start;
       }
 
       .wrapper section {
@@ -95,7 +101,16 @@
         padding-top: 0 !important;
       }
 
-      /* 👈 修改3：保留你需要的模块缩进样式，不干扰滚动条 */
+      /* 重置列表默认间距 */
+      .wrapper section ul,
+      .wrapper section ol {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+      }
+      
+      /* ====================================================================== */
+      /* 👈 1. 普通模块（Research Interests / Experience / Services / Awards）右移一点 */
+      /* 设为 15px → 整体向右挪一点点 */
       .wrapper section p,
       .wrapper section div,
       .wrapper section ul,
@@ -107,24 +122,29 @@
           line-height: 1.6;
       }
 
+      /* 👈 2. Selected Publications 单独向左移动 0.3cm（≈11px）*/
+      /* 15px - 11px = 4px → 直接设为 4px，实现整体左移 0.3cm */
       .wrapper section .publication,
       .wrapper section .publication-item {
-          margin-left: 0px !important;
+          margin-left: 0px !important; /* 👈 这个就是比普通模块少11px，≈左移0.3cm */
           padding-left: 0 !important;
       }
 
+      /* 👈 3. 强制 Selected Publications 里的图片也一起左移 */
       .wrapper section .publication img,
       .wrapper section .publication * {
           margin-left: 0 !important;
           padding-left: 0 !important;
       }
 
+      /* 简介保持和普通模块一致 */
       .wrapper section > p:first-of-type {
           margin-top: -10px !important;
           margin-bottom: 15px !important;
           margin-left: 18px !important;
       }
 
+      /* 标题不动 */
       .wrapper section h1,
       .wrapper section h2,
       .wrapper section h3,
@@ -135,97 +155,160 @@
           margin-bottom: 8px !important;
       }
 
+      .wrapper section * {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+
+      /* ------------------------------ iPad 适配 ------------------------------ */
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .page-container {
+          max-width: 98%;
+          gap: 8px;
+        }
+        .wrapper-outer {
+          flex: 0 0 240px;
+        }
+        .wrapper {
+          flex: 1.3;
+          padding: 20px 30px;
+        }
+        /* 普通模块 */
+        .wrapper section p,
+        .wrapper section div,
+        .wrapper section ul,
+        .wrapper section li,
+        .wrapper section .news-item,
+        .wrapper section .experience-item {
+            margin-left: 12px !important;
+        }
+        /* Selected Publications 同步左移 */
+        .wrapper section .publication,
+        .wrapper section .publication-item {
+            margin-left: 0px !important;
+        }
+        .avatar img {
+          width: 120px !important;
+          height: 120px !important;
+        }
+      }
+
+      /* ------------------------------ 手机适配 ------------------------------ */
+      @media screen and (max-width: 767px) {
+        .page-container {
+          flex-direction: column;
+          padding: 0 8px 20px;
+        }
+        .wrapper-outer,
+        .wrapper {
+          flex: 1 1 100%;
+          min-width: unset;
+          margin-top: 10px;
+          background-color: #fff;
+        }
+        .wrapper {
+          padding: 15px 20px;
+        }
+        /* 普通模块 */
+        .wrapper section p,
+        .wrapper section div,
+        .wrapper section ul,
+        .wrapper section li,
+        .wrapper section .news-item,
+        .wrapper section .experience-item {
+            margin-left: 10px !important;
+        }
+        /* Selected Publications 同步左移 */
+        .wrapper section .publication,
+        .wrapper section .publication-item {
+            margin-left: 0px !important;
+        }
+        .wrapper section > p:first-of-type {
+            margin-top: -5px !important;
+        }
+        .avatar img {
+          width: 120px !important;
+          height: 120px !important;
+        }
+      }
+
       .social-icons {
         margin: 15px 0;
         display: flex;
         gap: 10px;
         justify-content: center;
       }
-
-      /* 👈 修改4：强制所有设备显示News滚动条（核心！解决iPad/手机看不到滚动条） */
-      .wrapper section .news-container::-webkit-scrollbar {
-        height: 6px !important;
-        display: block !important; /* 强制显示滚动条 */
-      }
-      .wrapper section .news-container::-webkit-scrollbar-thumb {
-        background-color: #888 !important;
-        border-radius: 3px !important;
-      }
-      .wrapper section .news-container {
-        scrollbar-width: thin !important; /* Firefox兼容 */
-        -webkit-overflow-scrolling: touch !important; /* iOS惯性滚动 */
-      }
     </style>
   </head>
   <body>
-    <!-- 👈 修改5：调整布局嵌套结构，和第二段代码保持一致 -->
+    
     <div class="page-container">
       <div class="wrapper-outer">
-        <div class="wrapper">
-          <header>
-            {% if site.avatar %}
-            <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <header>
+          {% if site.avatar %}
+          <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+          {% endif %}
+
+          <h1>{{ site.title }}</h1>
+
+          {% if site.position %}
+          <position style="font-size:1.10rem;">{{ site.position }}</position>
+          <br>
+          {% endif %}
+          {% if site.affiliation %}
+          <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
+          <br>
+          {% endif %}
+          {% if site.email %}
+          <email>{{ site.email }}</email>
+          {% endif %}
+
+          <br>
+          <div class="social-icons">
+            {% if site.google_scholar %}
+            <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
+              <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
+            </a>  
             {% endif %}
 
-            <h1>{{ site.title }}</h1>
-
-            {% if site.position %}
-            <position style="font-size:1.10rem;">{{ site.position }}</position>
-            <br>
-            {% endif %}
-            {% if site.affiliation %}
-            <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
-            <br>
-            {% endif %}
-            {% if site.email %}
-            <email>{{ site.email }}</email>
+            {% if site.cv_link %}
+            <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
+              <i class="ai ai-cv" style="font-size:1.3rem;"></i>
+            </a>
             {% endif %}
 
-            <br>
-            <div class="social-icons">
-              {% if site.google_scholar %}
-              <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
-                <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
-              </a>  
-              {% endif %}
+            {% if site.github_link %}
+            <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
+              <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
 
-              {% if site.cv_link %}
-              <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
-                <i class="ai ai-cv" style="font-size:1.3rem;"></i>
-              </a>
-              {% endif %}
+            {% if site.linkedin %}
+            <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            {% endif %}
 
-              {% if site.github_link %}
-              <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
-                <i class="fab fa-github"></i>
-              </a>
-              {% endif %}
+            {% if site.twitter %}
+            <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            {% endif %}
+          </div>
 
-              {% if site.linkedin %}
-              <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              {% endif %}
+          <div style="text-align: center; margin-top: 20px;">
+            <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&ct=070707'></script>
+          </div>
+        </header>
+      </div>
 
-              {% if site.twitter %}
-              <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
-                <i class="fab fa-x-twitter"></i>
-              </a>
-              {% endif %}
-            </div>
-
-            <div style="text-align: center; margin-top: 20px;">
-              <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&ct=070707'></script>
-            </div>
-          </header>
-
-          <section>
-            {{ content }}
-            <br>
-          </section>
-
-          <footer></footer>
-        </div>
+      <div class="wrapper">
+        <section>
+          {{ content }}
+          <br>
+        </section>
+        <footer></footer>
       </div>
     </div>
 
@@ -243,3 +326,4 @@
   
   </body>
 </html>
+
