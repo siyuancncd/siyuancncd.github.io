@@ -4,7 +4,8 @@
     <title>{{ site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 修复：移除shrink-to-fit=no，避免移动端布局异常 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
@@ -109,8 +110,7 @@
       }
       
       /* ====================================================================== */
-      /* 👈 1. 普通模块（Research Interests / Experience / Services / Awards）右移一点 */
-      /* 设为 15px → 整体向右挪一点点 */
+      /* 👈 1. 普通模块右移一点 */
       .wrapper section p,
       .wrapper section div,
       .wrapper section ul,
@@ -122,22 +122,46 @@
           line-height: 1.6;
       }
 
-      /* 👈 2. Selected Publications 单独向左移动 0.3cm（≈11px）*/
-      /* 15px - 11px = 4px → 直接设为 4px，实现整体左移 0.3cm */
+      /* 👈 2. Selected Publications 左移 */
       .wrapper section .publication,
       .wrapper section .publication-item {
-          margin-left: 0px !important; /* 👈 这个就是比普通模块少11px，≈左移0.3cm */
+          margin-left: 0px !important;
           padding-left: 0 !important;
+          /* 新增：统一所有论文条目的布局为flex，避免float干扰 */
+          display: flex !important;
+          align-items: flex-start !important;
+          clear: both !important;
+          float: none !important;
+          margin-top: 0 !important;
+          padding-top: 0 !important;
       }
 
-      /* 👈 3. 强制 Selected Publications 里的图片也一起左移 */
+      /* 👈 3. 论文图片统一对齐（覆盖所有干扰样式） */
       .wrapper section .publication img,
-      .wrapper section .publication * {
+      .wrapper section .publication-item img {
           margin-left: 0 !important;
           padding-left: 0 !important;
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+          vertical-align: top !important;
+          flex-shrink: 0 !important; /* 防止图片被压缩 */
       }
 
-      /* 简介保持和普通模块一致 */
+      /* 👈 重点修复：第一条论文条目（最高优先级） */
+      .wrapper section .publication:first-child,
+      .wrapper section .publication-item:first-child {
+          margin: 0 !important;
+          padding: 0 !important;
+          display: flex !important;
+          align-items: flex-start !important;
+      }
+      .wrapper section .publication:first-child img,
+      .wrapper section .publication-item:first-child img {
+          margin-top: 0 !important;
+          vertical-align: baseline !important;
+      }
+
+      /* 简介保持一致 */
       .wrapper section > p:first-of-type {
           margin-top: -10px !important;
           margin-bottom: 15px !important;
@@ -163,53 +187,105 @@
 
       /* ------------------------------ iPad 适配 ------------------------------ */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
-        /* 原有所有样式保持不变 */
-        .page-container { max-width: 98%; gap: 8px; }
-        .wrapper-outer { flex: 0 0 240px; }
-        .wrapper { flex: 1.3; padding: 20px 30px; }
-        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 12px !important; }
-        .wrapper section .publication, .wrapper section .publication-item { margin-left: 0px !important; }
-        .avatar img { width: 120px !important; height: 120px !important; }
-        
-        /* 新增：iPad 强制显示滚动条 */
-        ::-webkit-scrollbar {
-          display: block !important;
-          opacity: 1 !important;
+        .page-container {
+          max-width: 98%;
+          gap: 8px;
         }
-        .news-container, [class*="news"], .wrapper section .news-item {
-          overflow-y: auto !important;
-          scrollbar-width: thin !important;
+        .wrapper-outer {
+          flex: 0 0 240px;
         }
-      }
-      
-      /* ------------------------------ 手机适配 ------------------------------ */
-      @media screen and (max-width: 767px) {
-        /* 原有所有样式保持不变 */
-        .page-container { flex-direction: column; padding: 0 8px 20px; }
-        .wrapper-outer, .wrapper { flex: 1 1 100%; min-width: unset; margin-top: 10px; background-color: #fff; }
-        .wrapper { padding: 15px 20px; }
-        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 10px !important; }
-        .wrapper section .publication, .wrapper section .publication-item { margin-left: 0px !important; }
-        .wrapper section > p:first-of-type { margin-top: -5px !important; }
-        .avatar img { width: 120px !important; height: 120px !important; }
-        
-        /* 新增：手机强制显示滚动条 */
-        ::-webkit-scrollbar {
-          display: block !important;
-          opacity: 1 !important;
+        .wrapper {
+          flex: 1.3;
+          padding: 20px 30px;
         }
-        .news-container, [class*="news"], .wrapper section .news-item {
-          overflow-y: auto !important;
-          scrollbar-width: thin !important;
+        .wrapper section p,
+        .wrapper section div,
+        .wrapper section ul,
+        .wrapper section li,
+        .wrapper section .news-item,
+        .wrapper section .experience-item {
+            margin-left: 12px !important;
+        }
+        .wrapper section .publication,
+        .wrapper section .publication-item {
+            margin-left: 0px !important;
+        }
+        .avatar img {
+          width: 120px !important;
+          height: 120px !important;
         }
       }
 
+      /* ------------------------------ 手机适配 ------------------------------ */
+      @media screen and (max-width: 767px) {
+        .page-container {
+          flex-direction: column;
+          padding: 0 8px 20px;
+        }
+        .wrapper-outer,
+        .wrapper {
+          flex: 1 1 100%;
+          min-width: unset;
+          margin-top: 10px;
+          background-color: #fff;
+        }
+        .wrapper {
+          padding: 15px 20px;
+        }
+        .wrapper section p,
+        .wrapper section div,
+        .wrapper section ul,
+        .wrapper section li,
+        .wrapper section .news-item,
+        .wrapper section .experience-item {
+            margin-left: 10px !important;
+        }
+        .wrapper section .publication,
+        .wrapper section .publication-item {
+            margin-left: 0px !important;
+        }
+        .wrapper section > p:first-of-type {
+            margin-top: -5px !important;
+        }
+        .avatar img {
+          width: 120px !important;
+          height: 120px !important;
+        }
+      }
 
       .social-icons {
         margin: 15px 0;
         display: flex;
         gap: 10px;
         justify-content: center;
+      }
+
+      /* 👈 核心修复：全设备强制显示滚动条（包括news模块） */
+      /* 全局滚动条 */
+      ::-webkit-scrollbar {
+        width: 8px !important;
+        height: 8px !important;
+        display: block !important; /* 强制显示 */
+        -webkit-appearance: none !important;
+        opacity: 1 !important;
+      }
+      /* 滚动条滑块 */
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        border-radius: 4px !important;
+        visibility: visible !important;
+      }
+      /* 滚动条轨道 */
+      ::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+      }
+      /* 确保news模块容器可滚动且显示滚动条 */
+      .wrapper section .news-item,
+      .news-container, /* 适配news模块的容器类名 */
+      [class*="news"] { /* 兼容所有含news的类名 */
+        overflow: auto !important;
+        scrollbar-width: thin !important; /* 火狐兼容 */
+        -ms-overflow-style: auto !important; /* IE/Edge兼容 */
       }
     </style>
   </head>
