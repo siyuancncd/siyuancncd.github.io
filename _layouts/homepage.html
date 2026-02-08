@@ -4,7 +4,8 @@
     <title>{{ site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 修改1：移除shrink-to-fit=no，和第二段代码保持一致 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
@@ -238,6 +239,26 @@
         display: flex;
         gap: 10px;
         justify-content: center;
+      }
+
+      /* 修改2：强制显示所有设备的滚动条（核心修复） */
+      ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+        height: 7px;
+        display: block !important; /* 强制显示滚动条 */
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, .5);
+        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+      }
+      ::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, .1);
+      }
+      /* 确保内容区域滚动条正常工作 */
+      .wrapper section {
+        overflow: auto !important;
       }
     </style>
   </head>
