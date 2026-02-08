@@ -84,7 +84,7 @@
         display: block;
       }
 
-      /* ===================== 1. 中间白色区域向左扩张 + 居中 ===================== */
+      /* 中间白色区域向左扩张 + 居中 */
       .wrapper {
         flex: 1.2;            /* 增大flex占比，白色区域明显向左扩 */
         min-width: 300px;
@@ -103,21 +103,13 @@
         margin: 0 auto;
       }
 
-      /* ===================== 2. 全局统一缩进：所有正文严格对齐 ===================== */
+      /* 全局统一缩进：所有正文严格对齐 */
       /* 重置列表默认缩进，避免浏览器自带padding */
       .wrapper section ul {
         padding-left: 0 !important;
       }
       
-      /* 所有模块正文统一向右缩进 22px，确保：
-         - Research Interests
-         - Industrial Experience
-         - News
-         - Services
-         - Honors and Awards
-         - Selected Publications
-         全部左端在同一条竖线上
-      */
+      /* 所有模块正文统一向右缩进 22px，确保全部左端对齐 */
       .wrapper section p,
       .wrapper section div,
       .wrapper section ul,
@@ -144,7 +136,7 @@
         hyphens: auto;
       }
 
-      /* ===================== 适配 ===================== */
+      /* 适配 */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container {
           max-width: 95%;
@@ -284,5 +276,7 @@
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
     </script>
+    {% endif %}
+  
   </body>
 </html>
