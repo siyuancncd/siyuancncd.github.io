@@ -233,6 +233,32 @@
         }
       }
 
+      <!-- 找到原代码中 手机适配 @media 区块，补充以下代码 -->
+      @media screen and (max-width: 767px) {
+        /* 原有代码保持不变，新增以下滚动条样式 */
+        ::-webkit-scrollbar {
+          display: block !important;
+          opacity: 1 !important;
+        }
+        .news-container, [class*="news"], .wrapper section .news-item {
+          overflow-y: auto !important;
+          /* 火狐移动端兼容 */
+          scrollbar-width: thin !important;
+        }
+      }
+      
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        /* iPad 适配区块，新增以下代码 */
+        ::-webkit-scrollbar {
+          display: block !important;
+          opacity: 1 !important;
+        }
+        .news-container, [class*="news"], .wrapper section .news-item {
+          overflow-y: auto !important;
+          scrollbar-width: thin !important;
+        }
+      }
+
       .social-icons {
         margin: 15px 0;
         display: flex;
