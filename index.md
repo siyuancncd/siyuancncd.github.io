@@ -38,4 +38,4 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 
 <br/>
 
-<img src="assets/img/dog.gif" alt="dog" width="30" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">
+<img src="assets/img/dog.gif" alt="dog" width="100" style="vertical-align: middle; margin-left: 100px; margin-right: 100px;">
