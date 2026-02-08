@@ -5,10 +5,10 @@
 
 .news-container {
   max-height: 120px; /* 高度仅针对列表，根据内容多少调整 */
-  overflow-y: auto; /* 内容超出时显示滚动条 */
+  // overflow-y: auto; /* 内容超出时显示滚动条 */
   padding-right: 10px; /* 避免滚动条遮挡文字 */
   margin-top: 10px; /* 标题与列表之间留一点间距 */
-  margin-bottom: 20px; /* 关键：增加底部间距，数值越大距离越远 */
+  margin-bottom: 22px; /* 关键：增加底部间距，数值越大距离越远 */
 }
 
 /* 可选：美化滚动条 */
@@ -35,34 +35,34 @@
   overflow: hidden; /* 避免内容溢出 */
 }
 
-/* 左侧12%浅灰色背景 */
-.page-container::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 12%; /* 左侧宽度占10% */
-  background-color: #f0f0f0; /* 浅灰色（可调整深浅） */
-  z-index: -1; /* 放在内容下方，不遮挡文字 */
-}
+// /* 左侧12%浅灰色背景 */
+// .page-container::before {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   bottom: 0;
+//   width: 12%; /* 左侧宽度占10% */
+//   background-color: #f0f0f0; /* 浅灰色（可调整深浅） */
+//   z-index: -1; /* 放在内容下方，不遮挡文字 */
+// }
 
-/* 右侧12%浅灰色背景 */
-.page-container::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 12%; /* 右侧宽度占10% */
-  background-color: #f0f0f0; /* 与左侧同色 */
-  z-index: -1;
-}
+// /* 右侧12%浅灰色背景 */
+// .page-container::after {
+//   content: "";
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   width: 12%; /* 右侧宽度占10% */
+//   background-color: #f0f0f0; /* 与左侧同色 */
+//   z-index: -1;
+// }
 
-/* 中间76%白色区域（确保原有内容居中） */
-.wrapper-outer {
-  max-width: 76%; /* 中间宽度占80% */
-  margin: 0 auto; /* 水平居中 */
-  background-color: #ffffff; /* 中间白色背景 */
-  padding: 0 20px; /* 左右预留一点内边距，避免内容贴边 */
-}
+// /* 中间76%白色区域（确保原有内容居中） */
+// .wrapper-outer {
+//   max-width: 76%; /* 中间宽度占80% */
+//   margin: 0 auto; /* 水平居中 */
+//   background-color: #ffffff; /* 中间白色背景 */
+//   padding: 0 20px; /* 左右预留一点内边距，避免内容贴边 */
+// }
