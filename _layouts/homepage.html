@@ -57,7 +57,7 @@
         gap: 15px;
       }
 
-      /* 左侧栏背景透明，无白色方块 */
+      /* 左侧：透明背景，无白色方块 */
       .wrapper-outer {
         flex: 0 0 280px;
         min-width: 250px;
@@ -84,12 +84,12 @@
         display: block;
       }
 
-      /* 右侧正文白色区域 */
+      /* ===================== 1. 中间白色区域向左扩张 + 居中 ===================== */
       .wrapper {
-        flex: 1.1;
+        flex: 1.2;            /* 增大flex占比，白色区域明显向左扩 */
         min-width: 300px;
         background-color: #ffffff;
-        padding: 28px 28px;
+        padding: 28px 32px;   /* 左右padding更均衡，实现文字居中 */
         border-radius: 8px;
         margin-top: 20px;
         display: flex;      
@@ -98,22 +98,37 @@
       }
 
       .wrapper section {
-        max-width: 860px;
+        max-width: 880px;
         width: 100%;        
         margin: 0 auto;
       }
 
-      /* ===================== 核心修改：正文与news区域完全对齐 ===================== */
-      /* 标题保持原位，正文（段落/列表/div）向右移18px，与news区域精准对齐 */
+      /* ===================== 2. 全局统一缩进：所有正文严格对齐 ===================== */
+      /* 重置列表默认缩进，避免浏览器自带padding */
+      .wrapper section ul {
+        padding-left: 0 !important;
+      }
+      
+      /* 所有模块正文统一向右缩进 22px，确保：
+         - Research Interests
+         - Industrial Experience
+         - News
+         - Services
+         - Honors and Awards
+         - Selected Publications
+         全部左端在同一条竖线上
+      */
       .wrapper section p,
+      .wrapper section div,
       .wrapper section ul,
       .wrapper section li,
-      .wrapper section div {
-          margin-left: 18px;    /* 从10px改为18px，大幅右移实现对齐 */
-          padding-left: 0;
+      .wrapper section .publication,
+      .wrapper section .publication-item {
+          margin-left: 22px !important;
+          padding-left: 0 !important;
       }
 
-      /* 标题强制保持原位，不跟随移动 */
+      /* 标题绝对不动 */
       .wrapper section h1,
       .wrapper section h2,
       .wrapper section h3,
@@ -122,14 +137,14 @@
           padding-left: 0 !important;
       }
 
-      /* 自动换行，防止iPad溢出 */
+      /* 自动换行，iPad不溢出 */
       .wrapper section * {
         overflow-wrap: break-word;
         word-wrap: break-word;
         hyphens: auto;
       }
 
-      /* iPad适配 */
+      /* ===================== 适配 ===================== */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container {
           max-width: 95%;
@@ -138,12 +153,13 @@
         .wrapper-outer {
           flex: 0 0 240px;
         }
-        /* iPad端正文右移幅度适配，保持对齐 */
         .wrapper section p,
+        .wrapper section div,
         .wrapper section ul,
         .wrapper section li,
-        .wrapper section div {
-            margin-left: 15px;
+        .wrapper section .publication,
+        .wrapper section .publication-item {
+            margin-left: 18px !important;
         }
         .avatar img {
           width: 120px !important;
@@ -151,7 +167,6 @@
         }
       }
 
-      /* 手机端适配 */
       @media screen and (max-width: 767px) {
         .page-container {
           flex-direction: column;
@@ -164,12 +179,13 @@
           margin-top: 15px;
           background-color: #fff;
         }
-        /* 手机端正文右移幅度减小，适配窄屏 */
         .wrapper section p,
+        .wrapper section div,
         .wrapper section ul,
         .wrapper section li,
-        .wrapper section div {
-            margin-left: 10px;
+        .wrapper section .publication,
+        .wrapper section .publication-item {
+            margin-left: 12px !important;
         }
         .avatar img {
           width: 120px !important;
@@ -188,7 +204,7 @@
   <body>
     
     <div class="page-container">
-      <!-- 左侧栏：头像、个人信息、插件（背景透明） -->
+      <!-- 左侧栏（透明，无白色方块） -->
       <div class="wrapper-outer">
         <header>
           {% if site.avatar %}
@@ -248,7 +264,7 @@
         </header>
       </div>
 
-      <!-- 右侧正文区域：内容与news区域精准对齐 -->
+      <!-- 右侧白色主区域：全局严格对齐 -->
       <div class="wrapper">
         <section>
           {{ content }}
@@ -268,7 +284,5 @@
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
     </script>
-    {% endif %}
-  
   </body>
 </html>
