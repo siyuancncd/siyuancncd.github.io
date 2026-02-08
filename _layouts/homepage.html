@@ -57,12 +57,11 @@
         gap: 15px;
       }
 
-      /* ===================== 核心修复1 ===================== */
-      /* 左侧栏背景 = 页面灰色（透明），彻底消灭左上角白色方块 */
+      /* 左侧栏背景透明，无白色方块 */
       .wrapper-outer {
         flex: 0 0 280px;
         min-width: 250px;
-        background-color: transparent; /* 这里！不再白色，和背景融为一体 */
+        background-color: transparent;
         padding: 20px;
         height: fit-content;
         margin-top: 20px;
@@ -76,7 +75,7 @@
         line-height: 1.4;
       }
 
-      /* 头像放大 20%：120 → 144px */
+      /* 头像放大20% */
       .avatar img {
         width: 144px !important;
         height: 144px !important;
@@ -85,12 +84,11 @@
         display: block;
       }
 
-      /* ===================== 核心修复2 ===================== */
-      /* 右侧内容区：保留白色背景（正文区域），向左扩张、居中合理 */
+      /* 右侧正文白色区域 */
       .wrapper {
         flex: 1.1;
         min-width: 300px;
-        background-color: #ffffff; /* 只有正文区域是白色 */
+        background-color: #ffffff;
         padding: 28px 28px;
         border-radius: 8px;
         margin-top: 20px;
@@ -105,22 +103,23 @@
         margin: 0 auto;
       }
 
-      /* ===================== 核心修复3 ===================== */
-      /* 正文内容（研究方向/实习/奖项/新闻等）相对于标题 向左微移 */
+      /* ===================== 核心修改：正文相对标题向右移动 ===================== */
+      /* 标题保持原位，正文（段落/列表/div）向右移10px，视觉美观 */
       .wrapper section p,
       .wrapper section ul,
       .wrapper section li,
       .wrapper section div {
-          margin-left: -5px;    /* 整体向左微挪 5px，美观不突兀 */
+          margin-left: 10px;    /* 从-5px改为10px，实现向右移动 */
           padding-left: 0;
       }
 
-      /* 标题保持原位，不要动 */
+      /* 标题强制保持原位，不跟随移动 */
       .wrapper section h1,
       .wrapper section h2,
       .wrapper section h3,
       .wrapper section h4 {
-          margin-left: 0;
+          margin-left: 0 !important;
+          padding-left: 0 !important;
       }
 
       /* 自动换行，防止iPad溢出 */
@@ -130,7 +129,7 @@
         hyphens: auto;
       }
 
-      /* ===================== 适配 ===================== */
+      /* iPad适配 */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container {
           max-width: 95%;
@@ -145,6 +144,7 @@
         }
       }
 
+      /* 手机端适配 */
       @media screen and (max-width: 767px) {
         .page-container {
           flex-direction: column;
@@ -155,7 +155,14 @@
           flex: 1 1 100%;
           min-width: unset;
           margin-top: 15px;
-          background-color: #fff; /* 手机端恢复左侧白色，更清爽 */
+          background-color: #fff;
+        }
+        /* 手机端正文右移幅度减小，适配窄屏 */
+        .wrapper section p,
+        .wrapper section ul,
+        .wrapper section li,
+        .wrapper section div {
+            margin-left: 5px;
         }
         .avatar img {
           width: 120px !important;
@@ -174,7 +181,7 @@
   <body>
     
     <div class="page-container">
-      <!-- 左侧：头像、名字、社交、统计（背景=灰色，无白色方块） -->
+      <!-- 左侧栏：头像、个人信息、插件（背景透明） -->
       <div class="wrapper-outer">
         <header>
           {% if site.avatar %}
@@ -234,7 +241,7 @@
         </header>
       </div>
 
-      <!-- 右侧：正文白色区域，内容相对标题左移 -->
+      <!-- 右侧正文区域：内容相对标题右移 -->
       <div class="wrapper">
         <section>
           {{ content }}
