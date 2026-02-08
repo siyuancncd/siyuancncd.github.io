@@ -51,15 +51,15 @@
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 15px 20px;
+        padding: 0 10px 20px; /* 减少左右padding，让白色区域更左 */
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 10px; /* 进一步缩小左右区域间距，强化左扩效果 */
       }
 
       /* 左侧：透明背景，无白色方块 */
       .wrapper-outer {
-        flex: 0 0 280px;
+        flex: 0 0 270px; /* 轻微缩小左侧宽度，给右侧更多空间 */
         min-width: 250px;
         background-color: transparent;
         padding: 20px;
@@ -84,49 +84,64 @@
         display: block;
       }
 
-      /* 中间白色区域向左扩张 + 居中 */
+      /* ===================== 核心优化1：白色区域大幅左扩 + 文字居中 ===================== */
       .wrapper {
-        flex: 1.2;            /* 增大flex占比，白色区域明显向左扩 */
+        flex: 1.4; /* 从1.2→1.4，白色区域显著向左扩张 */
         min-width: 300px;
         background-color: #ffffff;
-        padding: 28px 32px;   /* 左右padding更均衡，实现文字居中 */
+        padding: 20px 40px; /* 左padding减小，右padding增大，文字居中更明显 */
         border-radius: 8px;
-        margin-top: 20px;
+        margin-top: 10px; /* 轻微上移，配合简介文字上移 */
         display: flex;      
         justify-content: center;
         align-items: flex-start;
       }
 
       .wrapper section {
-        max-width: 880px;
+        max-width: 900px;
         width: 100%;        
         margin: 0 auto;
+        padding-top: 0 !important; /* 移除section顶部padding，让简介上移 */
       }
 
-      /* 全局统一缩进：所有正文严格对齐 */
-      /* 重置列表默认缩进，避免浏览器自带padding */
-      .wrapper section ul {
+      /* ===================== 核心优化2：全局100%对齐 + 简介上移 ===================== */
+      /* 重置所有默认缩进 */
+      .wrapper section ul,
+      .wrapper section ol {
         padding-left: 0 !important;
+        margin-left: 0 !important;
       }
       
-      /* 所有模块正文统一向右缩进 22px，确保全部左端对齐 */
+      /* 1. 所有模块正文统一缩进22px，确保完全对齐 */
       .wrapper section p,
       .wrapper section div,
       .wrapper section ul,
       .wrapper section li,
       .wrapper section .publication,
-      .wrapper section .publication-item {
+      .wrapper section .publication-item,
+      .wrapper section .news-item,
+      .wrapper section .experience-item {
           margin-left: 22px !important;
           padding-left: 0 !important;
+          line-height: 1.6; /* 优化行高，更易读 */
       }
 
-      /* 标题绝对不动 */
+      /* 2. 个人简介文字强制上移（核心） */
+      .wrapper section > p:first-of-type {
+          margin-top: -10px !important; /* 简介文字上移10px */
+          margin-bottom: 15px !important; /* 缩小和下方模块间距 */
+          margin-left: 22px !important; /* 和其他正文对齐 */
+      }
+
+      /* 标题绝对不动，层级清晰 */
       .wrapper section h1,
       .wrapper section h2,
       .wrapper section h3,
       .wrapper section h4 {
           margin-left: 0 !important;
           padding-left: 0 !important;
+          margin-top: 20px !important;
+          margin-bottom: 8px !important;
       }
 
       /* 自动换行，iPad不溢出 */
@@ -139,11 +154,15 @@
       /* 适配 */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container {
-          max-width: 95%;
-          gap: 10px;
+          max-width: 98%;
+          gap: 8px;
         }
         .wrapper-outer {
           flex: 0 0 240px;
+        }
+        .wrapper {
+          flex: 1.3;
+          padding: 20px 30px;
         }
         .wrapper section p,
         .wrapper section div,
@@ -162,14 +181,17 @@
       @media screen and (max-width: 767px) {
         .page-container {
           flex-direction: column;
-          padding: 0 10px 20px;
+          padding: 0 8px 20px;
         }
         .wrapper-outer,
         .wrapper {
           flex: 1 1 100%;
           min-width: unset;
-          margin-top: 15px;
+          margin-top: 10px;
           background-color: #fff;
+        }
+        .wrapper {
+          padding: 15px 20px;
         }
         .wrapper section p,
         .wrapper section div,
@@ -178,6 +200,9 @@
         .wrapper section .publication,
         .wrapper section .publication-item {
             margin-left: 12px !important;
+        }
+        .wrapper section > p:first-of-type {
+            margin-top: -5px !important;
         }
         .avatar img {
           width: 120px !important;
@@ -256,7 +281,7 @@
         </header>
       </div>
 
-      <!-- 右侧白色主区域：全局严格对齐 -->
+      <!-- 右侧白色主区域：全局严格对齐 + 简介上移 -->
       <div class="wrapper">
         <section>
           {{ content }}
