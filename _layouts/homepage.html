@@ -4,8 +4,7 @@
     <title>{{ site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- 修改1：移除shrink-to-fit=no，和第二段代码保持一致 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
@@ -138,6 +137,20 @@
           padding-left: 0 !important;
       }
 
+      /* 👈 新增：修复第一条论文图片与文字对齐问题 */
+      .wrapper section .publication:first-child,
+      .wrapper section .publication-item:first-child {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+          display: flex;
+          align-items: flex-start; /* 确保图片和文字顶部对齐 */
+      }
+      .wrapper section .publication:first-child img,
+      .wrapper section .publication-item:first-child img {
+          vertical-align: top !important; /* 图片与文字顶部对齐 */
+          margin-top: 0 !important; /* 重置第一条图片的顶部margin */
+      }
+
       /* 简介保持和普通模块一致 */
       .wrapper section > p:first-of-type {
           margin-top: -10px !important;
@@ -240,26 +253,6 @@
         gap: 10px;
         justify-content: center;
       }
-
-      /* 修改2：强制显示所有设备的滚动条（核心修复） */
-      ::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 7px;
-        height: 7px;
-        display: block !important; /* 强制显示滚动条 */
-      }
-      ::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, .5);
-        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-      }
-      ::-webkit-scrollbar-track {
-        background-color: rgba(0, 0, 0, .1);
-      }
-      /* 确保内容区域滚动条正常工作 */
-      .wrapper section {
-        overflow: auto !important;
-      }
     </style>
   </head>
   <body>
@@ -347,4 +340,3 @@
   
   </body>
 </html>
-
