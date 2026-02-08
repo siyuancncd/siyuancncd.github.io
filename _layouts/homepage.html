@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+<!--     <title>{{ site.title }} | {{site.affiliation}}</title>
+ -->
     <title>{{ site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
@@ -14,11 +16,12 @@
     {% endif %}
 
     <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
+    <!-- <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" /> -->
     <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon_dark }}" type="image/png" />
     <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
 
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css     integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css    " integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     {% if site.font == "Sans Serif" %}
     <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
@@ -26,143 +29,14 @@
     <link rel="stylesheet" href="./assets/css/font.css">
     {% endif %}
     {% if site.auto_dark_mode %}
+    <!-- <link rel="stylesheet" href="./assets/css/style-no-dark-mode.cs"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/publications.css">
     {% else %}
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
-
-    <!-- iPad 响应式修复：保持左右分栏布局，修复文字溢出 -->
-    <style>
-      /* 基础盒模型 */
-      * {
-        box-sizing: border-box;
-      }
-      
-      /* 防止页面水平滚动 */
-      html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-      }
-      
-      /* 外层容器保持 flex 布局 */
-      .page-container {
-        width: 100%;
-        min-height: 100vh;
-      }
-      
-      .wrapper-outer {
-        display: flex;
-        width: 100%;
-        min-height: 100vh;
-      }
-      
-      /* 左侧边栏固定 */
-      .wrapper {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 280px; /* 原布局的侧边栏宽度 */
-        height: 100vh;
-        overflow-y: auto;
-        overflow-x: hidden;
-        padding: 40px 30px;
-        background: inherit; /* 保持原背景色 */
-        z-index: 100;
-      }
-      
-      /* 右侧内容区可滚动 */
-      section {
-        margin-left: 280px; /* 与侧边栏宽度相同 */
-        flex: 1;
-        padding: 40px 50px;
-        min-height: 100vh;
-        overflow-x: hidden; /* 防止水平溢出 */
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
-      
-      /* 图片自适应 */
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      
-      /* iPad 适配 (768px - 1024px) */
-      @media screen and (max-width: 1024px) and (min-width: 769px) {
-        .wrapper {
-          width: 240px; /* 稍微减小侧边栏宽度 */
-          padding: 30px 20px;
-        }
-        
-        section {
-          margin-left: 240px;
-          padding: 30px 35px;
-        }
-        
-        /* 缩小字体防止溢出 */
-        h1 {
-          font-size: 1.6rem;
-        }
-        
-        position {
-          font-size: 0.95rem !important;
-        }
-        
-        a, email {
-          font-size: 0.9rem;
-        }
-        
-        /* 确保长文本换行 */
-        .wrapper a, .wrapper email, .wrapper position {
-          max-width: 100%;
-          display: inline-block;
-          word-break: break-word;
-          overflow-wrap: break-word;
-        }
-      }
-      
-      /* 手机端：改为上下布局 */
-      @media screen and (max-width: 768px) {
-        .wrapper-outer {
-          flex-direction: column;
-        }
-        
-        .wrapper {
-          position: relative;
-          width: 100%;
-          height: auto;
-          padding: 20px;
-          text-align: center;
-        }
-        
-        section {
-          margin-left: 0;
-          padding: 20px;
-        }
-      }
-      
-      /* 防止长文本溢出通用规则 */
-      a, p, span, div, h1, h2, h3, h4, h5, h6 {
-        max-width: 100%;
-      }
-      
-      /* 邮箱特别处理 */
-      email {
-        word-break: break-all;
-      }
-      
-      /* 社交图标 */
-      .social-icons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-      }
-    </style>
 
   </head>
   <body>
@@ -174,7 +48,8 @@
       <header>
         
         {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" style="width: 120px; height: 120px; object-fit: cover; max-width: 100%;" /></a>
+        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" style="width: 120px; height: 120px; object-fit: cover;" /></a>
+        <!-- <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a> -->
         {% endif %}
 
         <h1>{{ site.title }}</h1>
@@ -227,28 +102,40 @@
         <br>
 
         <!-- 添加的小组件 -->
-        <div style="text-align: center; margin-top: 20px; max-width: 100%;">
+        <div style="text-align: center; margin-top: 20px;">
+<!--           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=369bc4&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
+<!--           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=071a77&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
+<!--           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
+<!--        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script> -->
+<!--         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI'></script> -->
+<!--         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=0c0b0b'></script> -->
+<!--         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&cmo=ffd700&cmn=ff5353&ct=808080'></script> -->
           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=tt&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=ffffff&ct=070707'></script>
         </div>
         <!-- 添加的小组件结束 -->
 
       </header>
       
-      <!-- 注意：section 移到了 wrapper 外部，与 wrapper 同级 -->
-    </div> <!-- wrapper 结束 -->
-      
-    <section>
+      <section>
+    
       {{ content }}
-      <br>
-    </section>
 
+      <br>
+        
+      </section>
+
+      <footer>
+        
+      </footer>
+
+    </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js    ','ga');
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
     </script>
@@ -259,3 +146,4 @@
   
   </body>
 </html>
+
