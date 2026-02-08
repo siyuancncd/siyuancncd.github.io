@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
 
-    <!-- 最终优化：解决顶部空白、文字居中、保留全端兼容 -->
+    <!-- 最终精准优化：解决顶部空白、右侧布局、头像尺寸 -->
     <style>
       /* 1. 全局基础设置 */
       * {
@@ -43,73 +43,88 @@
       }
 
       body {
-        background-color: #f0f0f0; /* 灰色背景，铺满屏幕 */
+        background-color: #f0f0f0; /* 灰色背景 */
         min-height: 100vh;
         margin: 0;
         padding: 0;
       }
 
-      /* 2. 主容器：移除顶部padding，仅保留左右和底部，解决左侧顶部空白 */
+      /* 2. 主容器：彻底消除顶部空白的根源 */
       .page-container {
         width: 100%;
         max-width: 1200px; /* 电脑端最大宽度 */
         margin: 0 auto;     /* 水平居中 */
-        padding: 0 15px 20px; /* 仅保留左右15px、底部20px padding，移除顶部 */
+        padding: 0 15px 20px; /* 仅保留左右、底部padding */
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;          /* 左右区域间距，避免重叠 */
+        gap: 15px;          /* 缩小间距，让右侧区域向左扩张 */
       }
 
-      /* 3. 左侧固定区域：修复顶部空白 + 规整布局 */
+      /* 3. 左侧固定区域：彻底移除顶部空白 + 头像放大 */
       .wrapper-outer {
-        flex: 0 0 280px;    /* 固定宽度 */
+        flex: 0 0 280px;    /* 固定宽度不变 */
         min-width: 250px;   /* 最小宽度 */
         background-color: #fff; /* 白色背景 */
-        padding: 20px;      /* 内部padding，上下左右统一 */
+        padding: 20px;      /* 内部padding */
         border-radius: 8px;
         height: fit-content;
-        margin-top: 20px;   /* 仅给左侧加顶部margin，整体视觉统一 */
+        margin-top: 20px;   /* 仅顶部margin，无多余叠加 */
+        border: 0;          /* 确保无边框导致的空白 */
       }
 
-      /* 关键：重置header默认样式，彻底消除顶部空白 */
+      /* 关键：彻底重置所有默认样式，消除顶部空白 */
       .wrapper-outer header {
-        margin: 0;          /* 移除header默认margin */
-        padding: 0;         /* 移除header默认padding */
-        text-align: center; /* 左侧内容居中（头像/文字），更专业 */
+        margin: 0 !important;          /* 强制移除所有margin */
+        padding: 0 !important;         /* 强制移除所有padding */
+        text-align: center;            /* 左侧内容居中 */
+        line-height: 1.4;              /* 统一行高，避免行间距导致的空白 */
       }
 
-      /* 4. 右侧内容区域：实现文字区域居中对齐 */
+      /* 4. 头像放大20%：120px * 1.2 = 144px */
+      .avatar img {
+        width: 144px !important;       /* 放大20% */
+        height: 144px !important;      /* 等比例放大 */
+        object-fit: cover !important;  /* 保持裁剪比例 */
+        margin: 0 auto 15px !important;/* 底部间距，无顶部空白 */
+        display: block;
+      }
+
+      /* 5. 右侧内容区域：向左扩张 + 文字居中 */
       .wrapper {
-        flex: 1;            /* 自适应剩余宽度 */
+        flex: 1.1;          /* 增大flex占比，让区域向左扩张 */
         min-width: 300px;   /* 最小宽度 */
         background-color: #fff; /* 白色背景 */
-        padding: 20px;
+        padding: 20px 25px; /* 调整padding，让文字不偏左 */
         border-radius: 8px;
-        margin-top: 20px;   /* 与左侧顶部margin一致，视觉对齐 */
-        display: flex;      /* 开启flex，让内部section居中 */
+        margin-top: 20px;   /* 与左侧对齐 */
+        display: flex;      
         justify-content: center; /* 水平居中 */
-        align-items: flex-start; /* 顶部对齐，避免内容拉伸 */
+        align-items: flex-start; /* 顶部对齐 */
       }
 
-      /* 右侧内容块：限制最大宽度，居中显示，文字左对齐（阅读更友好） */
+      /* 右侧内容块：调整边距，让文字在区域内居中 */
       .wrapper section {
-        max-width: 800px;   /* 限制内容宽度，避免文字过宽 */
-        width: 100%;        /* 占满可用宽度 */
-        margin: 0 auto;     /* 块级居中 */
-        /* 可选：若需要文字完全居中，添加 text-align: center; */
+        max-width: 850px;   /* 适度加宽，配合区域扩张 */
+        width: 100%;        
+        margin: 0 auto;     
+        padding: 0 10px;    /* 左右留白，避免文字偏左 */
+        /* 可选：文字左对齐（阅读友好），如需完全居中则打开下面注释 */
         /* text-align: center; */
       }
 
-      /* 5. iPad适配（768px-1024px） */
+      /* 6. iPad适配 */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container {
           max-width: 95%;
-          gap: 15px;
+          gap: 10px;        /* 平板端缩小间距，增强扩张效果 */
         }
         .wrapper-outer {
-          flex: 0 0 250px;
+          flex: 0 0 240px;
         }
-        /* 文字换行：确保不溢出 */
+        .avatar img {
+          width: 120px !important; /* 平板端头像适当缩小，适配屏幕 */
+          height: 120px !important;
+        }
         section, h1, h2, p, a, position, email, autocolor {
           overflow-wrap: break-word;
           word-wrap: break-word;
@@ -117,7 +132,7 @@
         }
       }
 
-      /* 6. 手机端适配（小于768px） */
+      /* 7. 手机端适配 */
       @media screen and (max-width: 767px) {
         .page-container {
           flex-direction: column;
@@ -128,29 +143,24 @@
           min-width: unset;
           margin-top: 15px;
         }
+        .avatar img {
+          width: 120px !important; /* 手机端头像恢复原尺寸 */
+          height: 120px !important;
+        }
       }
 
-      /* 7. 细节优化：保留原有视觉 */
-      .avatar img {
-        width: 120px !important;
-        height: 120px !important;
-        object-fit: cover !important;
-        margin: 0 auto 15px; /* 头像底部加margin，与标题分隔 */
-        display: block;
-      }
+      /* 8. 细节优化：消除所有可能的空白 */
       .wrapper-outer h1 {
         font-size: 1.8rem;
-        margin-bottom: 10px;
+        margin-bottom: 10px !important;
+        padding: 0 !important;
       }
       .social-icons {
-        margin: 15px 0;
+        margin: 15px 0 !important;
         display: flex;
         gap: 10px;
         justify-content: center;
-      }
-      #clustrmaps {
-        width: 100% !important;
-        height: auto !important;
+        padding: 0 !important;
       }
     </style>
   </head>
