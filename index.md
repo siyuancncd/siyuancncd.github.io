@@ -36,6 +36,6 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 - China National Scholarship (Top 2%), 2025.
 - China National Scholarship (Top 1%), 2020.
 
-<br/>
-
+<!-- <br/> -->
+---
 <img src="assets/img/dog.gif" alt="dog" width="100" style="vertical-align: middle; margin-left: 100px; margin-right: 100px;">
