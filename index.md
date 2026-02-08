@@ -40,9 +40,9 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 ---
 <!-- 用 flex 容器包裹两张图片，实现自适应并排 -->
 <div style="display: flex; align-items: center; justify-content: center; width: 100%; gap: 20px; padding: 0 10px;">
-  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(2/3 * 15%); height: auto; vertical-align: middle;">
-  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(2/3 * 15%); height: auto; vertical-align: middle;">
-  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(2/3 * 15%); height: auto; vertical-align: middle;">
+  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(2/3 * 10%); height: auto; vertical-align: middle;">
+  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(2/3 * 10%); height: auto; vertical-align: middle;">
+  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(2/3 * 10%); height: auto; vertical-align: middle;">
   <!-- <img src="assets/img/xiantiaodog.gif" alt="dog" style="max-width: 50%; width: calc(1/3 * 100%); height: auto; vertical-align: middle;"> -->
 </div>
 
