@@ -38,5 +38,9 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 
 <!-- <br/> -->
 ---
-<img src="assets/img/dog.gif" alt="dog" width="140" style="vertical-align: middle; margin-left: 50px; margin-right: 50px;"><img src="assets/img/xiantiaodog.gif" alt="dog" width="70" style="vertical-align: middle; margin-left: 50px; margin-right: 50px;">
+<!-- 用 flex 容器包裹两张图片，实现自适应并排 -->
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; gap: 20px; padding: 0 10px;">
+  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(2/3 * 100%); height: auto; vertical-align: middle;">
+  <img src="assets/img/xiantiaodog.gif" alt="dog" style="max-width: 100%; width: calc(1/3 * 100%); height: auto; vertical-align: middle;">
+</div>
 
