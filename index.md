@@ -38,11 +38,5 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 
 <!-- <br/> -->
 ---
-<!-- 用 flex 容器包裹两张图片，实现自适应并排 -->
-<div style="display: flex; align-items: center; justify-content: center; width: 100%; gap: 20px; padding: 0 10px; box-sizing: border-box;">
-  <!-- 三张图片平分容器宽度，保留自适应特性 -->
-  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(100% / 3); height: auto;">
-  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(100% / 3); height: auto;">
-  <img src="assets/img/dog.gif" alt="dog" style="max-width: 100%; width: calc(100% / 3); height: auto;">
-</div>
+<img src="assets/img/dog.gif" alt="Alibaba Logo" width="100" style="vertical-align: middle; margin-left: 10px; margin-right: 10px;">
 
