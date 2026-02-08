@@ -94,56 +94,47 @@
         align-items: flex-start;
       }
 
-      .{
+      .wrapper section {
         max-width: 900px;
         width: 100%;        
         margin: 0 auto;
         padding-top: 0 !important;
       }
 
-      /* ===================== 核心修复：强化Selected Publications对齐 ===================== */
-      /* 1. 重置所有默认缩进（包括出版物模块） */
+      /* ===================== 关键修改：全局缩进从 22px → 15px（整体更靠左） ===================== */
       .wrapper section ul,
-      .wrapper section ol,
-      .wrapper section .publications,  /* 出版物父容器 */
-      .wrapper section .publication-list { /* 出版物列表容器 */
+      .wrapper section ol {
         padding-left: 0 !important;
         margin-left: 0 !important;
       }
       
-      /* 2. 全局统一缩进：强制所有模块（含Selected Publications）左端对齐 */
-      /* 覆盖主题默认样式，优先级拉满 */
+      /* 所有正文统一缩进 15px，实现完全对齐 */
       .wrapper section p,
       .wrapper section div,
       .wrapper section ul,
       .wrapper section li,
-      /* 专门针对Selected Publications的精准选择器 */
       .wrapper section .publication,
       .wrapper section .publication-item,
-      .wrapper section .publication-entry,
-      .wrapper section .pub-item,
-      /* 其他模块 */
       .wrapper section .news-item,
       .wrapper section .experience-item {
-          margin-left: 15px !important;  /* 统一缩进22px，和其他模块对齐 */
+          margin-left: 15px !important; /* 👈 这里从22改成15，整体左移 */
           padding-left: 0 !important;
           line-height: 1.6;
       }
 
-      /* 3. 单独强化Selected Publications标题下的内容（防止主题样式覆盖） */
-      .wrapper section h3:contains("Selected Publications") + div,
-      .wrapper section h3:contains("Selected Publications") + ul,
-      .wrapper section h2:contains("Selected Publications") + div,
-      .wrapper section h2:contains("Selected Publications") + ul {
-          margin-left: 22px !important;
+      /* 强制 Selected Publications 清除所有自带左边距，彻底对齐 */
+      .wrapper section .publication {
+          margin-left: 15px !important;
           padding-left: 0 !important;
+          position: relative !important;
+          left: 0 !important;
       }
 
-      /* 个人简介上移 */
+      /* 简介上移 */
       .wrapper section > p:first-of-type {
           margin-top: -10px !important;
           margin-bottom: 15px !important;
-          margin-left: 22px !important;
+          margin-left: 15px !important;
       }
 
       /* 标题不动 */
@@ -163,7 +154,7 @@
         hyphens: auto;
       }
 
-      /* 适配 */
+      /* iPad 适配同步改小 */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container {
           max-width: 98%;
@@ -176,14 +167,13 @@
           flex: 1.3;
           padding: 20px 30px;
         }
-        /* 平板端同步强化出版物对齐 */
         .wrapper section p,
         .wrapper section div,
         .wrapper section ul,
         .wrapper section li,
         .wrapper section .publication,
         .wrapper section .publication-item {
-            margin-left: 12px !important;
+            margin-left: 12px !important; /* 👈 同步减小 */
         }
         .avatar img {
           width: 120px !important;
@@ -191,6 +181,7 @@
         }
       }
 
+      /* 手机适配同步改小 */
       @media screen and (max-width: 767px) {
         .page-container {
           flex-direction: column;
@@ -206,16 +197,15 @@
         .wrapper {
           padding: 15px 20px;
         }
-        /* 手机端同步强化出版物对齐 */
         .wrapper section p,
         .wrapper section div,
         .wrapper section ul,
         .wrapper section li,
         .wrapper section .publication,
         .wrapper section .publication-item {
-            margin-left: 12px !important;
+            margin-left: 10px !important; /* 👈 同步减小 */
         }
-        .> p:first-of-type {
+        .wrapper section > p:first-of-type {
             margin-top: -5px !important;
         }
         .avatar img {
