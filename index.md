@@ -38,5 +38,5 @@ I'm currently a master's student at the College of Computer Science, [Sichuan Un
 
 <!-- <br/> -->
 ---
-<img src="assets/img/dog.gif" alt="dog" width="120" style="vertical-align: middle; margin-left: 50px; margin-right: 50px;"><img src="assets/img/xiantiaodog.gif" alt="dog" width="100" style="vertical-align: middle; margin-left: 50px; margin-right: 50px;">
+<img src="assets/img/dog.gif" alt="dog" width="140" style="vertical-align: middle; margin-left: 50px; margin-right: 50px;"><img src="assets/img/xiantiaodog.gif" alt="dog" width="70" style="vertical-align: middle; margin-left: 50px; margin-right: 50px;">
 
