@@ -101,51 +101,47 @@
         padding-top: 0 !important;
       }
 
-      /* 全局基础缩进 */
+      /* 重置列表默认间距 */
       .wrapper section ul,
       .wrapper section ol {
         padding-left: 0 !important;
         margin-left: 0 !important;
       }
       
-      /* 所有模块正文基础缩进（可调整数值控制整体左移幅度） */
+      /* ====================================================================== */
+      /* 👈 1. 普通模块（Research Interests / Experience / Services / Awards）右移一点 */
+      /* 设为 15px → 整体向右挪一点点 */
       .wrapper section p,
       .wrapper section div,
       .wrapper section ul,
       .wrapper section li,
-      .wrapper section .publication,
-      .wrapper section .publication-item,
       .wrapper section .news-item,
       .wrapper section .experience-item {
-          margin-left: 10px !important; /* 👈 核心：改这个数值控制左移（越小越靠左） */
+          margin-left: 15px !important;
           padding-left: 0 !important;
           line-height: 1.6;
       }
 
-      /* ===================== 新增：强制Selected Publications下的图片+所有元素左移 ===================== */
-      /* 1. 该模块下的所有图片左移 */
-      .wrapper section .publication img {
-          margin-left: 0 !important;    /* 图片取消额外右移，和文字对齐 */
+      /* 👈 2. Selected Publications 单独向左移动 0.3cm（≈11px）*/
+      /* 15px - 11px = 4px → 直接设为 4px，实现整体左移 0.3cm */
+      .wrapper section .publication,
+      .wrapper section .publication-item {
+          margin-left: 4px !important; /* 👈 这个就是比普通模块少11px，≈左移0.3cm */
           padding-left: 0 !important;
-          transform: translateX(0) !important; /* 覆盖主题可能的偏移 */
       }
-      /* 2. 该模块下所有子元素（文字/图片/链接）同步左移 */
+
+      /* 👈 3. 强制 Selected Publications 里的图片也一起左移 */
+      .wrapper section .publication img,
       .wrapper section .publication * {
           margin-left: 0 !important;
           padding-left: 0 !important;
       }
-      /* 3. 兜底：直接按标题定位该模块下的所有内容 */
-      .wrapper section h2:contains("Selected Publications") ~ .publication,
-      .wrapper section h3:contains("Selected Publications") ~ .publication {
-          margin-left: 10px !important; /* 和全局缩进保持一致，可单独改这个数值让该模块更靠左 */
-          padding-left: 0 !important;
-      }
 
-      /* 简介上移 */
+      /* 简介保持和普通模块一致 */
       .wrapper section > p:first-of-type {
           margin-top: -10px !important;
           margin-bottom: 15px !important;
-          margin-left: 10px !important; /* 和全局缩进同步 */
+          margin-left: 15px !important;
       }
 
       /* 标题不动 */
@@ -165,7 +161,7 @@
         hyphens: auto;
       }
 
-      /* iPad 适配 */
+      /* ------------------------------ iPad 适配 ------------------------------ */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container {
           max-width: 98%;
@@ -178,13 +174,19 @@
           flex: 1.3;
           padding: 20px 30px;
         }
+        /* 普通模块 */
         .wrapper section p,
         .wrapper section div,
         .wrapper section ul,
         .wrapper section li,
+        .wrapper section .news-item,
+        .wrapper section .experience-item {
+            margin-left: 12px !important;
+        }
+        /* Selected Publications 同步左移 */
         .wrapper section .publication,
         .wrapper section .publication-item {
-            margin-left: 8px !important; /* 平板端同步左移 */
+            margin-left: 1px !important;
         }
         .avatar img {
           width: 120px !important;
@@ -192,7 +194,7 @@
         }
       }
 
-      /* 手机适配 */
+      /* ------------------------------ 手机适配 ------------------------------ */
       @media screen and (max-width: 767px) {
         .page-container {
           flex-direction: column;
@@ -208,13 +210,19 @@
         .wrapper {
           padding: 15px 20px;
         }
+        /* 普通模块 */
         .wrapper section p,
         .wrapper section div,
         .wrapper section ul,
         .wrapper section li,
+        .wrapper section .news-item,
+        .wrapper section .experience-item {
+            margin-left: 10px !important;
+        }
+        /* Selected Publications 同步左移 */
         .wrapper section .publication,
         .wrapper section .publication-item {
-            margin-left: 5px !important; /* 手机端同步左移 */
+            margin-left: 0px !important;
         }
         .wrapper section > p:first-of-type {
             margin-top: -5px !important;
