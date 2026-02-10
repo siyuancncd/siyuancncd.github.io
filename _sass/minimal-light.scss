@@ -218,7 +218,7 @@ papertitle {
         border-radius: 20%;
         width: 150px !important;
         height: 150px !important;
-        padding: 0 !important;
+        padding: 20px !important;
         margin: 0 auto !important;
         display: block;
         /* 添加图片渲染优化 */
@@ -230,7 +230,7 @@ papertitle {
       /* 修复父容器宽度设置 */
       #header .image.avatar {
         margin: 0 0 1em 0;
-        width: 170px !important;
+        width: 150px !important;
       }
 
     //   .image.avatar img {
