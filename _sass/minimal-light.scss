@@ -230,7 +230,8 @@ papertitle {
       /* 修复父容器宽度设置 */
       #header .image.avatar {
         margin: 0 0 1em 0;
-        width: 150px !important;
+        // width: 150px !important;
+        width: 8.00em;
       }
 
     //   .image.avatar img {
