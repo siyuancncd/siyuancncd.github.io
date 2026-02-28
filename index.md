@@ -4,6 +4,22 @@ layout: homepage
 <br/>
 Welcome to my personal homepage. I'm currently a master's student at the College of Computer Science, [<img src="assets/img/scu-logo.png" alt="SCU Logo" width="22" height="22" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://cs.scu.edu.cn/) [Sichuan University (SCU)](https://cs.scu.edu.cn/), fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). I'm also an incoming Ph.D student at the Department of Computer Science and Engineering, [<img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="14.5" height="22" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://hkust.edu.hk/) [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/). I will conduct my doctoral studies under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
 
+<div style="display: flex; align-items: center; flex-wrap: wrap; gap: 4px; line-height: 1.6;">
+  <span>Welcome to my personal homepage. I'm currently a master's student at the College of Computer Science,</span>
+  <a href="https://cs.scu.edu.cn/"><img src="assets/img/scu-logo.png" alt="SCU Logo" width="22" height="22"></a>
+  <a href="https://cs.scu.edu.cn/">Sichuan University (SCU)</a>
+  <span>, fortunately advised by Prof.</span>
+  <a href="https://cs.scu.edu.cn/info/1282/13563.htm">Dezhong Peng</a>
+  <span>& Prof.</span>
+  <a href="https://penghu-cs.github.io">Peng Hu</a>
+  <span>. I'm also an incoming Ph.D student at the Department of Computer Science and Engineering,</span>
+  <a href="https://hkust.edu.hk/"><img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="14.5" height="22"></a>
+  <a href="https://hkust.edu.hk/">The Hong Kong University of Science and Technology (HKUST)</a>
+  <span>. I will conduct my doctoral studies under the supervision of Prof.</span>
+  <a href="https://cse.hkust.edu.hk/~jhc/">Hao Chen</a>
+  <span>.</span>
+</div>
+
 ## Research Interests
 
 - **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
