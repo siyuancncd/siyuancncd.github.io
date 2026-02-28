@@ -29,7 +29,9 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 
 - Jan. 2026 - Now: **Research Intern** @ <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" width="18" style="vertical-align: middle; margin-left: 2px; margin-right: 2px;">Taobao&Tmall Group in [<img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="90" style="vertical-align: middle; margin-left: 5px; margin-right: 2px;">](https://www.alibabagroup.com/en-US), Beijing, China. **Topic**: Vision-Language Models (VLMs).
 
-<span style="display: inline-flex; align-items: center; gap: 5px;">
+- Jan. 2026 - Now: **Research Intern** @ <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" width="18" height="18" style="vertical-align: middle; margin-left: 5px; margin-right: 5px; display: inline-block;">Taobao&Tmall Group in [<img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="90" style="vertical-align: middle; margin-left: 5px; margin-right: 2px;">](https://www.alibabagroup.com/en-US), Beijing, China. **Topic**: Vision-Language Models (VLMs).
+- 
+<!-- <span style="display: inline-flex; align-items: center; gap: 5px;">
   - Jan. 2026 - Now: **Research Intern** @ 
   <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" width="18">
   Taobao&Tmall Group in 
@@ -37,7 +39,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
     <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="90">
   </a>
   , Beijing, China. **Topic**: Vision-Language Models (VLMs).
-</span>
+</span> -->
 
 {% include_relative _includes/services.md %}
 
