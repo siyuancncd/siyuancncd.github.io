@@ -2,7 +2,7 @@
 layout: homepage
 ---
 <br/>
-Welcome to my personal homepage. I'm currently a master's student at the College of Computer Science, [<img src="assets/img/scu-logo.png" alt="SCU Logo" width="20" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">](https://cs.scu.edu.cn/) [Sichuan University (SCU)](https://cs.scu.edu.cn/), fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). I'm also an incoming Ph.D student at the Department of Computer Science and Engineering, [<img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="15" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">](https://hkust.edu.hk/) [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/). I will conduct my doctoral studies under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
+Welcome to my personal homepage. I'm currently a master's student at the College of Computer Science, [<img src="assets/img/scu-logo.png" alt="SCU Logo" width="20" style="vertical-align: middle; margin-left: 5px; margin-right: 2px;">](https://cs.scu.edu.cn/) [Sichuan University (SCU)](https://cs.scu.edu.cn/), fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). I'm also an incoming Ph.D student at the Department of Computer Science and Engineering, [<img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="15" style="vertical-align: middle; margin-left: 5px; margin-right: 2px;">](https://hkust.edu.hk/) [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/). I will conduct my doctoral studies under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
 
 ## Research Interests
 
@@ -27,7 +27,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 
 ## Industrial Experience
 
-- Jan. 2026 - Now: **Research Intern** @ <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" width="18" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">Taobao&Tmall Group in [<img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="90" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;">](https://www.alibabagroup.com/en-US), Beijing, China. **Topic**: Vision-Language Models (VLMs).
+- Jan. 2026 - Now: **Research Intern** @ <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" width="18" style="vertical-align: middle; margin-left: 2px; margin-right: 2px;">Taobao&Tmall Group in [<img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="90" style="vertical-align: middle; margin-left: 5px; margin-right: 2px;">](https://www.alibabagroup.com/en-US), Beijing, China. **Topic**: Vision-Language Models (VLMs).
 
 {% include_relative _includes/services.md %}
 
