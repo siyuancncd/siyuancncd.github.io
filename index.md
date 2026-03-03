@@ -34,26 +34,26 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 
 
 <div style="display: flex; align-items: flex-start; line-height: 1.8; margin: 8px 0;">
-  <!-- 左侧Logo（保持原有样式，与右侧文字顶部对齐） -->
+  <!-- 左侧Logo（与右侧文字顶部对齐，保持原有样式） -->
   <img src="assets/img/taotianlogo2.jpeg" alt="Alibaba Logo" 
        width="39" 
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
   
-  <!-- 右侧文本容器：整体纵向排列，两行文字左端对齐 -->
-  <div style="display: flex; flex-direction: column; flex: 1;">
-    <!-- 第一行：左侧公司信息 + 右侧右对齐的日期 -->
-    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-      <span>
-        <strong>Research Intern</strong> @ Taobao&Tmall Group in
-        <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
-          <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
-               width="90" height="12" 
-               style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
-        </a>, Beijing, China.
-      </span>
-      <span>Jan. 2026 - Now</span> <!-- 日期移到第一行并右对齐 -->
-    </div>
-    <!-- 第二行：Topic信息，左端对齐 -->
+  <!-- 右侧两行文本容器：纵向排列，确保两行左端对齐 -->
+  <div style="display: flex; flex-direction: column;">
+    <!-- 第一行：公司信息 + 带间距的日期 -->
+    <span>
+      <strong>Research Intern</strong> @ Taobao&Tmall Group in
+      <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
+        <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
+             width="90" height="12" 
+             style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
+      </a>, Beijing, China.
+      <!-- 日期移到第一行，通过margin-left设置与前面文字的间距 -->
+      <span style="margin-left: 16px;">Jan. 2026 - Now</span>
+    </span>
+    <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
+    <span><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
   </div>
 </div>
 
