@@ -50,7 +50,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
              style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
       </a>, Beijing, China.
       <!-- 日期移到第一行，通过margin-left设置与前面文字的间距 -->
-      <span style="margin-left: 16px;">Jan. 2026 - Now</span>
+      <span style="margin-left: 30px;">Jan. 2026 - Now</span>
     </span>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
     <span><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
