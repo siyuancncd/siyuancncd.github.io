@@ -42,7 +42,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
   <!-- 右侧两行文本容器 -->
   <div style="display: flex; flex-direction: column;">
     <!-- 第一行：公司及地址信息 -->
-    <span> Jan. 2026 - Now, <strong>Research Intern</strong> @ Taobao&Tmall Group in
+    <span> <strong>Research Intern</strong> @ Taobao&Tmall Group in
       <a href="https://www.alibabagroup.com/en-US" style="text-decoration: none;">
         <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
              width="90" height="12" 
@@ -50,7 +50,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
       </a>, Beijing, China. 
     <!-- 第二行：公司及地址信息 -->
     </span>
-     <span><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
+     <span>Jan. 2026 - Now, <strong>Topic</strong>: Vision-Language Models (VLMs).</span>
   </div>
 </div>
 
