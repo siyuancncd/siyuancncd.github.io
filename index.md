@@ -54,6 +54,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
   </div>
 </div>
 
+<br/>
 
 {% include_relative _includes/services.md %}
 
