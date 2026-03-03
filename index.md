@@ -33,7 +33,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 -->
 
 
-<div style="display: flex; align-items: flex-start; line-height: 1.8; margin: 8px 0;">
+<div style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
   <!-- 左侧Logo（与右侧文字顶部对齐，保持原有样式） -->
   <img src="assets/img/taotianlogo2.jpeg" alt="Alibaba Logo" 
        width="39" 
@@ -56,6 +56,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
     <span><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
   </div>
 </div>
+
 
 ## Services
 
