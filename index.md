@@ -32,27 +32,26 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 - Jan. 2026 - Now: **Research Intern** @ <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" width="19" style="vertical-align: middle; margin-left: 2px; margin-right: 2px;"> Taobao&Tmall Group in [<img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="90" height="12" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://www.alibabagroup.com/en-US), Beijing, China. **Topic**: Vision-Language Models (VLMs).
 -->
 
-<div style="display: flex; align-items: flex-start; line-height: 1.8; margin: 8px 0;">
-  <!-- 左侧Logo：保持原有样式，与右侧文字顶部对齐 -->
+<div style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
+  <!-- 左侧Logo（与右侧文字顶部对齐，保持原有样式） -->
   <img src="assets/img/taotianlogo2.jpeg" alt="Alibaba Logo" 
        width="39" 
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
   
-  <!-- 右侧文本容器：显式设置左对齐，确保文字靠左 -->
-  <div style="display: flex; flex-direction: column; text-align: left; flex: 1;">
-    <!-- 第一行：flex布局实现“左信息 + 右日期”，不影响文字左对齐 -->
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <span>
-        <strong>Research Intern</strong> @ Taobao&Tmall Group in
-        <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
-          <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
-               width="90" height="12" 
-               style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
-        </a>, Beijing, China.
-      </span>
-      <span>Jan. 2026 - Now</span>
-    </div>
-    <!-- 第二行：继承父容器的左对齐，与第一行信息严格对齐 -->
+  <!-- 右侧两行文本容器：纵向排列，确保两行左端对齐 -->
+  <div style="display: flex; flex-direction: column;">
+    <!-- 第一行：公司信息 + 带间距的日期 -->
+    <span>
+      <strong>Research Intern</strong> @ Taobao&Tmall Group in
+      <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
+        <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
+             width="90" height="12" 
+             style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
+      </a>, Beijing, China.
+      <!-- 日期移到第一行，通过margin-left设置与前面文字的间距 -->
+      <span style="margin-left: 130px;">Jan. 2026 - Now</span>
+    </span>
+    <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
     <span><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
   </div>
 </div>
