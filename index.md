@@ -35,7 +35,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 <!-- 实习经历样式块 -->
 <div style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
   <!-- 左侧Logo（占两行高度，调整宽度更醒目） -->
-  <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" 
+  <img src="assets/img/taotianlogo2.jpeg" alt="Alibaba Logo" 
        width="39" 
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
   
