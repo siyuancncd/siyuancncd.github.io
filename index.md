@@ -34,7 +34,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 
 
 <div style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
-  <!-- 左侧Logo（占两行高度，调整宽度更醒目） -->
+  <!-- 左侧Logo -->
   <img src="assets/img/taotianlogo2.jpeg" alt="Alibaba Logo" 
        width="39" 
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
@@ -43,7 +43,8 @@ Welcome to my personal homepage. I'm currently a master's student at the College
   <div style="display: flex; flex-direction: column; flex-grow: 1;">
     <!-- 第一行：公司信息 + 日期右对齐 -->
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <span>
+      <!-- 公司信息固定宽度，与下方对齐 -->
+      <span style="flex: 1;">
         <strong>Research Intern</strong> @ Taobao&Tmall Group in
         <a href="https://www.alibabagroup.com/en-US" style="text-decoration: none;">
           <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
@@ -51,8 +52,10 @@ Welcome to my personal homepage. I'm currently a master's student at the College
                style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
         </a>, Beijing, China.
       </span>
-      <span style="margin-left: auto;">Jan. 2026 - Now</span>
+      <!-- 日期 -->
+      <span>Jan. 2026 - Now</span>
     </div>
+    <!-- 第二行：Topic，与公司信息左对齐 -->
     <span><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
   </div>
 </div>
