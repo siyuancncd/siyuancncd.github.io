@@ -54,11 +54,6 @@ Welcome to my personal homepage. I'm currently a master's student at the College
   </div>
 </div>
 
-
-<!-- 
-{% include_relative _includes/services.md %}
--->
-
 ## Services
 
 - Conference Reviewer: ACL ARR
