@@ -54,7 +54,6 @@ Welcome to my personal homepage. I'm currently a master's student at the College
       <span>Jan. 2026 - Now</span> <!-- 日期移到第一行并右对齐 -->
     </div>
     <!-- 第二行：Topic信息，左端对齐 -->
-    <span style="margin-top: 4px;"><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
   </div>
 </div>
 
