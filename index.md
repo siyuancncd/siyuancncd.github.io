@@ -53,8 +53,6 @@ Welcome to my personal homepage. I'm currently a master's student at the College
       </span>
       <span style="margin-left: auto;">Jan. 2026 - Now</span>
     </div>
-    
-    <!-- 第二行：Topic -->
     <span><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
   </div>
 </div>
