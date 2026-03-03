@@ -34,21 +34,21 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 <div style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
   <!-- 左侧Logo（占两行高度，调整宽度更醒目） -->
   <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" 
-       width="38" 
+       width="39" 
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
   
   <!-- 右侧两行文本容器 -->
   <div style="display: flex; flex-direction: column;">
     <!-- 第一行：公司及地址信息 -->
-    <span> 
+    <span> Jan. 2026 - Now.
       <a href="https://www.alibabagroup.com/en-US" style="text-decoration: none;">
         <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
              width="90" height="12" 
              style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
-      </a>, Beijing, China. Jan. 2026 - Now.
+      </a>, Beijing, China. 
+    <!-- 第二行：公司及地址信息 -->
     </span>
-    <!-- 第二行：研究主题 -->
-    **Research Intern** @ Taobao&Tmall Group. <span><strong>Topic</strong>: Vision-Language Models (VLMs).</span>
+     <span><strong>Research Internc</strong> @ Taobao&Tmall Group. <strong>Topic</strong>: Vision-Language Models (VLMs).</span>
   </div>
 </div>
 
