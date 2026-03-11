@@ -10,7 +10,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 - **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
   
-🌟 ** I'm currently concentrating on research in the Vision-Language Models (VLMs). If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
+🌟 **I'm currently concentrating on research in the Vision-Language Models (VLMs). If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
 
 <h2>News</h2> <!-- 标题固定 -->
 
