@@ -42,7 +42,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
   <div style="display: flex; flex-direction: column;">
     <!-- 第一行：公司信息 + 带间距的日期 -->
     <span>
-      <strong>Research Intern</strong> @ Taobao&Tmall Group in
+      <strong>Research Intern</strong> @ Taobao&Tmall Group of
       <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
         <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
              width="90" height="12" 
