@@ -10,7 +10,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 - **Multi-modal Learning:** Including cross-modal retrieval and multi-view classification.
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
   
-🌟 **I'm currently concentrating on research in the Large Vision Language Models (LVLM). If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
+🌟 **I'm currently concentrating on research in the Large Vision Language Model (LVLM). If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
 
 <h2>News</h2> <!-- 标题固定 -->
 
@@ -52,7 +52,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
       <span style="margin-left: 234px;">Jan. 2026 - Now</span>
     </span>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
-    <span><strong>Topic</strong>: Large Vision Language Models (LVLM).</span>
+    <span><strong>Topic</strong>: Large Vision Language Model (LVLM).</span>
   </div>
 </div>
 
