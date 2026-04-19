@@ -44,7 +44,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
     <span>
       <strong>Research Intern</strong> @ Taobao&Tmall Group of
       <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
-        <img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" 
+        <img src="assets/img/alibaba_logo_EN_V2.png" alt="Alibaba Logo" 
              width="90" height="12" 
              style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
       </a>
