@@ -45,7 +45,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
       <strong>Research Intern</strong> @ Taobao&Tmall Group of
       <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
         <img src="assets/img/alibaba_logo_EN_V2.png" alt="Alibaba Logo" 
-             width="90" height="12" 
+             width="80" height="12" 
              style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">
       </a>
       <!-- 日期移到第一行，通过margin-left设置与前面文字的间距 -->
