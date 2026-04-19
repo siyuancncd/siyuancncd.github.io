@@ -68,5 +68,5 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 
 <!-- <br/> -->
 ---
-<img src="assets/img/dog.gif" alt="Alibaba Logo" width="100" style="vertical-align: middle; margin-left: 10px; margin-right: 10px;">
+<img src="assets/img/dog.gif" alt="dog" width="100" style="vertical-align: middle; margin-left: 10px; margin-right: 10px;">
 
