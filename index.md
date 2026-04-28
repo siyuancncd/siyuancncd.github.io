@@ -54,7 +54,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
              style="vertical-align: middle; margin-left: 3px; margin-right: 2px;margin-bottom: 1.8px;">
       </a> -->
       <!-- 日期移到第一行，通过margin-left设置与前面文字的间距 -->
-      <span style="margin-left: 252px;">Jan. 2026 - Now</span>
+      <span style="margin-left: 260px;">Jan. 2026 - Now</span>
     </span>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
     <span><strong>Topic</strong>: Large Vision Language Model (LVLM).</span>
