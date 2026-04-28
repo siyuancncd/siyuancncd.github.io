@@ -39,7 +39,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
    -->
   <img src="assets/img/alibaba_logo_ori.png" alt="Alibaba Logo" 
-       width="39" 
+       width="42" 
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
   
   <!-- 右侧两行文本容器：纵向排列，确保两行左端对齐 -->
