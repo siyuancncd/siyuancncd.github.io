@@ -38,20 +38,21 @@ Welcome to my personal homepage. I'm currently a master's student at the College
        width="39" 
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
    -->
+  <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
   <img src="assets/img/alibaba_logo_ori.png" alt="Alibaba Logo" 
        width="42" 
        style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
-  
+  </a>
   <!-- 右侧两行文本容器：纵向排列，确保两行左端对齐 -->
   <div style="display: flex; flex-direction: column;">
     <!-- 第一行：公司信息 + 带间距的日期 -->
     <span>
-      <strong>Research Intern</strong> @ Taobao&Tmall Group of
-      <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
+      <strong>Research Intern</strong> @ Taobao&Tmall Group of Alibaba Group
+      <!-- <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
         <img src="assets/img/alibaba_logo_EN_V2.png" alt="Alibaba Logo" 
              width="65" height="11" 
              style="vertical-align: middle; margin-left: 3px; margin-right: 2px;margin-bottom: 1.8px;">
-      </a>
+      </a> -->
       <!-- 日期移到第一行，通过margin-left设置与前面文字的间距 -->
       <span style="margin-left: 257px;">Jan. 2026 - Now</span>
     </span>
