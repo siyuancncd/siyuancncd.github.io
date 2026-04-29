@@ -40,8 +40,8 @@ Welcome to my personal homepage. I'm currently a master's student at the College
    -->
   <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
   <img src="assets/img/alibaba_logo_ori.png" alt="Alibaba Logo" 
-       width="45" 
-       style="margin-right: 5px; flex-shrink: 0; vertical-align: middle;">
+       width="50" 
+       style="margin-right: 0px; flex-shrink: 0; vertical-align: middle;">
   </a>
   <!-- 右侧两行文本容器：纵向排列，确保两行左端对齐 -->
   <div style="display: flex; flex-direction: column;">
