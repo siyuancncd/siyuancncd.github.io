@@ -69,7 +69,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 - Conference Reviewer: ACL ARR, NeurIPS.
 
 ## Honors and Awards 🏆
-
+- Full Postgraduate Studentship (2026 - 2030)
 - China National Scholarship (2025, 2020)
 
 <!-- <br/> -->
