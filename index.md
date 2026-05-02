@@ -35,11 +35,6 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 -->
 
 <div style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
-  <!-- 左侧Logo（与右侧文字顶部对齐，保持原有样式） -->
-  <!-- <img src="assets/img/taotianlogo2.jpeg" alt="Alibaba Logo" 
-       width="39" 
-       style="margin-right: 8px; flex-shrink: 0; vertical-align: middle;">
-   -->
   <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
   <img src="assets/img/alibaba_logo_ori.png" alt="Alibaba Logo" 
        width="50" 
@@ -50,16 +45,11 @@ Welcome to my personal homepage. I'm currently a master's student at the College
     <!-- 第一行：公司信息 + 带间距的日期 -->
     <span>
       <strong>Research Intern</strong> @ Taobao&Tmall Group of Alibaba
-      <!-- <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
-        <img src="assets/img/alibaba_logo_EN_V2.png" alt="Alibaba Logo" 
-             width="65" height="11" 
-             style="vertical-align: middle; margin-left: 3px; margin-right: 2px;margin-bottom: 1.8px;">
-      </a> -->
-      <!-- 日期移到第一行，通过margin-left设置与前面文字的间距 -->
       <span style="margin-left: 260px;">Jan. 2026 - Now</span>
     </span>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
     <span><strong>Topic</strong>: Large Vision Language Model (LVLM).</span>
+    <span>Jan. 2026 - Now</span>
   </div>
 </div>
 
