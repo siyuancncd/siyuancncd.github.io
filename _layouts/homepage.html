@@ -34,6 +34,17 @@
     {% endif %}
 
     <style>
+      /* ✨ 字体变量系统（字号整体缩小约 6%） */
+      :root {
+        --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-serif: "Crimson Pro", "STSong", "Songti SC", serif;
+        --font-size-base: 0.95rem;        /* ✨ 从 1rem → 0.95rem (≈15px) */
+        --font-size-sm: 0.875rem;          /* ✨ 小号文字 */
+        --font-size-lg: 1.1rem;            /* ✨ 标题基础 */
+        --line-height-base: 1.6;
+        --line-height-tight: 1.4;
+      }
+
       * {
         box-sizing: border-box;
         margin: 0;
@@ -41,6 +52,12 @@
       }
 
       body {
+        font-family: var(--font-base);
+        font-size: var(--font-size-base);  /* ✨ 应用新字号 */
+        line-height: var(--line-height-base);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        
         background-color: #f0f0f0;
         min-height: 100vh;
         margin: 0;
@@ -67,9 +84,6 @@
         border: 0;
       }
 
-
-
-
       .wrapper-outer header {
         margin: 0;
         padding: 0;
@@ -85,49 +99,39 @@
         display: block;
       }
 
-      /* .chinese-name {
-        font-family: "Crimson Pro", "STSong", "Songti", serif;
-        font-size: 1.3rem;
-        font-weight: inherit;
-        color: inherit;
-        margin: 0 0 8px;
-        line-height: 1.2;
-      } */
-
-
       .name-block {
         margin: 0 0 16px;
         color: #043361
       }
 
       .chinese-name {
-        font-family: "Songti SC", "STSong", "Songti", serif;
-        font-size: 1.4rem;
+        font-family: var(--font-serif);
+        font-size: 1.3rem;                 /* ✨ 从 1.4rem → 1.3rem */
         font-weight: inherit;
         color: inherit;
         margin: 0;
-        line-height: 1.2;
+        line-height: var(--line-height-tight);
       }
 
       .wrapper-outer header h1 {
         margin: 0 0 2px;
-        line-height: 1.2;
+        line-height: var(--line-height-tight);
+        font-size: 1.35rem;                /* ✨ 从 1.5rem → 1.35rem */
+        font-weight: 600;
       }
 
       .wrapper-outer header position,
       .wrapper-outer header autocolor {
-        font-size: 0.95rem;
+        font-size: var(--font-size-sm);    /* ✨ 从 0.95rem → 0.875rem */
         color: #888;
         font-weight: 400;
       }
 
       .wrapper-outer header email {
-        font-size: 0.95rem;
+        font-size: var(--font-size-sm);    /* ✨ 从 0.95rem → 0.875rem */
         color: #888;
       }
 
-
-      
       .wrapper {
         flex: 1.4;
         min-width: 300px;
@@ -154,9 +158,7 @@
         margin-left: 0 !important;
       }
       
-      /* ====================================================================== */
-      /* 👈 1. 普通模块（Research Interests / Experience / Services / Awards）右移一点 */
-      /* 设为 15px → 整体向右挪一点点 */
+      /* 普通模块间距 */
       .wrapper section p,
       .wrapper section div,
       .wrapper section ul,
@@ -165,91 +167,62 @@
       .wrapper section .experience-item {
           margin-left: 18px !important;
           padding-left: 0 !important;
-          line-height: 1.6;
+          line-height: var(--line-height-base);
+          font-size: var(--font-size-base);  /* ✨ 统一应用基础字号 */
       }
 
-      /* 👈 2. Selected Publications 单独向左移动 0.3cm（≈11px）*/
-      /* 15px - 11px = 4px → 直接设为 4px，实现整体左移 0.3cm */
+      /* Publications 左移处理 */
       .wrapper section .publication,
       .wrapper section .publication-item {
-          margin-left: 0px !important; /* 👈 这个就是比普通模块少11px，≈左移0.3cm */
+          margin-left: 0px !important;
           padding-left: 0 !important;
       }
 
-      /* 👈 3. 强制 Selected Publications 里的图片也一起左移 */
-      /* .wrapper section .publication img,
-      .wrapper section .publication * {
-          margin-left: 0 !important;
-          padding-left: 0 !important;
-      } */
+      /* ✨ 标题字号优化（层级缩小但保持区分） */
+      .wrapper section h1 { font-size: 1.4rem; font-weight: 600; line-height: var(--line-height-tight); margin: 24px 0 12px !important; }
+      .wrapper section h2 { font-size: 1.25rem; font-weight: 600; line-height: var(--line-height-tight); margin: 20px 0 10px !important; }
+      .wrapper section h3 { font-size: 1.1rem; font-weight: 600; line-height: var(--line-height-tight); margin: 18px 0 8px !important; }
+      .wrapper section h4 { font-size: var(--font-size-base); font-weight: 600; line-height: var(--line-height-tight); margin: 16px 0 6px !important; }
 
-      /* 简介保持和普通模块一致 */
-      /* .wrapper section > p:first-of-type {
-          margin-top: -10px !important;
-          margin-bottom: 15px !important;
-          margin-left: 18px !important;
+      /* ✨ 代码字体稍小 */
+      code, pre, kbd {
+        font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+        font-size: 0.85rem;                 /* ✨ 从 0.9em → 0.85rem */
       }
 
-      /* 标题不动 */
-      /* .wrapper section h1,
-      .wrapper section h2,
-      .wrapper section h3,
-      .wrapper section h4 {
-          margin-left: 0 !important;
-          padding-left: 0 !important;
-          margin-top: 20px !important;
-          margin-bottom: 8px !important;
-      }
-
+      /* 文字换行处理 */
       .wrapper section * {
         overflow-wrap: break-word;
         word-wrap: break-word;
         hyphens: auto;
-      } */ */
+      }
 
       /* ------------------------------ iPad 适配 ------------------------------ */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
-        /* 原有所有样式保持不变 */
         .page-container { max-width: 98%; gap: 8px; }
         .wrapper-outer { flex: 0 0 240px; }
         .wrapper { flex: 1.3; padding: 20px 30px; }
-        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 12px !important; }
+        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 12px !important; font-size: 0.9rem !important; }
         .wrapper section .publication, .wrapper section .publication-item { margin-left: 0px !important; }
         .avatar img { width: 110px !important; height: 110px !important; }
         
-        /* 新增：iPad 强制显示滚动条 */
-        ::-webkit-scrollbar {
-          display: block !important;
-          opacity: 1 !important;
-        }
-        .news-container, [class*="news"], .wrapper section .news-item {
-          overflow-y: auto !important;
-          scrollbar-width: thin !important;
-        }
+        ::-webkit-scrollbar { display: block !important; opacity: 1 !important; }
+        .news-container, [class*="news"], .wrapper section .news-item { overflow-y: auto !important; scrollbar-width: thin !important; }
       }
       
       /* ------------------------------ 手机适配 ------------------------------ */
       @media screen and (max-width: 767px) {
-        /* 原有所有样式保持不变 */
         .page-container { flex-direction: column; padding: 0 8px 20px; }
         .wrapper-outer, .wrapper { flex: 1 1 100%; min-width: unset; margin-top: 10px; background-color: #fff; }
         .wrapper { padding: 15px 20px; }
-        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 10px !important; }
+        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 10px !important; font-size: 0.9rem !important; }
         .wrapper section .publication, .wrapper section .publication-item { margin-left: 0px !important; }
         .wrapper section > p:first-of-type { margin-top: -5px !important; }
         .avatar img { width: 140px !important; height: 140px !important; }
         
-        /* 新增：手机强制显示滚动条 */
-        ::-webkit-scrollbar {
-          display: block !important;
-          opacity: 1 !important;
-        }
-        .news-container, [class*="news"], .wrapper section .news-item {
-          overflow-y: auto !important;
-          scrollbar-width: thin !important;
-        }
+        ::-webkit-scrollbar { display: block !important; opacity: 1 !important; }
+        .news-container, [class*="news"], .wrapper section .news-item { overflow-y: auto !important; scrollbar-width: thin !important; }
       }
-
 
       .social-icons {
         margin: 15px 0;
@@ -267,10 +240,6 @@
           {% if site.avatar %}
           <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
           {% endif %}
-          
-          <!-- {% if site.chinese_name %}
-          <p class="chinese-name">{{ site.chinese_name }}</p>
-          {% endif %} -->
 
           <div class="name-block">
             {% if site.chinese_name %}
@@ -279,10 +248,7 @@
             <h1>{{ site.title }}</h1>
           </div>
           
-          <!-- <h1>{{ site.title }}</h1> -->
-
           {% if site.position %}
-          <!-- <position style="font-size:1.10rem;">{{ site.position }}</position> -->
           <position>{{ site.position }}</position>
           <br>
           {% endif %}
@@ -328,18 +294,13 @@
           </div>
 
           <div style="margin-top: 18px; border-top: 1px solid #e0e0e0; padding-top: 14px; text-align: center;">
-            <p style="font-size: 1.25rem; font-weight: 600; color: #043361; margin: 0 0 6px 0;">Research Interests</p>
-            <div style="font-size: 0.95rem; color: #888; line-height: 1.7;">
+            <p style="font-size: 1.2rem; font-weight: 600; color: #043361; margin: 0 0 6px 0;">Research Interests</p>
+            <div style="font-size: 0.9rem; color: #888; line-height: 1.7;">
               <div>Large Vision Language Model</div>
               <div>Multi-modal Learning</div>
               <div>AI for Science (PINNs)</div>
             </div>
           </div>
-
-          <!-- <div style="margin-top: 18px; border-top: 1px solid #e0e0e0; padding-top: 14px; text-align: center;"></div>
-          <div style="text-align: center; margin-top: 20px;">
-            <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=a&t=n&d=0OB8EJiZb2L19i5E3yIhpB3SBjQuV9iBMqG9d2IBPkI&co=f0f0f0'></script>
-          </div> -->
           
         </header>
       </div>
@@ -364,11 +325,6 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
-  
-  </body>
-</html>
-
-
   
   </body>
 </html>
