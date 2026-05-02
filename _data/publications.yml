@@ -3,7 +3,7 @@ main:
   - title: "Deep Fuzzy Multi-view Learning for Reliable Classification"
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Guiduo Duan, Xi Peng, and Peng Hu#
     conference_short: ICML
-    conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, (CCF-A).
+    conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025.
     link: https://openreview.net/forum?id=ZzuaeYvLsJ&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICML.cc%2F2025%2FConference%2FAuthors%23your-submissions)
     code: https://github.com/siyuancncd/FUML
     video: https://www.bilibili.com/video/BV1mA3yzEEWF/?spm_id_from=333.1387.homepage.video_card.click&vd_source=6c3619d976449503d4bb811d9044ee7f&t=5481
@@ -15,7 +15,7 @@ main:
   - title: "CoPINN: Cognitive Physics-Informed Neural Networks"
     authors: <strong>Siyuan Duan*</strong>, Wenyuan Wu*, Peng Hu, Zhenwen Ren, Dezhong Peng, and Yuan Sun#
     conference_short: ICML Spotlight
-    conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, <strong>(Spotlight,acc rate=2.6%)</strong>, (CCF-A).
+    conference:  International Conference on Machine Learning <strong>(ICML)</strong>, 2025, <strong>(Spotlight,acc rate=2.6%)</strong>.
     link: https://openreview.net/forum?id=4vAa0A98xI&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICML.cc%2F2025%2FConference%2FAuthors%23your-submissions)
     code: https://github.com/siyuancncd/CoPINN
     video: https://www.bilibili.com/video/BV1sQ32zWEXA/?spm_id_from=333.1387.collection.video_card.click&vd_source=6c3619d976449503d4bb811d9044ee7f&t=6408
@@ -27,7 +27,7 @@ main:
   - title: "Fuzzy Multimodal Learning for Trusted Cross-modal Retrieval"
     authors: <strong>Siyuan Duan</strong>, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, and Peng Hu#
     conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025, (CCF-A).
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025.
     link: https://openaccess.thecvf.com/content/CVPR2025/html/Duan_Fuzzy_Multimodal_Learning_for_Trusted_Cross-modal_Retrieval_CVPR_2025_paper.html
     # pdf: https://arxiv.org/pdf/2002.10211.pdf
     code: https://github.com/siyuancncd/FUME
@@ -40,7 +40,7 @@ main:
   - title: Deep Fuzzy Physics-Informed Neural Networks for Forward and Inverse PDE Problems
     authors: Wenyuan Wu*, <strong>Siyuan Duan*</strong>, Yuan Sun, Yang Yu, Dong Liu#, and Dezhong Peng#
     conference_short: NN
-    conference: Neural Networks <strong>(NN)</strong>, 2025, (IF=6.6, CCF-B).
+    conference: Neural Networks <strong>(NN)</strong>, 2025, (IF=6.6).
     link: https://doi.org/10.1016/j.neunet.2024.106750
     code: https://github.com/siyuancncd/FPINNs
     report: https://mp.weixin.qq.com/s/J_UTQvRlSGxl9VH4ctk2Og
