@@ -37,7 +37,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 <div style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
   <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
   <img src="assets/img/alibaba_logo_ori.png" alt="Alibaba Logo" 
-       width="50" 
+       width="55" 
        style="margin-right: 0px; flex-shrink: 0; vertical-align: middle;">
   </a>
   <!-- 右侧两行文本容器：纵向排列，确保两行左端对齐 -->
