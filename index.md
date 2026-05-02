@@ -48,7 +48,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
     </span>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
     <span><strong>Topic</strong>: Large Vision Language Model (LVLM).</span>
-    <span style="font-size: 8.5rem">Jan. 2026 - Now</span>
+    <span style="font-size: 8.5rem !important;">Jan. 2026 - Now</span>
   </div>
 </div>
 
