@@ -230,6 +230,30 @@
         gap: 10px;
         justify-content: center;
       }
+
+      .wrapper section .Selected publications,
+      .wrapper section ol.bibliography {
+          margin-left: -37px !important;
+          margin-right: 0 !important;
+          padding: 0 !important;
+          width: calc(100% + 20px);
+      }
+      .wrapper section ol.bibliography li {
+          margin: 0 !important; padding: 0 !important; list-style: none;
+      }
+      .wrapper section .pub-row > [class*="col-"] {
+          padding-left: 0 !important; padding-right: 0 !important;
+      }
+      .wrapper section .pub-row {
+          display: flex; align-items: flex-start; gap: 0px !important; flex-wrap: wrap;
+      }
+      .wrapper section .pub-row .col-sm-3 {
+          flex: 0 0 190px; max-width: 190px; padding: 0 !important;
+      }
+      .wrapper section .pub-row .col-sm-9 {
+          flex: 1; min-width: 0; padding: 0 !important;
+      }
+      
     </style>
   </head>
   <body>
