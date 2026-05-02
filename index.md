@@ -45,7 +45,6 @@ Welcome to my personal homepage. I'm currently a master's student at the College
     <!-- 第一行：公司信息 + 带间距的日期 -->
     <span>
       <strong>Research Intern</strong> @ Taobao&Tmall Group of Alibaba
-      <span style="margin-left: 260px;">Jan. 2026 - Now</span>
     </span>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
     <span><strong>Topic</strong>: Large Vision Language Model (LVLM).</span>
