@@ -70,12 +70,15 @@
       .wrapper-outer {
         flex: 0 0 270px;
         min-width: 250px;
-        background-color: #ffffff; /* 白色背景 */
-        padding: 24px 20px;        /* 内边距，让内容不贴边 */
+        background-color: #ffffff;    /* 白色背景 */
+        padding: 24px 20px;          /* 内边距 */
         height: fit-content;
-        margin-top: 10px;          /* 和右边顶部对齐 */
+        margin-top: 10px;
         border: 0;
-        border-radius: 8px;        /* 圆角和右边一样 */
+        border-radius: 8px;          /* 圆角和右边一致 */
+        position: sticky;             /* 👈 固定不动关键 */
+        top: 10px;                    /* 👈 距离顶部10px */
+        align-self: flex-start;       /* 👈 防止被拉伸 */
       }
 
       .wrapper-outer header {
