@@ -70,8 +70,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 
 ## Honors and Awards 🏆
 
-- China National Scholarship (Top 2%), 2025.
-- China National Scholarship (Top 1%), 2020.
+- China National Scholarship (2025, 2020)
 
 <!-- <br/> -->
 ---
