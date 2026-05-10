@@ -262,30 +262,6 @@
       .wrapper section ol.bibliography .periodical {
           font-size: 0.85rem !important;   /* 👈 只改作者，不影响其他 */
       }
-
-      a {
-        color: #1a5fb4;                    /* 标准蓝色（未访问/已访问统一） */
-        text-decoration: none;             /* 默认无下划线 */
-        transition: text-decoration 0.2s ease;
-      }
-      
-      a:hover {
-        color: #043361;                    /* 悬停时颜色保持不变 */
-        /* text-decoration-line: underline;   /* 添加下划线 */ */
-        /* text-decoration-style: dashed;     /* ✨ 虚线样式 */ */
-        /* text-decoration-color: #04336;    /* 虚线颜色与文字一致 */ */
-      }
-      
-      /* ✨ 兼容性降级方案（针对旧版浏览器） */
-      /* @supports not (text-decoration-style: dashed) { */
-        /* a {
-          border-bottom: 1px dashed transparent;
-          transition: border-color 0.2s ease;
-        }
-        a:hover {
-          border-bottom-color: #0000EE;
-        }
-      } */
       
     </style>
   </head>
