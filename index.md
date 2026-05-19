@@ -56,6 +56,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 ## Services
 
 - Conference Reviewer: ACL ARR, NeurIPS.
+- Journal: Neurocomputing
 
 ## Honors & Awards
 - Full Postgraduate Studentship, HKUST (2026 - 2030)
