@@ -55,7 +55,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 
 ## Services
 
-- Conference Reviewer: ACL ARR, NeurIPS.
+- Conference Reviewer: NeurIPS, ACL ARR.
 - Journal Reviewer: Neurocomputing
 
 ## Honors & Awards
