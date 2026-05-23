@@ -2,6 +2,11 @@
 
 <div class="Selected publications">
 <ol class="bibliography">
+  
+/**Preprint**/
+- Siyuan Duan, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu#, "Robust Fuzzy Multi-view Learning under View Conflict", 2026.
+
+/**Published**/
 
 {% for link in site.data.publications.main %}
 
@@ -55,8 +60,6 @@
 </ol>
 </div>
 
-/**Preprint**/
-- Siyuan Duan, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu#, "Robust Fuzzy Multi-view Learning under View Conflict", 2026.
 
 
 “*” and “#” indicate equal contribution and the corresponding author, respectively. For full publications, please refer to my [Google Scholar](https://scholar.google.com/citations?user=Zck_72MAAAAJ&hl=en).
