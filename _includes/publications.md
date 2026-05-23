@@ -52,7 +52,7 @@
 </div>
 </li>
 <!-- <br> -->
-{% if forloop.last == false %}<br>{% endif %}
+<!-- {% if forloop.last == false %}<br>{% endif %} -->
 {% endfor %}
 </ol>
 
