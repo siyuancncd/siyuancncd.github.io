@@ -2,11 +2,10 @@
 
 <div class="Selected publications">
 
-<ol class="bibliography">
-
 /**Preprint**/
 - **[Robust Fuzzy Multi-view Learning under View Conflict](https://siyuancncd.github.io/)**, **Siyuan Duan**, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu#, arxiv'2026.
 
+<ol class="bibliography">
 {% for link in site.data.publications.main %}
 
 <li>
