@@ -51,7 +51,8 @@
   </div>
 </div>
 </li>
-<br>
+<!-- <br> -->
+{% if forloop.last == false %}<br>{% endif %}
 {% endfor %}
 </ol>
 
