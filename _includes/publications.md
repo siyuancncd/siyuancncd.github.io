@@ -3,6 +3,24 @@
 <div class="Selected publications">
 
 <ol class="bibliography">
+  <!-- Preprint Entry (Static) -->
+  <li>
+    <div class="pub-row">
+      <div class="col-sm-3 abbr" style="position: relative;padding-right: 10px;padding-left: 8px;">
+        <abbr class="badge">Preprint</abbr>
+      </div>
+      <div class="col-sm-9" style="position: relative;padding-right: 12px;padding-left: 12px;">
+        <div class="title">Robust Fuzzy Multi-view Learning under View Conflict</div>
+        <div class="author">Siyuan Duan, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu#</div> 
+        <div class="periodical"><em>arXiv preprint</em>, 2026</div>
+        <div class="links">
+          <a href="https://siyuancncd.github.io/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Link</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+<!-- <ol class="bibliography"> -->
 {% for link in site.data.publications.main %}
 
 <li>
