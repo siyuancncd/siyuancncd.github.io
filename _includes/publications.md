@@ -1,12 +1,13 @@
 <h2 id="Selected publications" style="margin: 2px 0px -15px;">Selected Publications</h2>
 
 <div class="Selected publications">
-<ol class="bibliography">
-  
+
 /**Preprint**/
 - Siyuan Duan, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu#, "Robust Fuzzy Multi-view Learning under View Conflict", 2026.
 
 /**Published**/
+
+<ol class="bibliography">
 
 {% for link in site.data.publications.main %}
 
