@@ -59,7 +59,7 @@
 
 
 /*Preprint*/
-- Siyuan Duan, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu^*, "Robust Fuzzy Multi-view Learning under View Conflict", 2026.
+- Siyuan Duan, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu#, "Robust Fuzzy Multi-view Learning under View Conflict", 2026.
 
 
 “*” and “#” indicate equal contribution and the corresponding author, respectively. For full publications, please refer to my [Google Scholar](https://scholar.google.com/citations?user=Zck_72MAAAAJ&hl=en).
