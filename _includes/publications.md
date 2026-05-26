@@ -16,7 +16,8 @@
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 10px;padding-left: 8px;">
     {% if link.image %} 
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width=100;height=30%">
+    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width:100;height:auto">
+    <!-- <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width=100;height=30%"> -->
     <!-- {% if link.conference_short %}  -->
     <!-- <abbr class="badge">{{ link.conference_short }}</abbr> -->
     <!-- {% endif %} -->
