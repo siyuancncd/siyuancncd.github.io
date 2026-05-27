@@ -264,6 +264,16 @@
       .wrapper section ol.bibliography .periodical {
           font-size: 0.85rem !important;   /* 👈 只改作者，不影响其他 */
       }
+
+      /* 鼠标悬停时为正文超链接添加下划线（排除按钮、社交图标、头像包裹、已禁用的论文标题链接） */
+      a:not(.btn):not(.image):hover {
+        text-decoration: underline;
+      }
+      .social-icons a:hover,
+      .image.avatar:hover {
+        text-decoration: none;
+      }
+      
       
     </style>
   </head>
