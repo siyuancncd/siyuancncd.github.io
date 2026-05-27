@@ -94,9 +94,9 @@
       .avatar img {
         width: 160px !important;
         height: 160px !important;
-        border-radius: 5% !important;
-        padding: 0 !important; 
         object-fit: cover !important;
+        border-radius: 5% !important;
+        padding: 0 !important;          /* 覆写主题原生的 padding:10px，避免 border-box 让图片实际只能画在 145x145 内 */
         margin: 15px auto 10px !important;
         display: block;
       }
@@ -273,11 +273,101 @@
       .image.avatar:hover {
         text-decoration: none;
       }
-      
+
+      /* ============================ 顶部磨砂质感导航栏 ============================ */
+      html {
+        scroll-behavior: smooth;            /* 点击锺点时平滑滚动 */
+        scroll-padding-top: 64px;           /* 防止跳转后标题被 nav 遮挡 */
+      }
+      body {
+        padding-top: 52px;                  /* 为固定 nav 预留空间 */
+      }
+      .top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.72);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      }
+      .top-nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 14px 24px;
+        display: flex;
+        gap: 28px;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 0.95rem;
+      }
+      .top-nav-inner a {
+        color: #043361;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        padding: 2px 0;
+        transition: color 0.2s ease;
+      }
+      .top-nav-inner a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 2px;
+        background: #1a5490;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.25s ease;
+      }
+      .top-nav-inner a:hover {
+        color: #1a5490;
+        text-decoration: none;
+      }
+      .top-nav-inner a:hover::after {
+        transform: scaleX(1);
+      }
+      /* 高亮当前可视区间的导航项（由 JS 动态添加 active 类） */
+      .top-nav-inner a.active {
+        color: #1a5490;
+      }
+      .top-nav-inner a.active::after {
+        transform: scaleX(1);
+      }
+      /* 移动端适配 */
+      @media screen and (max-width: 767px) {
+        .top-nav-inner {
+          gap: 14px;
+          padding: 10px 12px;
+          font-size: 0.85rem;
+        }
+        body {
+          padding-top: 44px;
+        }
+        html {
+          scroll-padding-top: 56px;
+        }
+      }
       
     </style>
   </head>
   <body>
+
+    <!-- 顶部磨砂导航栏 -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="#bio">Bio</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#honors">Honors</a>
+      </div>
+    </nav>
     
     <div class="page-container">
       <div class="wrapper-outer">
@@ -381,4 +471,5 @@
   
   </body>
 </html>
+
 
