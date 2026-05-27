@@ -1,7 +1,8 @@
 ---
 layout: homepage
 ---
-<br/>
+<a id="bio"></a>
+<!-- <br/> -->
 Welcome to my personal homepage. I'm currently a master's student at the College of Computer Science, [<img src="assets/img/scu-logo.png" alt="SCU Logo" width="22" height="22" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://cs.scu.edu.cn/) [Sichuan University (SCU)](https://cs.scu.edu.cn/), fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io). I'm also an incoming Ph.D student at the Department of Computer Science and Engineering, [<img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="14.5" height="22" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://hkust.edu.hk/) [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/). I will conduct my doctoral studies under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/).
 
 <!--
@@ -14,7 +15,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 🌟 **I'm currently concentrating on research in the Large Vision Language Model (LVLM). If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
 
 
-<h2>News</h2> <!-- 标题固定 -->
+<h2 id="news">News</h2> <!-- 标题固定 -->
 
 <div class="news-container">
   <ul>
@@ -29,6 +30,7 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 {% include_relative _includes/publications.md %}
 
 ## Industrial Experience
+{:#experience}
 
 <!-- 
 - Jan. 2026 - Now: **Research Intern** @ <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" width="19" style="vertical-align: middle; margin-left: 2px; margin-right: 2px;"> Taobao&Tmall Group in [<img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="90" height="12" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://www.alibabagroup.com/en-US), Beijing, China. **Topic**: Vision-Language Models (VLMs).
@@ -54,15 +56,18 @@ Welcome to my personal homepage. I'm currently a master's student at the College
 
 
 ## Services
+{:#services}
 
 - Conference Reviewer: NeurIPS, ACL ARR.
 - Journal Reviewer: Neurocomputing
 
 ## Honors & Awards
+{:#honors}
 - Full Postgraduate Studentship, HKUST (2026 - 2030)
 - China National Scholarship (2025, 2020)
 
 <!-- <br/> -->
 ---
 <img src="assets/img/dog.gif" alt="dog" width="100" style="vertical-align: middle; margin-left: 10px; margin-right: 10px;">
+
 
