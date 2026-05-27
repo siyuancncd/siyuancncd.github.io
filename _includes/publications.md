@@ -1,5 +1,11 @@
 <h2 id="Selected publications" style="margin: 2px 0px -15px;">Selected Publications</h2>
 
+/**Preprint**/
+- **[Robust Fuzzy Multi-view Learning under View Conflict](https://arxiv.org/abs/2605.24475)**, **Siyuan Duan**, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu#, arxiv'2026.
+
+/**Publicated**/
+
+
 <div class="Selected publications">
 
 <ol class="bibliography">
@@ -66,7 +72,6 @@
 
 </div>
 
-/**Preprint**/
-- **[Robust Fuzzy Multi-view Learning under View Conflict](https://arxiv.org/abs/2605.24475)**, **Siyuan Duan**, Yuan Sun, Dezhong Peng, Yingke Chen, Xi Peng, Peng Hu#, arxiv'2026.
+
 
 “*” and “#” indicate equal contribution and the corresponding author, respectively. For full publications, please refer to my [Google Scholar](https://scholar.google.com/citations?user=Zck_72MAAAAJ&hl=en).
