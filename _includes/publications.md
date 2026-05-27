@@ -32,7 +32,7 @@
   <div class="col-sm-9" style="position: relative;padding-right: 12px;padding-left: 12px;">
       <!-- <div class="title"><a href="{{ link.link }}">{{ link.title }}</a></div> -->
 <!--       <div class="title"><a></a> {{ link.title }} </div> -->
-      <div class="title"><a href="{{ link.link }}" style="pointer-events: none; cursor: default;" tabindex="-1" aria-disabled="true" onclick="return false;">{{ link.title }}</a></div>
+      <div class="title"><a href="{{ link.link }}" style="pointer-events: none; cursor: default;  color: #365486;"  tabindex="-1" aria-disabled="true" onclick="return false;">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div> 
       <div class="periodical"><em>{{ link.conference }}</em>
       </div>
