@@ -8,11 +8,10 @@
 .news-container {
   max-height: 120px; /* 高度仅针对列表，根据内容多少调整 */
   overflow-y: auto; /* 内容超出时显示滚动条 */
-  // padding-right: 10px; /* 避免滚动条遮挡文字 */
-  padding: 12px 16px;
+  padding: 12px 16px; /* 内边距：上下12 左右16，右侧足够避免滚动条遮挡文字 */
   margin-top: 10px; /* 标题与列表之间留一点间距 */
   margin-bottom: 20px; /* 关键：增加底部间距，数值越大距离越远 */
-  background-color: #f7f7f7; /* 冷灰白背景，让 News 模块有边界感 */
+  background-color: #f7f7f7; /* 比 avatar 区域色调略浅一点 */
   border-radius: 6px; /* 圆角 */
   border: 1px solid rgba(0, 0, 0, 0.04); /* 极淡边框，提升精致感 */
 }
@@ -72,3 +71,4 @@
   background-color: #ffffff; /* 中间白色背景 */
   padding: 0 20px; /* 左右预留一点内边距，避免内容贴边 */
 }
+
