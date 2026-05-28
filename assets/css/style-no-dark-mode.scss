@@ -10,7 +10,7 @@
   padding: 12px 16px;
   margin-top: 10px; /* 标题与列表之间留一点间距 */
   margin-bottom: 20px; /* 关键：增加底部间距，数值越大距离越远 */
-  background-color: #f7f9fc; /* 冷灰白背景，让 News 模块有边界感 */
+  background-color: #f7f7f7; /* 冷灰白背景，让 News 模块有边界感 */
   border-radius: 6px; /* 圆角 */
   border: 1px solid rgba(0, 0, 0, 0.04); /* 极淡边框，提升精致感 */
 }
@@ -20,7 +20,7 @@
   width: 5px;
 }
 .news-container::-webkit-scrollbar-track {
-  background: #f7f7f7;
+  background: #f1f1f1;
   border-radius: 3px;
 }
 .news-container::-webkit-scrollbar-thumb {
