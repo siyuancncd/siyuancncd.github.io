@@ -77,6 +77,7 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 
 <!-- <br/> -->
 ---
+Cutest pup, right here!
 <img src="assets/img/dog.gif" alt="dog" width="100" style="vertical-align: middle; margin-left: 10px; margin-right: 10px;">
 
 
