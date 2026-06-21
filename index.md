@@ -72,8 +72,8 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 
 ## Honors & Awards
 {:#honors}
-- Full Postgraduate Studentship, HKUST (2026 - 2030)
-- China National Scholarship (2025, 2020)
+- Full Postgraduate Studentship @ HKUST (2026 - 2030)
+- China National Scholarship (2025 @ SCU, 2020 @ CAFUC)
 
 <!-- <br/> -->
 ---
