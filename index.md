@@ -59,7 +59,7 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
     </span>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
     <span><strong>Topic</strong>: Large Vision Language Model (LVLM).</span>
-    <span style="font-size: 14px; font-style: italic; !important;">Jan. 2026 - Now</span>
+    <span style="font-size: 14px; font-style: italic; !important;">Jan. 2026 - Jul. 2026</span>
   </div>
 </div>
 
