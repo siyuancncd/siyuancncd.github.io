@@ -70,7 +70,7 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 - Conference Reviewer:
     - *NeurIPS, AAAI, ACL ARR.*
 - Journal Reviewer:
-    - *TOIS, Neurocomputing.*
+    - *ACM TOIS, Neurocomputing.*
 
 ## Honors & Awards
 {:#honors}
