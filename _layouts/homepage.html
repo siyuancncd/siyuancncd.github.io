@@ -207,11 +207,83 @@
 
       /* ✨ News 容器背景色（高优先级，不被上面的规则覆盖） */
       .wrapper section .news-container {
-          background-color: #f7f7f7 !important;
-          border-radius: 6px !important;
-          border: 1px solid rgba(0, 0, 0, 0.06) !important;
+          background-color: #ffffff !important;
+          border-radius: 8px !important;
+          border: 0 !important;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
           padding: 12px 16px !important;
           margin-left: 18px !important;
+      }
+
+      /* Industrial Experience: a fixed, opaque white square behind the logo. */
+      .wrapper section .experience-logo {
+          width: 64px;
+          height: 64px;
+          flex: 0 0 64px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 12px 0 0 !important;
+          background-color: #ffffff;
+          opacity: 1;
+          border-radius: 6px;
+      }
+      .wrapper section .experience-logo img {
+          display: block;
+          max-width: 48px;
+          max-height: 48px;
+          width: auto;
+          height: auto;
+          margin: 0 !important;
+          object-fit: contain;
+      }
+      .wrapper section .experience-card {
+          box-sizing: border-box;
+          width: calc(100% - 20px);
+          margin: 8px 0 8px 20px !important;
+          padding: 10px 12px !important;
+          background-color: #ffffff !important;
+          opacity: 1;
+          border-radius: 8px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      }
+      .wrapper section .experience-card > div {
+          margin-left: 0 !important;
+      }
+      .wrapper section .experience-details {
+          flex: 1;
+          min-width: 0;
+      }
+      .wrapper section .experience-heading {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 12px;
+          width: 100%;
+          margin-left: 0 !important;
+      }
+      .wrapper section .experience-date {
+          margin-left: auto;
+          font-size: inherit;
+          font-style: italic;
+          white-space: nowrap;
+      }
+      /* Services and Honors: one aligned white card per list item. */
+      .wrapper section .info-card-list {
+          box-sizing: border-box;
+          width: calc(100% - 20px);
+          margin: 0 0 8px 20px !important;
+          padding: 0 !important;
+          list-style: none;
+      }
+      .wrapper section .info-card-list li {
+          box-sizing: border-box;
+          margin: 0 0 8px 0 !important;
+          padding: 4px 10px !important;
+          list-style: none;
+          background-color: #ffffff !important;
+          border-radius: 8px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06);
       }
 
       /* Publications 左移处理 */
@@ -275,27 +347,64 @@
         justify-content: center;
       }
 
-      .wrapper section .Selected publications,
-      .wrapper section ol.bibliography {
-          margin-left: -37px !important;
+      /* Publication cards use their own compact layout.  This prevents the
+         general content offset above from adding a left gutter to every
+         nested publication element. */
+      .wrapper section .Selected.publications {
+          margin-left: 0 !important;
           margin-right: 0 !important;
           padding: 0 !important;
-          width: calc(100% + 20px);
+          width: 100%;
+      }
+      .wrapper section ol.bibliography {
+          margin-left: 20px !important;
+          margin-right: 0 !important;
+          padding: 0 !important;
+          width: calc(100% - 20px);
       }
       .wrapper section ol.bibliography li {
-          margin: 0 !important; padding: 0 !important; list-style: none;
+          min-height: 0 !important;
+          margin: 0 0 8px 0 !important;
+          padding: 4px 0 4px 10px !important;
+          list-style: none;
+          background-color: #ffffff !important;   /* 纯白不透明卡片 */
+          border-radius: 8px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      }
+      .wrapper section .preprint-card {
+          box-sizing: border-box;
+          width: calc(100% - 20px);
+          margin: 0 0 8px 20px !important;
+          padding: 4px 10px !important;
+          background-color: #ffffff !important;
+          border-radius: 8px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      }
+      .wrapper section ol.bibliography .pub-row,
+      .wrapper section ol.bibliography .pub-row div {
+          margin-left: 0 !important;
       }
       .wrapper section .pub-row > [class*="col-"] {
           padding-left: 0 !important; padding-right: 0 !important;
       }
       .wrapper section .pub-row {
-          display: flex; align-items: flex-start; gap: 0px !important; flex-wrap: wrap;
+          display: flex; align-items: flex-start; gap: 10px !important; flex-wrap: wrap;
       }
       .wrapper section .pub-row .col-sm-3 {
-          flex: 0 0 190px; max-width: 190px; padding: 0 !important;
+          flex: 0 0 170px; max-width: 170px; padding: 0 !important;
       }
       .wrapper section .pub-row .col-sm-9 {
           flex: 1; min-width: 0; padding: 0 !important;
+      }
+      .wrapper section ol.bibliography .abbr {
+          height: auto !important;
+          margin-bottom: 0 !important;
+      }
+      .wrapper section ol.bibliography .teaser {
+          display: block;
+          width: 170px !important;
+          height: auto;
+          margin: 0 !important;
       }
       
       .wrapper section ol.bibliography .author {
@@ -340,7 +449,7 @@
       .top-nav-inner {
         max-width: 1450px;
         margin: 0 auto;
-        padding: 7px 24px 7px 24px;
+        padding: 7px 24px 7px 75px;
         display: flex;
         gap: 28px;
         justify-content: flex-start;
@@ -514,8 +623,6 @@
   
   </body>
 </html>
-
-
 
 
 
