@@ -99,7 +99,7 @@
       .wrapper-outer {
         flex: 0 0 297px;
         min-width: 275px;
-        background-color: rgba(255,255,255,0.85);  /* 微透明，可调 0~1，越小越透 */
+        background-color: rgba(255,255,255,0.75);  /* 左侧更透，凸显背景图氛围 */
         padding: 20px;                     /* 左右对称内边距，让内容在白色背景板中水平居中 */
         height: fit-content;
         margin-top: 20px;
@@ -169,7 +169,7 @@
       .wrapper {
         flex: 1.4;
         min-width: 300px;
-        background-color: rgba(255,255,255,0.85);  /* 微透明，与左侧保持一致 */
+        background-color: rgba(255,255,255,0.92);  /* 右侧更不透明，保证阅读清晰 */
         padding: 20px 40px;
         border-radius: 8px;
         margin: 20px 0 0 0;                 /* 覆盖主题 .wrapper{margin:0 auto}，确保与左侧 margin-top 一致 */
@@ -323,7 +323,9 @@
       /* ------------------------------ 手机适配 ------------------------------ */
       @media screen and (max-width: 767px) {
         .page-container { flex-direction: column; padding: 0 8px 20px; }
-        .wrapper-outer, .wrapper { flex: 1 1 100%; min-width: unset; margin-top: 10px; background-color: rgba(255,255,255,0.85); position: static; }
+        .wrapper-outer, .wrapper { flex: 1 1 100%; min-width: unset; margin-top: 10px; position: static; }
+        .wrapper-outer { background-color: rgba(255,255,255,0.75); }
+        .wrapper { background-color: rgba(255,255,255,0.92); }
         .wrapper-outer { padding: 20px; }                              /* 手机上下堆叠、无横向 gap，重置为对称内边距 */
         .wrapper { padding: 15px 20px; }
         .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 10px !important; font-size: 0.9rem !important; }
@@ -621,9 +623,6 @@
   
   </body>
 </html>
-
-
-
 
 
 
