@@ -57,12 +57,31 @@
         line-height: var(--line-height-base);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        
-        background-color: #f0f0f0;
+
+        background-color: transparent;
         min-height: 100vh;
         margin: 0;
         padding: 0;
       }
+
+      /* 固定在最底层的背景图：cover 铺满、轻微模糊、保持比例裁剪 */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("{{ '/assets/img/Sundial_(HKUST).jpg' | relative_url }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* 背景图不模糊 */
+        z-index: -2;
+        pointer-events: none;
+      }
+
+      /* 背景图保持原色，不加遮罩，避免“雾感” */
 
       .page-container {
         width: 100%;
@@ -72,16 +91,24 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        align-items: flex-start;            /* 左右两栏顶部严格对齐 */
+        position: relative;
+        z-index: 1;
       }
 
       .wrapper-outer {
         flex: 0 0 297px;
         min-width: 275px;
-        background-color: transparent;
-        padding: 20px 10px 20px 30px;       /* 右侧减 10px、左侧加 10px 补偿 gap，让 avatar 视觉居中于灰色区域 */
+        background-color: rgba(255,255,255,0.92);  /* 微透明，可调 0~1，越小越透 */
+        padding: 20px;                     /* 左右对称内边距，让内容在白色背景板中水平居中 */
         height: fit-content;
         margin-top: 20px;
         border: 0;
+        border-radius: 8px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 70px;                          /* 避开顶部固定导航栏 */
+        align-self: flex-start;
       }
 
       .wrapper-outer header {
@@ -89,6 +116,11 @@
         padding: 0;
         text-align: center;
         line-height: 1.4;
+        /* 覆盖主题原生 header 的 fixed/float/width，避免 header 脱离 .wrapper-outer 导致白色背景覆盖不到内容 */
+        position: static !important;
+        float: none !important;
+        width: auto !important;
+        padding-top: 0 !important;
       }
 
       .avatar img {
@@ -137,10 +169,10 @@
       .wrapper {
         flex: 1.4;
         min-width: 300px;
-        background-color: #ffffff;
+        background-color: rgba(255,255,255,0.92);  /* 微透明，与左侧保持一致 */
         padding: 20px 40px;
         border-radius: 8px;
-        margin-top: 10px;
+        margin: 20px 0 0 0;                 /* 覆盖主题 .wrapper{margin:0 auto}，确保与左侧 margin-top 一致 */
         display: flex;      
         justify-content: center;
         align-items: flex-start;
@@ -211,7 +243,7 @@
       /* ------------------------------ iPad 适配 ------------------------------ */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .page-container { max-width: 98%; gap: 8px; }
-        .wrapper-outer { flex: 0 0 264px; padding: 20px 16px 20px 24px; }   /* iPad gap=8px，左侧加 4px右侧减 4px */
+        .wrapper-outer { flex: 0 0 264px; padding: 20px 16px 20px 24px; position: static; }   /* iPad 不固定，随页面滚动 */
         .wrapper { flex: 1.3; padding: 20px 30px; }
         .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 12px !important; font-size: 0.9rem !important; }
         .wrapper section .publication, .wrapper section .publication-item { margin-left: 0px !important; }
@@ -224,7 +256,7 @@
       /* ------------------------------ 手机适配 ------------------------------ */
       @media screen and (max-width: 767px) {
         .page-container { flex-direction: column; padding: 0 8px 20px; }
-        .wrapper-outer, .wrapper { flex: 1 1 100%; min-width: unset; margin-top: 10px; background-color: #fff; }
+        .wrapper-outer, .wrapper { flex: 1 1 100%; min-width: unset; margin-top: 10px; background-color: rgba(255,255,255,0.92); position: static; }
         .wrapper-outer { padding: 20px; }                              /* 手机上下堆叠、无横向 gap，重置为对称内边距 */
         .wrapper { padding: 15px 20px; }
         .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 10px !important; font-size: 0.9rem !important; }
@@ -482,6 +514,14 @@
   
   </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 
