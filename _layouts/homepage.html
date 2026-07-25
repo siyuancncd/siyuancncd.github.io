@@ -102,12 +102,12 @@
         background-color: rgba(255,255,255,0.92);  /* 左侧更透，凸显背景图氛围 */
         padding: 20px;                     /* 左右对称内边距，让内容在白色背景板中水平居中 */
         height: fit-content;
-        margin-top: 20px;
+        margin: 20px 0 0 0;
         border: 0;
         border-radius: 8px;
         position: -webkit-sticky;
         position: sticky;
-        top: 70px;                          /* 避开顶部固定导航栏 */
+        top: 44px;                          /* 避开顶部固定导航栏 */
         align-self: flex-start;
       }
 
@@ -324,7 +324,7 @@
       @media screen and (max-width: 767px) {
         .page-container { flex-direction: column; padding: 0 8px 20px; }
         .wrapper-outer, .wrapper { flex: 1 1 100%; min-width: unset; margin-top: 10px; position: static; }
-        .wrapper-outer { background-color: rgba(255,255,255,0.75); }
+        .wrapper-outer { background-color: rgba(255,255,255,0.92); }
         .wrapper { background-color: rgba(255,255,255,0.92); }
         .wrapper-outer { padding: 20px; }                              /* 手机上下堆叠、无横向 gap，重置为对称内边距 */
         .wrapper { padding: 15px 20px; }
@@ -426,13 +426,13 @@
         text-decoration: none;
       }
 
-      /* ============================ 顶部磨砂质感导航栏 ============================ */
+      /* ============================ 顶部导航栏 ============================ */
       html {
         scroll-behavior: smooth;            /* 点击锺点时平滑滚动 */
-        scroll-padding-top: 50px;           /* 防止跳转后标题被 nav 遮挡 */
+        scroll-padding-top: 40px;           /* 防止跳转后标题被 nav 遮挡 */
       }
       body {
-        padding-top: 48px;                  /* 为固定 nav 预留空间 */
+        padding-top: 36px;                  /* 为固定 nav 预留空间 */
       }
       .top-nav {
         position: fixed;
@@ -440,7 +440,7 @@
         left: 0;
         right: 0;
         z-index: 1000;
-        background: #043361;
+        background: rgba(4, 51, 97, 0.88);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.10);
@@ -449,12 +449,12 @@
       .top-nav-inner {
         max-width: 1450px;
         margin: 0 auto;
-        padding: 7px 24px 7px 75px;
+        padding: 4px 24px 4px 20px;
         display: flex;
         gap: 28px;
         justify-content: flex-start;
         flex-wrap: wrap;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .top-nav-inner a {
         color: rgba(255, 255, 255, 0.95);
@@ -623,9 +623,6 @@
   
   </body>
 </html>
-
-
-
 
 
 
