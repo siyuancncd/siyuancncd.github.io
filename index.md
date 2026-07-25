@@ -45,21 +45,23 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 - Jan. 2026 - Now: **Research Intern** @ <img src="assets/img/taotianlogo.avif" alt="Alibaba Logo" width="19" style="vertical-align: middle; margin-left: 2px; margin-right: 2px;"> Taobao&Tmall Group in [<img src="assets/img/alibaba_logo_EN.png" alt="Alibaba Logo" width="90" height="12" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://www.alibabagroup.com/en-US), Beijing, China. **Topic**: Vision-Language Models (VLMs).
 -->
 
-<div style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
-  <a href="https://www.alibabagroup.com/en-US " style="text-decoration: none;">
+<div class="experience-card" style="display: flex; align-items: center; line-height: 1.8; margin: 8px 0;">
+  <a class="experience-logo" href="https://www.alibabagroup.com/en-US" aria-label="Alibaba Group" style="text-decoration: none;">
   <img src="assets/img/alibaba_logo_ori.png" alt="Alibaba Logo" 
        width="55" 
        style="margin-right: 0px; flex-shrink: 0; vertical-align: middle;">
   </a>
   <!-- 右侧两行文本容器：纵向排列，确保两行左端对齐 -->
-  <div style="display: flex; flex-direction: column;">
-    <!-- 第一行：公司信息 + 带间距的日期 -->
-    <span>
+  <div class="experience-details" style="display: flex; flex-direction: column;">
+    <!-- 第一行：公司信息，日期在右侧对齐 -->
+    <div class="experience-heading">
+      <span>
       <strong>Research Intern</strong> @ Taobao&Tmall Group of Alibaba
-    </span>
+      </span>
+      <span class="experience-date">Jan. 2026 - Jul. 2026</span>
+    </div>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
     <span><strong>Topic</strong>: Large Vision Language Model (LVLM).</span>
-    <span style="font-size: 14px; font-style: italic; !important;">Jan. 2026 - Jul. 2026</span>
   </div>
 </div>
 
@@ -67,15 +69,18 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 ## Services
 {:#services}
 
-- Conference Reviewer:
-    - *NeurIPS, AAAI, ACL ARR.*
-- Journal Reviewer:
-    - *ACM TOIS, Neurocomputing.*
+<ul class="info-card-list">
+  <li><strong>Conference Reviewer:</strong> <em>NeurIPS, AAAI, ACL ARR.</em></li>
+  <li><strong>Journal Reviewer:</strong> <em>ACM TOIS, Neurocomputing.</em></li>
+</ul>
 
 ## Honors & Awards
 {:#honors}
-- Full Postgraduate Studentship @ HKUST (2026 - 2030)
-- China National Scholarship (2025 @ SCU, 2020 @ CAFUC)
+
+<ul class="info-card-list">
+  <li>Full Postgraduate Studentship @ HKUST (2026 - 2030)</li>
+  <li>China National Scholarship (2025 @ SCU, 2020 @ CAFUC)</li>
+</ul>
 
 <!-- <br/> -->
 ---
