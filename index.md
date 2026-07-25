@@ -67,8 +67,10 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 ## Services
 {:#services}
 
-- Conference Reviewer: NeurIPS, AAAI, ACL ARR.
-- Journal Reviewer: TOIS, Neurocomputing.
+- Conference Reviewer:
+    - NeurIPS, AAAI, ACL ARR
+- Journal Reviewer:
+    - TOIS, Neurocomputing
 
 ## Honors & Awards
 {:#honors}
