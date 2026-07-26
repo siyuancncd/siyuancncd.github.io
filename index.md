@@ -61,7 +61,7 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
       <span class="experience-date">Jan. 2026 - Jul. 2026</span>
     </div>
     <!-- 第二行：仅保留Topic信息，自然左端对齐 -->
-    <span><strong>Topic</strong>: Large Vision Language Model (LVLM).</span>
+    <span><strong>Topic</strong>: <em>Large Vision Language Model (LVLM).</em></span>
   </div>
 </div>
 
