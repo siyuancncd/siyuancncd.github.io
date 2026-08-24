@@ -2,7 +2,7 @@
 layout: homepage
 ---
 <a id="bio"></a>
-<br/>
+<!-- <br/> -->
 Welcome to my personal homepage. I'm a first-year Ph.D student at the Department of Computer Science and Engineering (CSE), [<img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="14.2" height="21" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://hkust.edu.hk/) [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/). I conduct my doctoral studies under the supervision of Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/). Previously, I gained valuable experience as a research intern at <img src="assets/img/alibaba_logo_ori.png" alt="HKUST Logo" width="24" style="vertical-align: middle; margin-left: 3px; margin-right: 3px;">[Alibaba Group](https://www.alibabagroup.com/en-US).
 
 <!--
