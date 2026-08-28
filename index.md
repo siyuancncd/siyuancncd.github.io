@@ -82,7 +82,7 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 {:#honors}
 
 <ul class="info-card-list">
-  <li>Full Postgraduate Studentship @ HKUST (2026 - 2030)</li>
+  <li>Full Postgraduate Studentship @ HKUST (2026 - 2029(expected))</li>
   <li>China National Scholarship (2025 @ SCU, 2020 @ CAFUC)</li>
 </ul>
 
