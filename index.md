@@ -24,7 +24,7 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
 -->
 
-🌟 **I'm currently concentrating on research in the Large Vision Language Model (LVLM). If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
+🌟 **I'm currently concentrating on research in the Large Vision Language Model (LVLM) and the Foundation Model for Healthcare. If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
 
 
 <h2 id="news">News</h2> <!-- 标题固定 -->
