@@ -58,89 +58,99 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
-        background-color: transparent;
+        background-color: #ffffff;          /* 页面下方为纯白背景 */
         min-height: 100vh;
         margin: 0;
         padding: 0;
       }
 
-      /* 固定在最底层的背景图：cover 铺满、轻微模糊、保持比例裁剪 */
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        /* background-image: url("{{ '/assets/img/Sundial_(HKUST).jpg' | relative_url }}"); */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        /* 背景图不模糊 */
-        z-index: -2;
-        pointer-events: none;
-      }
-
-      /* 背景图保持原色，不加遮罩，避免“雾感” */
-
       .page-container {
         width: 100%;
-        max-width: 1450px;
-        margin: 0 auto;
-        padding: 0 10px 20px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: flex-start;            /* 左右两栏顶部严格对齐 */
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        display: block;                     /* 上下堆叠：顶部信息栏 + 下方内容 */
         position: relative;
         z-index: 1;
       }
 
       .wrapper-outer {
-        flex: 0 0 297px;
-        min-width: 275px;
-        background-color: rgba(255,255,255,0.97);  /* 左侧更透，凸显背景图氛围 */
-        padding: 20px;                     /* 左右对称内边距，让内容在白色背景板中水平居中 */
-        height: fit-content;
-        margin: 20px 0 0 0;
+        width: 100%;
+        max-width: none;
+        flex: none;
+        height: 35vh;                       /* 背景图占页面顶部约 35% */
+        min-height: 300px;                  /* 防止窗口过矮时内容被裁切 */
+        margin: 0;
+        padding: 48px 16px 16px;            /* 顶部留白避开固定导航栏 */
         border: 0;
-        border-radius: 8px;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 44px;                          /* 避开顶部固定导航栏 */
-        align-self: flex-start;
+        border-radius: 0;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-image: url("{{ '/assets/img/IMG_3462.jpeg' | relative_url }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 47%;
       }
 
       .wrapper-outer header {
-        margin: 0;
-        padding: 0;
+        margin: 0 auto;
+        padding: 22px 36px;
         text-align: center;
-        line-height: 1.4;
-        /* 覆盖主题原生 header 的 fixed/float/width，避免 header 脱离 .wrapper-outer 导致白色背景覆盖不到内容 */
+        line-height: 1.35;
+        /* 横向三栏：头像在左，基本信息在中，研究方向在右 */
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;           /* 顶部对齐：让 Research Interests 与姓名在同一水平线 */
+        justify-content: center;
+        gap: 30px;
+        /* 半透明白色卡片，保证图片上的文字可读 */
+        background: rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+        border-radius: 12px;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+        width: fit-content;
+        max-width: min(94vw, 800px);
+        /* 覆盖主题原生 header 的 fixed/float/width，避免 header 脱离 .wrapper-outer */
         position: static !important;
         float: none !important;
-        width: auto !important;
-        padding-top: 0 !important;
+        padding-top: 22px !important;
+      }
+      .wrapper-outer header .info-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        min-width: 0;
+        flex: 1 1 auto;
+        text-align: center;
       }
 
       .avatar img {
-        width: 160px !important;
-        height: 160px !important;
+        width: 132px !important;
+        height: 132px !important;
         object-fit: cover !important;
-        border-radius: 5% !important;
+        border-radius: 10px !important;
         padding: 0 !important;          /* 覆写主题原生的 padding:10px，避免 border-box 让图片实际只能画在 145x145 内 */
-        margin: 0px auto 10px !important;
+        margin: 0 !important;
         display: block;
+        flex: 0 0 auto;
       }
 
       .name-block {
-        margin: 0 0 16px;
-        color: #043361
+        margin: 0 0 2px;
+        color: #043361;
+        text-align: center;
       }
 
       .chinese-name {
         font-family: var(--font-serif);
-        font-size: 1.3rem;                 /* ✨ 从 1.4rem → 1.3rem */
+        font-size: 1.1rem;                 /* 顶部卡片更紧凑 */
         font-weight: inherit;
         color: inherit;
         margin: 0;
@@ -148,41 +158,68 @@
       }
 
       .wrapper-outer header h1 {
-        margin: 0 0 2px;
+        margin: 0 0 1px;
         line-height: var(--line-height-tight);
-        font-size: 1.35rem;                /* ✨ 从 1.5rem → 1.35rem */
+        font-size: 1.05rem;                /* Siyuan Duan 字号略缩小 */
         font-weight: 600;
       }
 
       .wrapper-outer header position,
       .wrapper-outer header autocolor {
-        font-size: var(--font-size-sm);    /* ✨ 从 0.95rem → 0.875rem */
+        font-size: 0.85rem;
         color: #888;
         font-weight: 400;
       }
 
       .wrapper-outer header email {
-        font-size: var(--font-size-sm);    /* ✨ 从 0.95rem → 0.875rem */
+        font-size: 0.85rem;
         color: #888;
       }
 
-      .wrapper {
-        flex: 1.4;
-        min-width: 300px;
-        background-color: rgba(255,255,255,0.97);  /* 右侧更不透明，保证阅读清晰 */
-        padding: 20px 40px;
-        border-radius: 8px;
-        margin: 20px 0 0 0;                 /* 覆盖主题 .wrapper{margin:0 auto}，确保与左侧 margin-top 一致 */
-        display: flex;      
-        justify-content: center;
+      /* 顶部信息卡片右侧：Research Interests 纵向排列 */
+      .research-interests {
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
+        justify-content: center;
+        gap: 2px;
+        padding-left: 18px;
+        border-left: 1px solid #e0e0e0;
+        font-size: 0.8rem;
+        line-height: 1.45;
+        text-align: left;
+        white-space: nowrap;
+      }
+      .research-interests .ri-title {
+        font-weight: 600;
+        color: #043361;
+        margin: 0 0 2px;
+        font-size: 1rem;                   /* Research Interests 字号增大 */
+      }
+      .research-interests .ri-item {
+        color: #888;                       /* 与 Ph.D Student / HKUST / 邮箱一致 */
+        font-size: 0.85rem;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: none;
+        flex: none;
+        min-width: 0;
+        background-color: #ffffff;          /* 下方内容区域纯白背景 */
+        padding: 28px 24px 40px;
+        border-radius: 0;
+        margin: 0;
+        display: block;
       }
 
       .wrapper section {
         max-width: 1100px;
-        width: 100%;        
+        width: 100%;
         margin: 0 auto;
         padding-top: 0 !important;
+        float: none !important;             /* 修复主题自带 float:right 导致内容靠右、容器塌缩 */
+        position: static !important;
       }
 
       /* 重置列表默认间距 */
@@ -192,14 +229,14 @@
         margin-left: 0 !important;
       }
       
-      /* 普通模块间距 */
+      /* 普通模块间距（与标题左边缘对齐，保证视觉居中） */
       .wrapper section p,
       .wrapper section div,
       .wrapper section ul,
       .wrapper section li,
       .wrapper section .news-item,
       .wrapper section .experience-item {
-          margin-left: 18px !important;
+          margin-left: 0 !important;
           padding-left: 0 !important;
           line-height: var(--line-height-base);
           font-size: var(--font-size-base);  /* ✨ 统一应用基础字号 */
@@ -211,7 +248,7 @@
           border: 0 !important;
           box-shadow: none !important;
           padding: 8px 0 !important;
-          margin-left: 18px !important;
+          margin-left: 0 !important;
       }
 
       /* Industrial Experience: a fixed, opaque white square behind the logo. */
@@ -309,12 +346,13 @@
 
       /* ------------------------------ iPad 适配 ------------------------------ */
       @media screen and (min-width: 768px) and (max-width: 1024px) {
-        .page-container { max-width: 98%; gap: 8px; }
-        .wrapper-outer { flex: 0 0 264px; padding: 20px 16px 20px 24px; position: static; }   /* iPad 不固定，随页面滚动 */
-        .wrapper { flex: 1.3; padding: 20px 30px; }
-        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 12px !important; font-size: 0.9rem !important; }
+        .wrapper-outer { height: 35vh; min-height: 260px; padding: 48px 12px 12px; }
+        .wrapper-outer header { gap: 16px; padding: 12px 18px; max-width: min(94vw, 640px); }
+        .avatar img { width: 114px !important; height: 114px !important; }
+        .research-interests { padding-left: 12px; white-space: normal; }
+        .wrapper { padding: 24px 24px 36px; }
+        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 0 !important; font-size: 0.9rem !important; }
         .wrapper section .publication, .wrapper section .publication-item { margin-left: 0px !important; }
-        .avatar img { width: 110px !important; height: 110px !important; }
         
         ::-webkit-scrollbar { display: block !important; opacity: 1 !important; }
         .news-container, [class*="news"], .wrapper section .news-item { overflow-y: auto !important; scrollbar-width: thin !important; }
@@ -322,26 +360,54 @@
       
       /* ------------------------------ 手机适配 ------------------------------ */
       @media screen and (max-width: 767px) {
-        .page-container { flex-direction: column; padding: 0 8px 20px; }
-        .wrapper-outer, .wrapper { flex: 1 1 100%; min-width: unset; margin-top: 10px; position: static; }
-        .wrapper-outer { background-color: rgba(255,255,255,0.95); }
-        .wrapper { background-color: rgba(255,255,255,0.95); }
-        .wrapper-outer { padding: 20px; }                              /* 手机上下堆叠、无横向 gap，重置为对称内边距 */
-        .wrapper { padding: 15px 20px; }
-        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 10px !important; font-size: 0.9rem !important; }
+        .wrapper-outer { min-height: 0; height: auto; padding: 60px 12px 16px; }
+        .wrapper-outer header {
+          flex-direction: column;          /* 手机上头像在上、信息在下 */
+          align-items: center;
+          gap: 10px;
+          padding: 16px;
+          width: 100%;
+          max-width: 100%;
+          text-align: center;
+        }
+        .wrapper-outer header .info-col { align-items: center; }
+        .name-block { text-align: center; }
+        .social-icons { justify-content: center; }
+        .research-interests {
+          align-items: center;
+          text-align: center;
+          border-left: 0;
+          border-top: 1px solid #e0e0e0;
+          padding-left: 0;
+          padding-top: 8px;
+          white-space: normal;
+        }
+        .avatar img { width: 120px !important; height: 120px !important; }
+        .wrapper { padding: 20px 16px 32px; }
+        .wrapper section p, .wrapper section div, .wrapper section ul, .wrapper section li, .wrapper section .news-item, .wrapper section .experience-item { margin-left: 0 !important; font-size: 0.9rem !important; }
         .wrapper section .publication, .wrapper section .publication-item { margin-left: 0px !important; }
         .wrapper section > p:first-of-type { margin-top: -5px !important; }
-        .avatar img { width: 140px !important; height: 140px !important; }
         
         ::-webkit-scrollbar { display: block !important; opacity: 1 !important; }
         .news-container, [class*="news"], .wrapper section .news-item { overflow-y: auto !important; scrollbar-width: thin !important; }
       }
 
       .social-icons {
-        margin: 15px 0;
+        margin: 12px 0 0;                  /* 图标整体下移一点 */
         display: flex;
-        gap: 10px;
+        gap: 8px;
         justify-content: center;
+      }
+      .social-icons a {
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
+        font-size: 1rem;
+      }
+      .social-icons a:hover {
+        background-color: transparent !important;  /* 悬停只放大，周围不变色 */
+        color: #043361 !important;
+        transform: scale(1.2);
       }
 
       /* Publication cards use their own compact layout.  This prevents the
@@ -432,7 +498,7 @@
         scroll-padding-top: 40px;           /* 防止跳转后标题被 nav 遮挡 */
       }
       body {
-        padding-top: 36px;                  /* 为固定 nav 预留空间 */
+        padding-top: 0;                     /* 顶部横幅背景从页面最顶端开始，导航悬浮其上 */
       }
       .top-nav {
         position: fixed;
@@ -452,9 +518,9 @@
         padding: 4px 24px 4px 20px;
         display: flex;
         gap: 28px;
-        justify-content: flex-start;
+        justify-content: center;            /* 导航居中，与下方内容轴线一致 */
         flex-wrap: wrap;
-        font-size: 1rem;
+        font-size: 1.1rem;                 /* 导航字体稍大 */
       }
       .top-nav-inner a {
         color: rgba(255, 255, 255, 0.95);
@@ -495,7 +561,7 @@
         .top-nav-inner {
           gap: 14px;
           padding: 4px 12px;
-          font-size: 0.85rem;
+          font-size: 0.95rem;
         }
         body {
           padding-top: 33px;
@@ -528,27 +594,22 @@
           <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
           {% endif %}
 
-          <div class="name-block">
-            {% if site.chinese_name %}
-            <p class="chinese-name">{{ site.chinese_name }}</p>
-            {% endif %}
-            <h1>{{ site.title }}</h1>
-          </div>
-          
-          {% if site.position %}
-          <position>{{ site.position }}</position>
-          <br>
-          {% endif %}
-          {% if site.affiliation %}
-          <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
-          <br>
-          {% endif %}
-          {% if site.email %}
-          <email>{{ site.email }}</email>
-          {% endif %}
+          <div class="info-col">
+            <div class="name-block">
+              <h1>{{ site.title }}{% if site.chinese_name %}({{ site.chinese_name }}){% endif %}</h1>
+            </div>
 
-          <br>
-          <div class="social-icons">
+            {% if site.position %}
+            <position>{{ site.position }}</position>
+            {% endif %}
+            {% if site.affiliation %}
+            <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
+            {% endif %}
+            {% if site.email %}
+            <email>{{ site.email }}</email>
+            {% endif %}
+
+            <div class="social-icons">
             {% if site.google_scholar %}
             <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
               <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
@@ -586,17 +647,15 @@
             </a>  
             {% endif %}
             
-          </div>
-
-          <div style="margin-top: 18px; border-top: 1px solid #e0e0e0; padding-top: 14px; text-align: center;">
-            <p style="font-size: 1.2rem; font-weight: 600; color: #043361; margin: 0 0 6px 0;">Research Interests</p>
-            <div style="font-size: 0.9rem; color: #888; line-height: 1.7;">
-              <div>Large Vision Language Model</div>
-              <div>Multi-modal Learning</div>
-              <div>AI for Science (PINNs)</div>
             </div>
           </div>
-          
+
+          <div class="research-interests">
+            <span class="ri-title">Research Interests:</span>
+            <span class="ri-item">Large Vision Language Model</span>
+            <span class="ri-item">Multi-modal AI</span>
+            <span class="ri-item">AI for Science (PINNs)</span>
+          </div>
         </header>
       </div>
 
@@ -623,6 +682,16 @@
   
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
