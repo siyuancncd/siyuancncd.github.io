@@ -4,8 +4,9 @@ layout: homepage
 <a id="bio"></a>
 <!-- <br/> -->
 Welcome! <br>
-I'm currently a first-year Ph.D student at the Department of Computer Science and Engineering (CSE), [<img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="14.2" height="21" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://hkust.edu.hk/) [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/), supervised by Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/). Previously, I gained valuable experience as a research intern at <img src="assets/img/alibaba_logo_ori.png" alt="HKUST Logo" width="24" style="vertical-align: middle; margin-left: 3px; margin-right: 3px;">[Alibaba Group](https://www.alibabagroup.com/en-US).
+I'm currently a first-year Ph.D. student at the Department of Computer Science and Engineering (CSE), [<img src="assets/img/HKUST_logo.png" alt="HKUST Logo" width="14.2" height="21" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://hkust.edu.hk/) [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/), supervised by Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/). Previously, I gained valuable experience as a research intern at <img src="assets/img/alibaba_logo_ori.png" alt="HKUST Logo" width="24" style="vertical-align: middle; margin-left: 3px; margin-right: 3px;">[Alibaba Group](https://www.alibabagroup.com/en-US).
 
+🌟 **I'm currently concentrating on research in the Large Vision Language Model (LVLM) and foundation models for healthcare. If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
 <!--
 I'm currently a master's student at the College of Computer Science, [<img src="assets/img/scu-logo.png" alt="SCU Logo" width="22" height="22" style="vertical-align: middle; margin-left: 3px; margin-right: 2px;">](https://cs.scu.edu.cn/) [Sichuan University (SCU)](https://cs.scu.edu.cn/), fortunately advised by Prof. [Dezhong Peng](https://cs.scu.edu.cn/info/1282/13563.htm) & Prof. [Peng Hu](https://penghu-cs.github.io).
 -->
@@ -25,7 +26,7 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 - **AI for Science:** Utilizing Physics-Informed Neural Networks (PINNs) for solving PDE problems.
 -->
 
-🌟 **I'm currently concentrating on research in the Large Vision Language Model (LVLM) and the Foundation Model for Healthcare. If you are interested in collaborating with me or want to have a chat, please feel free to contact me via <a href="mailto:siyuanduancn@gmail.com">email</a> !**
+
 
 
 <h2 id="news">News</h2> <!-- 标题固定 -->
