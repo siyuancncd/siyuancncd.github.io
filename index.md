@@ -76,7 +76,7 @@ I'm also an incoming Ph.D student at the Department of Computer Science and Engi
 {:#services}
 
 <ul class="info-card-list">
-  <li><strong>Conference Reviewer:</strong> <em>NeurIPS, AAAI, ACL ARR.</em></li>
+  <li><strong>Conference Reviewer:</strong> <em>CVPR, NeurIPS, AAAI, ACL ARR.</em></li>
   <li><strong>Journal Reviewer:</strong> <em>ACM TOIS, Neurocomputing.</em></li>
 </ul>
 
